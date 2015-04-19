@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		412831EC1AE4044500E2A36F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 412831EB1AE4044500E2A36F /* .gitignore */; };
+		412831ED1AE4044500E2A36F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 412831EB1AE4044500E2A36F /* .gitignore */; };
 		41461A861AE3348500272F21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41461A851AE3348500272F21 /* AppDelegate.swift */; };
 		41461A881AE3348500272F21 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41461A871AE3348500272F21 /* FirstViewController.swift */; };
 		41461A8A1AE3348500272F21 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41461A891AE3348500272F21 /* SecondViewController.swift */; };
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		412831EB1AE4044500E2A36F /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		41461A801AE3348500272F21 /* Milton Mobile iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Milton Mobile iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41461A841AE3348500272F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41461A851AE3348500272F21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 		41461A771AE3348500272F21 = {
 			isa = PBXGroup;
 			children = (
+				412831EB1AE4044500E2A36F /* .gitignore */,
 				41461A821AE3348500272F21 /* Milton Mobile iOS */,
 				41461A9A1AE3348500272F21 /* Milton Mobile iOSTests */,
 				41461A811AE3348500272F21 /* Products */,
@@ -196,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				412831EC1AE4044500E2A36F /* .gitignore in Resources */,
 				41461A8D1AE3348500272F21 /* Main.storyboard in Resources */,
 				41461A921AE3348500272F21 /* LaunchScreen.xib in Resources */,
 				41461A8F1AE3348500272F21 /* Images.xcassets in Resources */,
@@ -206,6 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				412831ED1AE4044500E2A36F /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

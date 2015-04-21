@@ -29,6 +29,7 @@
 		17C4E021198E4CB500E0B395 /* ID-10029135.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17C4E020198E4CB500E0B395 /* ID-10029135.jpg */; };
 		17C4E023198E504400E0B395 /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4E022198E504400E0B395 /* SidePanelViewController.swift */; };
 		620BDF401AE5DDE80047EDC1 /* 1329_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 620BDF3F1AE5DDE80047EDC1 /* 1329_logo.jpg */; };
+		621D23661AE6AFD0007E0922 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 621D23651AE6AFD0007E0922 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -79,6 +80,7 @@
 		17C4E020198E4CB500E0B395 /* ID-10029135.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-10029135.jpg"; sourceTree = "<group>"; };
 		17C4E022198E504400E0B395 /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
 		620BDF3F1AE5DDE80047EDC1 /* 1329_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1329_logo.jpg; sourceTree = "<group>"; };
+		621D23651AE6AFD0007E0922 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		17C4DFC1198E428000E0B395 = {
 			isa = PBXGroup;
 			children = (
+				621D23651AE6AFD0007E0922 /* .gitignore */,
 				17C4DFCC198E428000E0B395 /* SlideOutNavigation */,
 				17C4DFDF198E428000E0B395 /* SlideOutNavigationTests */,
 				17C4DFCB198E428000E0B395 /* Products */,
@@ -272,6 +275,7 @@
 				17C4DFD5198E428000E0B395 /* Main.storyboard in Resources */,
 				17C4E00C198E43AD00E0B395 /* ID-10091065.jpg in Resources */,
 				17C4E007198E43AD00E0B395 /* ID-10019208.jpg in Resources */,
+				621D23661AE6AFD0007E0922 /* .gitignore in Resources */,
 				17C4E00D198E43AD00E0B395 /* ID-10091745.jpg in Resources */,
 				17C4E004198E43AD00E0B395 /* ID-100113060.jpg in Resources */,
 				17C4DFD7198E428000E0B395 /* Images.xcassets in Resources */,

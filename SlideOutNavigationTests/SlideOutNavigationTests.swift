@@ -1,15 +1,15 @@
 //
-//  Milton_Mobile_iOSTests.swift
-//  Milton Mobile iOSTests
+//  SlideOutNavigationTests.swift
+//  SlideOutNavigationTests
 //
-//  Created by Ravi Rahman on 4/18/15.
-//  Copyright (c) 2015 Milton Academy. All rights reserved.
+//  Created by James Frost on 03/08/2014.
+//  Copyright (c) 2014 James Frost. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class Milton_Mobile_iOSTests: XCTestCase {
+class SlideOutNavigationTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

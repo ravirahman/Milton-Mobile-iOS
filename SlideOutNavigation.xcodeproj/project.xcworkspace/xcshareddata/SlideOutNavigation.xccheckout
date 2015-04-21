@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>DFD7B3EB-0F3C-4FC2-8435-FFB3C66B250F</string>
+	<string>B69F9478-090E-47D1-B8BA-E5F36BC88FA2</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Milton Mobile iOS</string>
+	<string>SlideOutNavigation</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>D14E3FC66B3BCA2B9565EE8E7B70D62145FE7319</key>
 		<string>https://github.com/milton-programming/MiltonMobileIOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Milton Mobile iOS.xcodeproj</string>
+	<string>SlideOutNavigation.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>D14E3FC66B3BCA2B9565EE8E7B70D62145FE7319</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>D14E3FC66B3BCA2B9565EE8E7B70D62145FE7319</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Milton%20Mobile%20iOS</string>
+			<string>SlideOutNavigation-Starter</string>
 		</dict>
 	</array>
 </dict>

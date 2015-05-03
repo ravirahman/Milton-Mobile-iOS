@@ -3,30 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		178B5A5D198E7379006414ED /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178B5A5C198E7379006414ED /* ContainerViewController.swift */; };
 		179191C91A1D4F0D00072138 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 179191C81A1D4F0D00072138 /* LaunchScreen.xib */; };
-		17C4DFD0198E428000E0B395 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4DFCF198E428000E0B395 /* AppDelegate.swift */; };
 		17C4DFD5198E428000E0B395 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17C4DFD3198E428000E0B395 /* Main.storyboard */; };
 		17C4DFD7198E428000E0B395 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17C4DFD6198E428000E0B395 /* Images.xcassets */; };
-		17C4DFE3198E428000E0B395 /* SlideOutNavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4DFE2198E428000E0B395 /* SlideOutNavigationTests.swift */; };
-		17C4E004198E43AD00E0B395 /* ID-100113060.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17C4DFED198E43AD00E0B395 /* ID-100113060.jpg */; };
-		17C4E005198E43AD00E0B395 /* ID-10011404.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17C4DFEE198E43AD00E0B395 /* ID-10011404.jpg */; };
-		17C4E006198E43AD00E0B395 /* ID-10017782.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17C4DFEF198E43AD00E0B395 /* ID-10017782.jpg */; };
-		17C4E007198E43AD00E0B395 /* ID-10019208.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17C4DFF0198E43AD00E0B395 /* ID-10019208.jpg */; };
-		17C4E008198E43AD00E0B395 /* ID-10022760.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17C4DFF1198E43AD00E0B395 /* ID-10022760.jpg */; };
-		17C4E009198E43AD00E0B395 /* ID-10041194.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17C4DFF2198E43AD00E0B395 /* ID-10041194.jpg */; };
-		17C4E00A198E43AD00E0B395 /* ID-10047796.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17C4DFF3198E43AD00E0B395 /* ID-10047796.jpg */; };
-		17C4E00B198E43AD00E0B395 /* ID-10056941.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17C4DFF4198E43AD00E0B395 /* ID-10056941.jpg */; };
-		17C4E00C198E43AD00E0B395 /* ID-10091065.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17C4DFF5198E43AD00E0B395 /* ID-10091065.jpg */; };
-		17C4E00D198E43AD00E0B395 /* ID-10091745.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17C4DFF6198E43AD00E0B395 /* ID-10091745.jpg */; };
-		17C4E00E198E43AD00E0B395 /* ID-10092572.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17C4DFF7198E43AD00E0B395 /* ID-10092572.jpg */; };
-		17C4E01B198E444000E0B395 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4E01A198E444000E0B395 /* Animal.swift */; };
+		17C4DFE3198E428000E0B395 /* MiltonMobileIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4DFE2198E428000E0B395 /* MiltonMobileIOSTests.swift */; };
+		17C4E01B198E444000E0B395 /* NavigationCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4E01A198E444000E0B395 /* NavigationCategory.swift */; };
 		17C4E01F198E477C00E0B395 /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4E01E198E477C00E0B395 /* CenterViewController.swift */; };
-		17C4E021198E4CB500E0B395 /* ID-10029135.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17C4E020198E4CB500E0B395 /* ID-10029135.jpg */; };
 		17C4E023198E504400E0B395 /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4E022198E504400E0B395 /* SidePanelViewController.swift */; };
 		620BDF401AE5DDE80047EDC1 /* 1329_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 620BDF3F1AE5DDE80047EDC1 /* 1329_logo.jpg */; };
 		621D23661AE6AFD0007E0922 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 621D23651AE6AFD0007E0922 /* .gitignore */; };
@@ -40,6 +27,7 @@
 			isEditable = 1;
 			outputFiles = (
 			);
+			script = "";
 		};
 /* End PBXBuildRule section */
 
@@ -58,26 +46,13 @@
 		179191C81A1D4F0D00072138 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		17C4DFCA198E428000E0B395 /* MiltonMobileIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiltonMobileIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C4DFCE198E428000E0B395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		17C4DFCF198E428000E0B395 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17C4DFD4198E428000E0B395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17C4DFD6198E428000E0B395 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		17C4DFDC198E428000E0B395 /* MiltonMobileIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiltonMobileIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C4DFE1198E428000E0B395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		17C4DFE2198E428000E0B395 /* SlideOutNavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOutNavigationTests.swift; sourceTree = "<group>"; };
-		17C4DFED198E43AD00E0B395 /* ID-100113060.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-100113060.jpg"; sourceTree = "<group>"; };
-		17C4DFEE198E43AD00E0B395 /* ID-10011404.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-10011404.jpg"; sourceTree = "<group>"; };
-		17C4DFEF198E43AD00E0B395 /* ID-10017782.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-10017782.jpg"; sourceTree = "<group>"; };
-		17C4DFF0198E43AD00E0B395 /* ID-10019208.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-10019208.jpg"; sourceTree = "<group>"; };
-		17C4DFF1198E43AD00E0B395 /* ID-10022760.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-10022760.jpg"; sourceTree = "<group>"; };
-		17C4DFF2198E43AD00E0B395 /* ID-10041194.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-10041194.jpg"; sourceTree = "<group>"; };
-		17C4DFF3198E43AD00E0B395 /* ID-10047796.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-10047796.jpg"; sourceTree = "<group>"; };
-		17C4DFF4198E43AD00E0B395 /* ID-10056941.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-10056941.jpg"; sourceTree = "<group>"; };
-		17C4DFF5198E43AD00E0B395 /* ID-10091065.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-10091065.jpg"; sourceTree = "<group>"; };
-		17C4DFF6198E43AD00E0B395 /* ID-10091745.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-10091745.jpg"; sourceTree = "<group>"; };
-		17C4DFF7198E43AD00E0B395 /* ID-10092572.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-10092572.jpg"; sourceTree = "<group>"; };
-		17C4E01A198E444000E0B395 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		17C4DFE2198E428000E0B395 /* MiltonMobileIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiltonMobileIOSTests.swift; sourceTree = "<group>"; };
+		17C4E01A198E444000E0B395 /* NavigationCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationCategory.swift; sourceTree = "<group>"; };
 		17C4E01E198E477C00E0B395 /* CenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
-		17C4E020198E4CB500E0B395 /* ID-10029135.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-10029135.jpg"; sourceTree = "<group>"; };
 		17C4E022198E504400E0B395 /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
 		620BDF3F1AE5DDE80047EDC1 /* 1329_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1329_logo.jpg; sourceTree = "<group>"; };
 		621D23651AE6AFD0007E0922 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -105,8 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				620BDF3F1AE5DDE80047EDC1 /* 1329_logo.jpg */,
-				17C4E020198E4CB500E0B395 /* ID-10029135.jpg */,
-				17C4DFEC198E43AD00E0B395 /* Cats */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -115,8 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				621D23651AE6AFD0007E0922 /* .gitignore */,
-				17C4DFCC198E428000E0B395 /* SlideOutNavigation */,
-				17C4DFDF198E428000E0B395 /* SlideOutNavigationTests */,
+				17C4DFCC198E428000E0B395 /* MiltonMobileIOS */,
+				17C4DFDF198E428000E0B395 /* MiltonMobileIOSTests */,
 				17C4DFCB198E428000E0B395 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,24 +100,23 @@
 				17C4DFCA198E428000E0B395 /* MiltonMobileIOS.app */,
 				17C4DFDC198E428000E0B395 /* MiltonMobileIOSTests.xctest */,
 			);
-			name = Products;
+			path = Products;
 			sourceTree = "<group>";
 		};
-		17C4DFCC198E428000E0B395 /* SlideOutNavigation */ = {
+		17C4DFCC198E428000E0B395 /* MiltonMobileIOS */ = {
 			isa = PBXGroup;
 			children = (
 				17BDB3511998A8860064476C /* Resources */,
-				17C4DFCF198E428000E0B395 /* AppDelegate.swift */,
 				17C4E01E198E477C00E0B395 /* CenterViewController.swift */,
 				178B5A5C198E7379006414ED /* ContainerViewController.swift */,
 				17C4E022198E504400E0B395 /* SidePanelViewController.swift */,
-				17C4E01A198E444000E0B395 /* Animal.swift */,
+				17C4E01A198E444000E0B395 /* NavigationCategory.swift */,
 				17C4DFD3198E428000E0B395 /* Main.storyboard */,
 				179191C81A1D4F0D00072138 /* LaunchScreen.xib */,
 				17C4DFD6198E428000E0B395 /* Images.xcassets */,
 				17C4DFCD198E428000E0B395 /* Supporting Files */,
 			);
-			path = SlideOutNavigation;
+			path = MiltonMobileIOS;
 			sourceTree = "<group>";
 		};
 		17C4DFCD198E428000E0B395 /* Supporting Files */ = {
@@ -155,13 +127,13 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		17C4DFDF198E428000E0B395 /* SlideOutNavigationTests */ = {
+		17C4DFDF198E428000E0B395 /* MiltonMobileIOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				17C4DFE2198E428000E0B395 /* SlideOutNavigationTests.swift */,
+				17C4DFE2198E428000E0B395 /* MiltonMobileIOSTests.swift */,
 				17C4DFE0198E428000E0B395 /* Supporting Files */,
 			);
-			path = SlideOutNavigationTests;
+			path = MiltonMobileIOSTests;
 			sourceTree = "<group>";
 		};
 		17C4DFE0198E428000E0B395 /* Supporting Files */ = {
@@ -170,24 +142,6 @@
 				17C4DFE1198E428000E0B395 /* Info.plist */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		17C4DFEC198E43AD00E0B395 /* Cats */ = {
-			isa = PBXGroup;
-			children = (
-				17C4DFED198E43AD00E0B395 /* ID-100113060.jpg */,
-				17C4DFEE198E43AD00E0B395 /* ID-10011404.jpg */,
-				17C4DFEF198E43AD00E0B395 /* ID-10017782.jpg */,
-				17C4DFF0198E43AD00E0B395 /* ID-10019208.jpg */,
-				17C4DFF1198E43AD00E0B395 /* ID-10022760.jpg */,
-				17C4DFF2198E43AD00E0B395 /* ID-10041194.jpg */,
-				17C4DFF3198E43AD00E0B395 /* ID-10047796.jpg */,
-				17C4DFF4198E43AD00E0B395 /* ID-10056941.jpg */,
-				17C4DFF5198E43AD00E0B395 /* ID-10091065.jpg */,
-				17C4DFF6198E43AD00E0B395 /* ID-10091745.jpg */,
-				17C4DFF7198E43AD00E0B395 /* ID-10092572.jpg */,
-			);
-			path = Cats;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,10 +190,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0600;
-				ORGANIZATIONNAME = "James Frost";
+				ORGANIZATIONNAME = "Milton Academy";
 				TargetAttributes = {
 					17C4DFC9198E428000E0B395 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 7B7M7FR7QW;
 					};
 					17C4DFDB198E428000E0B395 = {
 						CreatedOnToolsVersion = 6.0;
@@ -248,7 +203,7 @@
 				};
 			};
 			buildConfigurationList = 17C4DFC5198E428000E0B395 /* Build configuration list for PBXProject "MiltonMobileIOS" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -271,23 +226,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17C4E021198E4CB500E0B395 /* ID-10029135.jpg in Resources */,
 				17C4DFD5198E428000E0B395 /* Main.storyboard in Resources */,
-				17C4E00C198E43AD00E0B395 /* ID-10091065.jpg in Resources */,
-				17C4E007198E43AD00E0B395 /* ID-10019208.jpg in Resources */,
 				621D23661AE6AFD0007E0922 /* .gitignore in Resources */,
-				17C4E00D198E43AD00E0B395 /* ID-10091745.jpg in Resources */,
-				17C4E004198E43AD00E0B395 /* ID-100113060.jpg in Resources */,
 				17C4DFD7198E428000E0B395 /* Images.xcassets in Resources */,
-				17C4E00B198E43AD00E0B395 /* ID-10056941.jpg in Resources */,
-				17C4E009198E43AD00E0B395 /* ID-10041194.jpg in Resources */,
-				17C4E00A198E43AD00E0B395 /* ID-10047796.jpg in Resources */,
-				17C4E00E198E43AD00E0B395 /* ID-10092572.jpg in Resources */,
-				17C4E005198E43AD00E0B395 /* ID-10011404.jpg in Resources */,
 				620BDF401AE5DDE80047EDC1 /* 1329_logo.jpg in Resources */,
-				17C4E008198E43AD00E0B395 /* ID-10022760.jpg in Resources */,
 				179191C91A1D4F0D00072138 /* LaunchScreen.xib in Resources */,
-				17C4E006198E43AD00E0B395 /* ID-10017782.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,8 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17C4DFD0198E428000E0B395 /* AppDelegate.swift in Sources */,
-				17C4E01B198E444000E0B395 /* Animal.swift in Sources */,
+				17C4E01B198E444000E0B395 /* NavigationCategory.swift in Sources */,
 				178B5A5D198E7379006414ED /* ContainerViewController.swift in Sources */,
 				17C4E023198E504400E0B395 /* SidePanelViewController.swift in Sources */,
 				17C4E01F198E477C00E0B395 /* CenterViewController.swift in Sources */,
@@ -317,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17C4DFE3198E428000E0B395 /* SlideOutNavigationTests.swift in Sources */,
+				17C4DFE3198E428000E0B395 /* MiltonMobileIOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,7 +367,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = "SlideOutNavigation/Supporting Files/Info.plist";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "MiltonMobileIOS/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = MiltonMobileIOS;
 			};
@@ -436,7 +379,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = "SlideOutNavigation/Supporting Files/Info.plist";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "MiltonMobileIOS/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = MiltonMobileIOS;
 			};
@@ -454,7 +398,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "SlideOutNavigationTests/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "MiltonMobileIOSTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = MiltonMobileIOSTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -469,7 +413,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "SlideOutNavigationTests/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "MiltonMobileIOSTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = MiltonMobileIOSTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";

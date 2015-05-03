@@ -1,11 +1,3 @@
-//
-//  CenterViewController.swift
-//  SlideOutNavigation
-//
-//  Created by James Frost on 03/08/2014.
-//  Copyright (c) 2014 James Frost. All rights reserved.
-//
-
 import UIKit
 
 @objc
@@ -31,10 +23,10 @@ class CenterViewController: UIViewController, SidePanelViewControllerDelegate {
     @IBAction func puppiesTapped(sender: AnyObject) {
     }
     
-    func animalSelected(animal: Animal) {
-        imageView.image = animal.image
-        titleLabel.text = animal.title
-        creatorLabel.text = animal.creator
+    func categorySelected(navigationCategory: NavigationCategory) {
+        imageView.image = navigationCategory.image
+        titleLabel.text = navigationCategory.title
+        creatorLabel.text = navigationCategory.creator
         
         delegate?.collapseSidePanels?()
     }

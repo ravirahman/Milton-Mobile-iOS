@@ -65,7 +65,7 @@ class ContainerViewController: UIViewController, CenterViewControllerDelegate, U
     func addLeftPanelViewController() {
         if (leftViewController == nil) {
             leftViewController = UIStoryboard.leftViewController()
-            leftViewController!.animals = Animal.allCats()
+            leftViewController!.navigationCategories = NavigationCategory.allCategories()
             
             addChildSidePanelController(leftViewController!)
         }

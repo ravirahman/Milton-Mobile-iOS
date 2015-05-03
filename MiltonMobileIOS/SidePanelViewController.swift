@@ -1,16 +1,7 @@
-//
-//  LeftViewController.swift
-//  SlideOutNavigation
-//
-//  Created by James Frost on 03/08/2014.
-//  Copyright (c) 2014 James Frost. All rights reserved.
-//
-
 import UIKit
 
-@objc
 protocol SidePanelViewControllerDelegate {
-  func animalSelected(animal: Animal)
+  func categorySelected(navigationCategory: NavigationCategory)
 }
 
 class SidePanelViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -19,11 +10,11 @@ class SidePanelViewController: UIViewController, UITableViewDataSource, UITableV
     
     var delegate: SidePanelViewControllerDelegate?
         
-    var animals: Array<Animal>!
+    var navigationCategories: Array<NavigationCategory>!
     
     struct TableView {
         struct CellIdentifiers {
-            static let AnimalCell = "AnimalCell"
+            static let NavigationCell = "NavigationCell"
         }
     }
   
@@ -40,32 +31,32 @@ class SidePanelViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return animals.count
+        return navigationCategories.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(TableView.CellIdentifiers.AnimalCell, forIndexPath: indexPath) as AnimalCell
-        cell.configureForAnimal(animals[indexPath.row])
+        let cell = tableView.dequeueReusableCellWithIdentifier(TableView.CellIdentifiers.NavigationCell, forIndexPath: indexPath) as! NavigationCell
+        cell.configureforCateogry(navigationCategories[indexPath.row])
         return cell
     }
     
     // Mark: Table View Delegate
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let selectedAnimal = animals[indexPath.row]
-        delegate?.animalSelected(selectedAnimal)
+        let selectedCategory = navigationCategories[indexPath.row]
+        delegate?.categorySelected(selectedCategory)
     }
     
 }
 
-class AnimalCell: UITableViewCell {
+class NavigationCell: UITableViewCell {
   @IBOutlet weak var animalImageView: UIImageView!
   @IBOutlet weak var imageNameLabel: UILabel!
   @IBOutlet weak var imageCreatorLabel: UILabel!
   
-  func configureForAnimal(animal: Animal) {
-    animalImageView.image = animal.image
-    imageNameLabel.text = animal.title
-    imageCreatorLabel.text = animal.creator
+  func configureforCateogry(navigationCategory: NavigationCategory) {
+    animalImageView.image = navigationCategory.image
+    imageNameLabel.text = navigationCategory.title
+    imageCreatorLabel.text = navigationCategory.creator
   }
 }

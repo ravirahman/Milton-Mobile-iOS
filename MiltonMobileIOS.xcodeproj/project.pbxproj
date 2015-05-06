@@ -7,20 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		41FB94691AF7DB5600D2C1B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FB94681AF7DB5600D2C1B5 /* AppDelegate.swift */; };
+		41E33E821AF999CE00FF50BE /* Events_Saa_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E33E791AF999CE00FF50BE /* Events_Saa_ViewController.swift */; };
+		41E33E831AF999CE00FF50BE /* Food_Flik_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E33E7C1AF999CE00FF50BE /* Food_Flik_ViewController.swift */; };
+		41E33E841AF999CE00FF50BE /* Me_Mailbox_ViewControllerMailbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E33E7F1AF999CE00FF50BE /* Me_Mailbox_ViewControllerMailbox.swift */; };
+		41E33E851AF999CE00FF50BE /* Settings_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E33E811AF999CE00FF50BE /* Settings_ViewController.swift */; };
+		41E33E871AF99A3000FF50BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E33E861AF99A3000FF50BE /* AppDelegate.swift */; };
+		41E33E8B1AF99C4000FF50BE /* Home_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E33E8A1AF99C4000FF50BE /* Home_ViewController.swift */; };
 		41FB946E1AF7DB5600D2C1B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41FB946C1AF7DB5600D2C1B5 /* Main.storyboard */; };
 		41FB94701AF7DB5600D2C1B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41FB946F1AF7DB5600D2C1B5 /* Images.xcassets */; };
 		41FB94731AF7DB5600D2C1B5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FB94711AF7DB5600D2C1B5 /* LaunchScreen.xib */; };
 		41FB947F1AF7DB5600D2C1B5 /* MiltonMobileIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FB947E1AF7DB5600D2C1B5 /* MiltonMobileIOSTests.swift */; };
-		41FB94911AF7DBCC00D2C1B5 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FB94881AF7DBCC00D2C1B5 /* Animal.swift */; };
-		41FB94921AF7DBCC00D2C1B5 /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FB94891AF7DBCC00D2C1B5 /* CenterViewController.swift */; };
-		41FB94931AF7DBCC00D2C1B5 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FB948A1AF7DBCC00D2C1B5 /* ContainerViewController.swift */; };
-		41FB94941AF7DBCC00D2C1B5 /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FB948B1AF7DBCC00D2C1B5 /* SidePanelViewController.swift */; };
-		41FB94951AF7DBCC00D2C1B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FB948C1AF7DBCC00D2C1B5 /* ViewController.swift */; };
-		41FB94961AF7DBCC00D2C1B5 /* ViewControllerFlik.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FB948D1AF7DBCC00D2C1B5 /* ViewControllerFlik.swift */; };
-		41FB94971AF7DBCC00D2C1B5 /* ViewControllerMailbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FB948E1AF7DBCC00D2C1B5 /* ViewControllerMailbox.swift */; };
-		41FB94981AF7DBCC00D2C1B5 /* ViewControllerSAA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FB948F1AF7DBCC00D2C1B5 /* ViewControllerSAA.swift */; };
-		41FB94991AF7DBCC00D2C1B5 /* ViewControllerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FB94901AF7DBCC00D2C1B5 /* ViewControllerSettings.swift */; };
 		41FB949E1AF7DC7C00D2C1B5 /* 1329_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41FB949A1AF7DC7C00D2C1B5 /* 1329_logo.jpg */; };
 		41FB94A01AF7DC7C00D2C1B5 /* Milton_Academy_Seal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41FB949C1AF7DC7C00D2C1B5 /* Milton_Academy_Seal.jpg */; };
 		41FB94A11AF7DC7C00D2C1B5 /* vegetarian.png in Resources */ = {isa = PBXBuildFile; fileRef = 41FB949D1AF7DC7C00D2C1B5 /* vegetarian.png */; };
@@ -37,25 +33,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		41E33E791AF999CE00FF50BE /* Events_Saa_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events_Saa_ViewController.swift; sourceTree = "<group>"; };
+		41E33E7C1AF999CE00FF50BE /* Food_Flik_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food_Flik_ViewController.swift; sourceTree = "<group>"; };
+		41E33E7F1AF999CE00FF50BE /* Me_Mailbox_ViewControllerMailbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Me_Mailbox_ViewControllerMailbox.swift; sourceTree = "<group>"; };
+		41E33E811AF999CE00FF50BE /* Settings_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings_ViewController.swift; sourceTree = "<group>"; };
+		41E33E861AF99A3000FF50BE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		41E33E8A1AF99C4000FF50BE /* Home_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home_ViewController.swift; sourceTree = "<group>"; };
 		41EEB50F1AF7DDC1002435F7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		41FB94631AF7DB5600D2C1B5 /* MiltonMobileIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiltonMobileIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41FB94671AF7DB5600D2C1B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		41FB94681AF7DB5600D2C1B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41FB946D1AF7DB5600D2C1B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41FB946F1AF7DB5600D2C1B5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		41FB94721AF7DB5600D2C1B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		41FB94781AF7DB5600D2C1B5 /* MiltonMobileIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiltonMobileIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41FB947D1AF7DB5600D2C1B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41FB947E1AF7DB5600D2C1B5 /* MiltonMobileIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiltonMobileIOSTests.swift; sourceTree = "<group>"; };
-		41FB94881AF7DBCC00D2C1B5 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
-		41FB94891AF7DBCC00D2C1B5 /* CenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
-		41FB948A1AF7DBCC00D2C1B5 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
-		41FB948B1AF7DBCC00D2C1B5 /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
-		41FB948C1AF7DBCC00D2C1B5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		41FB948D1AF7DBCC00D2C1B5 /* ViewControllerFlik.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerFlik.swift; sourceTree = "<group>"; };
-		41FB948E1AF7DBCC00D2C1B5 /* ViewControllerMailbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMailbox.swift; sourceTree = "<group>"; };
-		41FB948F1AF7DBCC00D2C1B5 /* ViewControllerSAA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerSAA.swift; sourceTree = "<group>"; };
-		41FB94901AF7DBCC00D2C1B5 /* ViewControllerSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerSettings.swift; sourceTree = "<group>"; };
 		41FB949A1AF7DC7C00D2C1B5 /* 1329_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1329_logo.jpg; sourceTree = "<group>"; };
 		41FB949C1AF7DC7C00D2C1B5 /* Milton_Academy_Seal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Milton_Academy_Seal.jpg; sourceTree = "<group>"; };
 		41FB949D1AF7DC7C00D2C1B5 /* vegetarian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vegetarian.png; sourceTree = "<group>"; };
@@ -79,6 +71,87 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41E33E6D1AF9998600FF50BE /* Src */ = {
+			isa = PBXGroup;
+			children = (
+				41E33E881AF99C0600FF50BE /* Home */,
+				41E33E861AF99A3000FF50BE /* AppDelegate.swift */,
+				41E33E771AF999CE00FF50BE /* Events */,
+				41E33E7A1AF999CE00FF50BE /* Food */,
+				41E33E7D1AF999CE00FF50BE /* Me */,
+				41E33E801AF999CE00FF50BE /* Settings */,
+			);
+			name = Src;
+			sourceTree = "<group>";
+		};
+		41E33E771AF999CE00FF50BE /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				41E33E781AF999CE00FF50BE /* Saa */,
+			);
+			name = Events;
+			path = Src/Events;
+			sourceTree = "<group>";
+		};
+		41E33E781AF999CE00FF50BE /* Saa */ = {
+			isa = PBXGroup;
+			children = (
+				41E33E791AF999CE00FF50BE /* Events_Saa_ViewController.swift */,
+			);
+			path = Saa;
+			sourceTree = "<group>";
+		};
+		41E33E7A1AF999CE00FF50BE /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				41E33E7B1AF999CE00FF50BE /* Flik */,
+			);
+			name = Food;
+			path = Src/Food;
+			sourceTree = "<group>";
+		};
+		41E33E7B1AF999CE00FF50BE /* Flik */ = {
+			isa = PBXGroup;
+			children = (
+				41E33E7C1AF999CE00FF50BE /* Food_Flik_ViewController.swift */,
+			);
+			path = Flik;
+			sourceTree = "<group>";
+		};
+		41E33E7D1AF999CE00FF50BE /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				41E33E7E1AF999CE00FF50BE /* Mailbox */,
+			);
+			name = Me;
+			path = Src/Me;
+			sourceTree = "<group>";
+		};
+		41E33E7E1AF999CE00FF50BE /* Mailbox */ = {
+			isa = PBXGroup;
+			children = (
+				41E33E7F1AF999CE00FF50BE /* Me_Mailbox_ViewControllerMailbox.swift */,
+			);
+			path = Mailbox;
+			sourceTree = "<group>";
+		};
+		41E33E801AF999CE00FF50BE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				41E33E811AF999CE00FF50BE /* Settings_ViewController.swift */,
+			);
+			name = Settings;
+			path = Src/Settings;
+			sourceTree = "<group>";
+		};
+		41E33E881AF99C0600FF50BE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				41E33E8A1AF99C4000FF50BE /* Home_ViewController.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
 		41FB945A1AF7DB5600D2C1B5 = {
 			isa = PBXGroup;
 			children = (
@@ -101,16 +174,7 @@
 		41FB94651AF7DB5600D2C1B5 /* MiltonMobileIOS */ = {
 			isa = PBXGroup;
 			children = (
-				41FB94881AF7DBCC00D2C1B5 /* Animal.swift */,
-				41FB94891AF7DBCC00D2C1B5 /* CenterViewController.swift */,
-				41FB948A1AF7DBCC00D2C1B5 /* ContainerViewController.swift */,
-				41FB948B1AF7DBCC00D2C1B5 /* SidePanelViewController.swift */,
-				41FB948C1AF7DBCC00D2C1B5 /* ViewController.swift */,
-				41FB948D1AF7DBCC00D2C1B5 /* ViewControllerFlik.swift */,
-				41FB948E1AF7DBCC00D2C1B5 /* ViewControllerMailbox.swift */,
-				41FB948F1AF7DBCC00D2C1B5 /* ViewControllerSAA.swift */,
-				41FB94901AF7DBCC00D2C1B5 /* ViewControllerSettings.swift */,
-				41FB94681AF7DB5600D2C1B5 /* AppDelegate.swift */,
+				41E33E6D1AF9998600FF50BE /* Src */,
 				41FB946C1AF7DB5600D2C1B5 /* Main.storyboard */,
 				41FB946F1AF7DB5600D2C1B5 /* Images.xcassets */,
 				41FB94711AF7DB5600D2C1B5 /* LaunchScreen.xib */,
@@ -251,16 +315,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41FB94961AF7DBCC00D2C1B5 /* ViewControllerFlik.swift in Sources */,
-				41FB94941AF7DBCC00D2C1B5 /* SidePanelViewController.swift in Sources */,
-				41FB94921AF7DBCC00D2C1B5 /* CenterViewController.swift in Sources */,
-				41FB94931AF7DBCC00D2C1B5 /* ContainerViewController.swift in Sources */,
-				41FB94951AF7DBCC00D2C1B5 /* ViewController.swift in Sources */,
-				41FB94691AF7DB5600D2C1B5 /* AppDelegate.swift in Sources */,
-				41FB94971AF7DBCC00D2C1B5 /* ViewControllerMailbox.swift in Sources */,
-				41FB94991AF7DBCC00D2C1B5 /* ViewControllerSettings.swift in Sources */,
-				41FB94981AF7DBCC00D2C1B5 /* ViewControllerSAA.swift in Sources */,
-				41FB94911AF7DBCC00D2C1B5 /* Animal.swift in Sources */,
+				41E33E8B1AF99C4000FF50BE /* Home_ViewController.swift in Sources */,
+				41E33E831AF999CE00FF50BE /* Food_Flik_ViewController.swift in Sources */,
+				41E33E841AF999CE00FF50BE /* Me_Mailbox_ViewControllerMailbox.swift in Sources */,
+				41E33E821AF999CE00FF50BE /* Events_Saa_ViewController.swift in Sources */,
+				41E33E871AF99A3000FF50BE /* AppDelegate.swift in Sources */,
+				41E33E851AF999CE00FF50BE /* Settings_ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,8 +449,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MiltonMobileIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -400,8 +462,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MiltonMobileIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

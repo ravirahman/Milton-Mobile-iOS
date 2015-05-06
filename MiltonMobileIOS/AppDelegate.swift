@@ -1,13 +1,4 @@
-//
-//  AppDelegate.swift
-//  MiltonMobileIOS
-//
-//  Created by Ravi Rahman on 5/4/15.
-//  Copyright (c) 2015 Milton Academy. All rights reserved.
-//
-
 import UIKit
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,12 +7,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        /*window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
         let containerViewController = ContainerViewController()
         
         window!.rootViewController = containerViewController
-        window!.makeKeyAndVisible()
+        window!.makeKeyAndVisible()*/
         return true
     }
 

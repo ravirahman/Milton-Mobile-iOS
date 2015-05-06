@@ -1,193 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="t72-DZ-8Ch">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Center View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
-            <objects>
-                <viewController storyboardIdentifier="CenterViewController" title="Center View Controller" id="vXZ-lx-hvc" customClass="CenterViewController" customModule="MiltonMobileIOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to Milton Mobile!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMC-FW-BQ2">
-                                <rect key="frame" x="201" y="433" width="199" height="20"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Contact Mr. Hales for questions or comments." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2r-S3-GSP">
-                                <rect key="frame" x="165" y="460" width="297" height="17"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="1329_logo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5QZ-bA-oHp">
-                                <rect key="frame" x="101" y="134" width="399" height="190"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="350" id="dKw-DS-MxB"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="5QZ-bA-oHp" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="30" id="4Lp-KK-goy"/>
-                            <constraint firstAttribute="centerX" secondItem="RMC-FW-BQ2" secondAttribute="centerX" id="9fL-10-c9s"/>
-                            <constraint firstItem="5QZ-bA-oHp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="MCH-FJ-3b5"/>
-                            <constraint firstAttribute="trailing" secondItem="5QZ-bA-oHp" secondAttribute="trailing" id="hlJ-6P-jnv"/>
-                            <constraint firstItem="t2r-S3-GSP" firstAttribute="top" secondItem="RMC-FW-BQ2" secondAttribute="bottom" constant="8" id="rmG-yf-gyZ"/>
-                            <constraint firstAttribute="centerX" secondItem="t2r-S3-GSP" secondAttribute="centerX" id="uGw-Tj-zhF"/>
-                            <constraint firstItem="RMC-FW-BQ2" firstAttribute="top" secondItem="5QZ-bA-oHp" secondAttribute="bottom" constant="50" id="vIa-Dl-gbe"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Slide Out Tutorial" id="Eg8-MT-Krf">
-                        <barButtonItem key="leftBarButtonItem" title="Open" id="HWO-cc-B6e">
-                            <connections>
-                                <action selector="kittiesTapped:" destination="vXZ-lx-hvc" id="4vV-uR-ALe"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <connections>
-                        <outlet property="creatorLabel" destination="t2r-S3-GSP" id="Pqh-qE-HCq"/>
-                        <outlet property="imageView" destination="5QZ-bA-oHp" id="xCn-vP-0gO"/>
-                        <outlet property="titleLabel" destination="RMC-FW-BQ2" id="9an-FH-eW0"/>
-                        <segue destination="cAZ-kd-cOY" kind="show" identifier="flik_segue" id="n73-bG-4kk"/>
-                        <segue destination="ukh-Ur-jUD" kind="show" identifier="saa_segue" id="0v5-6t-JNM"/>
-                        <segue destination="6iC-fY-UPf" kind="show" identifier="mailbox_segue" id="klc-LG-k8K"/>
-                        <segue destination="ieG-G4-egS" kind="show" identifier="settings_segue" id="Rll-Ux-62E"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="305" y="382"/>
-        </scene>
-        <!--View Controller Mailbox-->
+        <!--Mailbox-->
         <scene sceneID="PyE-RA-7YY">
             <objects>
-                <viewController id="6iC-fY-UPf" customClass="ViewControllerMailbox" customModule="MiltonMobileIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Me_Mailbox_ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6iC-fY-UPf" customClass="Me_Mailbox_ViewController" customModule="MiltonMobileIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gsi-DJ-Ec5"/>
-                        <viewControllerLayoutGuide type="bottom" id="0J9-O8-9Ve"/>
+                        <viewControllerLayoutGuide type="top" id="snq-ve-7ov"/>
+                        <viewControllerLayoutGuide type="bottom" id="J6h-iP-v2Q"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kk5-gY-08Z">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Mailbox" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mB3-xn-h2E">
-                                <rect key="frame" x="270" y="289" width="61" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mailbox" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mB3-xn-h2E">
+                                <rect key="frame" x="130" y="289" width="61" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="0J9-O8-9Ve" firstAttribute="top" secondItem="mB3-xn-h2E" secondAttribute="bottom" constant="290" id="2SC-q5-KJ2"/>
-                            <constraint firstItem="mB3-xn-h2E" firstAttribute="top" secondItem="gsi-DJ-Ec5" secondAttribute="bottom" constant="269" id="wmm-gG-uaJ"/>
-                            <constraint firstItem="mB3-xn-h2E" firstAttribute="centerX" secondItem="Kk5-gY-08Z" secondAttribute="centerX" id="xQy-dC-Mae"/>
-                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Mailbox" id="2Bf-aW-BzY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="atZ-gZ-FBg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-27" y="1547"/>
-        </scene>
-        <!--Left View Controller-->
-        <scene sceneID="1ll-8V-Mdv">
-            <objects>
-                <viewController storyboardIdentifier="LeftViewController" title="Left View Controller" id="Kzo-Kj-67C" customClass="SidePanelViewController" customModule="MiltonMobileIOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="U3c-bd-U6O"/>
-                        <viewControllerLayoutGuide type="bottom" id="cfu-bu-gtL"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="92D-xz-mFb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="QEm-P2-vPr">
-                                <rect key="frame" x="97" y="69" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AnimalCell" id="TXU-Kh-QMn" customClass="AnimalCell" customModule="MiltonMobileIOS" customModuleProvider="target">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TXU-Kh-QMn" id="hX0-Xf-csq">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xsm-hm-29D">
-                                                    <rect key="frame" x="0.0" y="0.0" width="85" height="53"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="85" id="amC-ZB-6o3"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Creator" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtZ-tG-vn5">
-                                                    <rect key="frame" x="93" y="30" width="74" height="14"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmN-aK-JCP">
-                                                    <rect key="frame" x="93" y="6" width="82" height="17"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="zmN-aK-JCP" firstAttribute="top" secondItem="hX0-Xf-csq" secondAttribute="top" constant="6" id="0RK-S5-flB"/>
-                                                <constraint firstAttribute="bottom" secondItem="Xsm-hm-29D" secondAttribute="bottom" id="3jZ-lC-4Ny"/>
-                                                <constraint firstItem="QtZ-tG-vn5" firstAttribute="top" secondItem="zmN-aK-JCP" secondAttribute="bottom" constant="6.5" id="HMG-mZ-au1"/>
-                                                <constraint firstItem="Xsm-hm-29D" firstAttribute="top" secondItem="hX0-Xf-csq" secondAttribute="top" id="eaw-WG-hcI"/>
-                                                <constraint firstItem="QtZ-tG-vn5" firstAttribute="leading" secondItem="zmN-aK-JCP" secondAttribute="leading" id="gFg-Xh-76V"/>
-                                                <constraint firstItem="zmN-aK-JCP" firstAttribute="leading" secondItem="Xsm-hm-29D" secondAttribute="trailing" constant="8" id="hZk-Bn-r9r"/>
-                                                <constraint firstItem="Xsm-hm-29D" firstAttribute="leading" secondItem="hX0-Xf-csq" secondAttribute="leading" id="vHQ-ER-rDL"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="animalImageView" destination="Xsm-hm-29D" id="hkX-Lc-2Uq"/>
-                                            <outlet property="imageCreatorLabel" destination="QtZ-tG-vn5" id="pmC-Ob-pSV"/>
-                                            <outlet property="imageNameLabel" destination="zmN-aK-JCP" id="Zul-tq-qzE"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="Kzo-Kj-67C" id="CWh-a3-aDE"/>
-                                    <outlet property="delegate" destination="Kzo-Kj-67C" id="shq-Bc-6e3"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="QEm-P2-vPr" firstAttribute="leading" secondItem="92D-xz-mFb" secondAttribute="leading" id="7t7-Pq-K5a"/>
-                            <constraint firstAttribute="trailing" secondItem="QEm-P2-vPr" secondAttribute="trailing" id="Eex-En-TLF"/>
-                            <constraint firstItem="QEm-P2-vPr" firstAttribute="top" secondItem="U3c-bd-U6O" secondAttribute="bottom" constant="-20" id="ZHh-u6-lTK"/>
-                            <constraint firstItem="cfu-bu-gtL" firstAttribute="top" secondItem="QEm-P2-vPr" secondAttribute="bottom" id="vke-7O-Jjj"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="tableView" destination="QEm-P2-vPr" id="bwQ-e1-eT0"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="J4t-sY-Xte" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-451" y="381"/>
+            <point key="canvasLocation" x="571" y="1162"/>
         </scene>
         <!--View Controller Settings-->
         <scene sceneID="59y-BY-643">
             <objects>
                 <viewController id="ieG-G4-egS" customClass="ViewControllerSettings" customModule="MiltonMobileIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OQm-F5-1JN"/>
-                        <viewControllerLayoutGuide type="bottom" id="5BJ-b9-uGa"/>
+                        <viewControllerLayoutGuide type="top" id="dgK-HV-hnn"/>
+                        <viewControllerLayoutGuide type="bottom" id="0wc-9V-nX4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XjA-wx-trB">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ip9-oB-yJH">
@@ -202,36 +56,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lJC-h1-A3T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="875" y="-1331"/>
+            <point key="canvasLocation" x="-20" y="-372"/>
         </scene>
-        <!--View Controller Flik-->
+        <!--FLIK-->
         <scene sceneID="WZf-QD-Nlx">
             <objects>
-                <viewController restorationIdentifier="flik_view" storyboardIdentifier="flik_view" id="cAZ-kd-cOY" customClass="ViewControllerFlik" customModule="MiltonMobileIOS" sceneMemberID="viewController">
+                <viewController restorationIdentifier="Food_Flik_ViewController" storyboardIdentifier="Food_Flik_ViewController" id="cAZ-kd-cOY" customClass="Food_Flik_ViewController" customModule="MiltonMobileIOS" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1CG-XW-Eef"/>
-                        <viewControllerLayoutGuide type="bottom" id="WpB-tK-OVK"/>
+                        <viewControllerLayoutGuide type="top" id="LAa-I7-mq2"/>
+                        <viewControllerLayoutGuide type="bottom" id="u1u-GW-Zzv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xbf-pR-AgJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="MrP-hL-urt">
-                                <rect key="frame" x="0.0" y="184" width="600" height="416"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="416" id="uIH-BE-KEX"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="dataSource" destination="cAZ-kd-cOY" id="gU1-Z3-608"/>
-                                    <outlet property="delegate" destination="cAZ-kd-cOY" id="GfE-ns-Crv"/>
-                                </connections>
-                            </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Milton_Academy_Seal.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YTE-Vf-DFE">
-                                <rect key="frame" x="180" y="28" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="B9i-ol-7Y5"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Milton_Academy_Seal.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YTE-Vf-DFE">
+                                <rect key="frame" x="40" y="28" width="240" height="96"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flik" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iM-Cj-xxC">
                                 <rect key="frame" x="67" y="116" width="27" height="21"/>
@@ -239,50 +79,141 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TXa-La-W2s">
+                                <rect key="frame" x="-5" y="145" width="320" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="cAZ-kd-cOY" id="nfn-xH-wx1"/>
+                                    <outlet property="delegate" destination="cAZ-kd-cOY" id="vwu-Lv-Tam"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="MrP-hL-urt" firstAttribute="leading" secondItem="xbf-pR-AgJ" secondAttribute="leading" id="6bh-sy-571"/>
-                            <constraint firstItem="MrP-hL-urt" firstAttribute="top" secondItem="YTE-Vf-DFE" secondAttribute="bottom" constant="28" id="6gD-UR-CHo"/>
-                            <constraint firstItem="YTE-Vf-DFE" firstAttribute="centerX" secondItem="MrP-hL-urt" secondAttribute="centerX" id="RhB-1L-Em5"/>
-                            <constraint firstItem="YTE-Vf-DFE" firstAttribute="top" secondItem="1CG-XW-Eef" secondAttribute="bottom" constant="8" symbolic="YES" id="fp7-MK-ZAg"/>
-                            <constraint firstItem="MrP-hL-urt" firstAttribute="bottom" secondItem="WpB-tK-OVK" secondAttribute="top" id="wQk-as-dFr"/>
-                            <constraint firstAttribute="trailing" secondItem="MrP-hL-urt" secondAttribute="trailing" id="wo4-pF-CQA"/>
-                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="FLIK" id="iyQ-Ha-Gkh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F9S-pB-NpO" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1195" y="-114"/>
+            <point key="canvasLocation" x="571" y="-180"/>
         </scene>
-        <!--View ControllerSAA-->
-        <scene sceneID="wa5-g3-EUE">
+        <!--Milton Academy-->
+        <scene sceneID="x0P-2K-i8D">
             <objects>
-                <viewController restorationIdentifier="saa_view" storyboardIdentifier="saa_view" id="ukh-Ur-jUD" customClass="ViewControllerSAA" customModule="MiltonMobileIOS" sceneMemberID="viewController">
+                <navigationController title="Milton Academy" id="t72-DZ-8Ch" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NVa-Sx-vnK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="s2W-bH-d1n">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BBV-pq-T5P" kind="relationship" relationship="rootViewController" id="6sf-gV-6hr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZsT-SK-KYR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-484" y="328"/>
+        </scene>
+        <!--Milton Academy-->
+        <scene sceneID="2fD-YO-msq">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1A3-5Z-DWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="BBV-pq-T5P" customClass="Home_ViewController" customModule="MiltonMobileIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9A6-8z-zOw"/>
-                        <viewControllerLayoutGuide type="bottom" id="fN4-rt-Z5X"/>
+                        <viewControllerLayoutGuide type="top" id="9sC-1u-o31"/>
+                        <viewControllerLayoutGuide type="bottom" id="qov-ff-rTy"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bx5-Zu-hrf">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="tqq-OX-GbJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mvx-Lq-ghl">
-                                <rect key="frame" x="0.0" y="184" width="600" height="416"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jal-XS-S8z">
+                                <rect key="frame" x="0.0" y="11" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="416" id="C7c-Mj-1hV"/>
-                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BBV-pq-T5P" id="jW1-b7-lkP"/>
+                                    <outlet property="delegate" destination="BBV-pq-T5P" id="vTY-bd-T5T"/>
+                                </connections>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzN-k2-FDG">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" id="Hk8-qA-f0L"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jal-XS-S8z" firstAttribute="leading" secondItem="gzN-k2-FDG" secondAttribute="leading" id="0eM-Yo-jI8"/>
+                            <constraint firstItem="jal-XS-S8z" firstAttribute="top" secondItem="tqq-OX-GbJ" secondAttribute="topMargin" constant="11" id="1Tb-yP-7aM"/>
+                            <constraint firstItem="gzN-k2-FDG" firstAttribute="bottom" secondItem="qov-ff-rTy" secondAttribute="top" id="KPc-lj-1tz"/>
+                            <constraint firstItem="jal-XS-S8z" firstAttribute="trailing" secondItem="gzN-k2-FDG" secondAttribute="trailing" id="SXV-QR-abX"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="jal-XS-S8z" secondAttribute="bottom" constant="-11" id="Z9u-6g-wem"/>
+                            <constraint firstItem="gzN-k2-FDG" firstAttribute="leading" secondItem="tqq-OX-GbJ" secondAttribute="leading" id="sSg-yM-cJD"/>
+                            <constraint firstAttribute="trailing" secondItem="gzN-k2-FDG" secondAttribute="trailing" id="vCS-9f-9Rz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Milton Academy" id="m68-PH-Qv0"/>
+                    <connections>
+                        <outlet property="navigationTableView" destination="jal-XS-S8z" id="5WZ-dt-hbk"/>
+                        <outlet property="toolbar" destination="gzN-k2-FDG" id="hDm-Tx-01R"/>
+                        <segue destination="cAZ-kd-cOY" kind="push" id="ojQ-E9-Mzm"/>
+                        <segue destination="ukh-Ur-jUD" kind="push" id="UM6-gg-xLI"/>
+                        <segue destination="6iC-fY-UPf" kind="push" id="plE-w3-UZl"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-20" y="350"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="587-9x-shh">
+            <objects>
+                <tableViewController id="nFE-XY-u3C" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Rff-Ce-kcc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="AKu-16-FRz">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AKu-16-FRz" id="5vf-Rg-Pnl">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nFE-XY-u3C" id="Sm0-Vs-U43"/>
+                            <outlet property="delegate" destination="nFE-XY-u3C" id="5fT-Wg-myy"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lZI-xk-hpJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14" y="1066"/>
+        </scene>
+        <!--SAA-->
+        <scene sceneID="wa5-g3-EUE">
+            <objects>
+                <viewController storyboardIdentifier="Events_Saa_ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ukh-Ur-jUD" customClass="Events_Saa_ViewController" customModule="MiltonMobileIOS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L3i-KV-fy8"/>
+                        <viewControllerLayoutGuide type="bottom" id="qjh-M6-8Vf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bx5-Zu-hrf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mvx-Lq-ghl">
+                                <rect key="frame" x="0.0" y="152" width="320" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="ukh-Ur-jUD" id="ooX-eh-tga"/>
                                     <outlet property="delegate" destination="ukh-Ur-jUD" id="6pV-Je-ubu"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Milton_Academy_Seal.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="tVg-D0-cy9">
-                                <rect key="frame" x="180" y="28" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="PQ9-PW-vro"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Milton_Academy_Seal.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="tVg-D0-cy9">
+                                <rect key="frame" x="40" y="28" width="240" height="96"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SAA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awg-lR-768">
                                 <rect key="frame" x="81" y="107" width="34" height="21"/>
@@ -292,23 +223,20 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="tVg-D0-cy9" firstAttribute="centerX" secondItem="mvx-Lq-ghl" secondAttribute="centerX" id="JYK-tZ-8zP"/>
-                            <constraint firstAttribute="trailing" secondItem="mvx-Lq-ghl" secondAttribute="trailing" id="Luj-9C-l5N"/>
-                            <constraint firstItem="mvx-Lq-ghl" firstAttribute="leading" secondItem="bx5-Zu-hrf" secondAttribute="leading" id="Na5-tT-var"/>
-                            <constraint firstItem="mvx-Lq-ghl" firstAttribute="bottom" secondItem="fN4-rt-Z5X" secondAttribute="top" id="P8c-lk-cnK"/>
-                            <constraint firstItem="mvx-Lq-ghl" firstAttribute="top" secondItem="tVg-D0-cy9" secondAttribute="bottom" constant="28" id="tCu-kg-OVD"/>
-                            <constraint firstItem="tVg-D0-cy9" firstAttribute="top" secondItem="9A6-8z-zOw" secondAttribute="bottom" constant="8" symbolic="YES" id="txc-Bd-1jK"/>
-                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="SAA" id="ii6-Ai-CSa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mub-8c-eyZ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1195" y="858"/>
+            <point key="canvasLocation" x="571" y="506"/>
         </scene>
     </scenes>
     <resources>
-        <image name="1329_logo.jpg" width="288" height="288"/>
         <image name="Milton_Academy_Seal.jpg" width="200" height="200"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

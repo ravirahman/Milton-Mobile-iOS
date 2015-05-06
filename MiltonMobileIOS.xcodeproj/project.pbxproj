@@ -17,7 +17,6 @@
 		41FB94701AF7DB5600D2C1B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41FB946F1AF7DB5600D2C1B5 /* Images.xcassets */; };
 		41FB94731AF7DB5600D2C1B5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FB94711AF7DB5600D2C1B5 /* LaunchScreen.xib */; };
 		41FB947F1AF7DB5600D2C1B5 /* MiltonMobileIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FB947E1AF7DB5600D2C1B5 /* MiltonMobileIOSTests.swift */; };
-		41FB949E1AF7DC7C00D2C1B5 /* 1329_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41FB949A1AF7DC7C00D2C1B5 /* 1329_logo.jpg */; };
 		41FB94A01AF7DC7C00D2C1B5 /* Milton_Academy_Seal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41FB949C1AF7DC7C00D2C1B5 /* Milton_Academy_Seal.jpg */; };
 		41FB94A11AF7DC7C00D2C1B5 /* vegetarian.png in Resources */ = {isa = PBXBuildFile; fileRef = 41FB949D1AF7DC7C00D2C1B5 /* vegetarian.png */; };
 /* End PBXBuildFile section */
@@ -34,7 +33,7 @@
 
 /* Begin PBXFileReference section */
 		41E33E791AF999CE00FF50BE /* Events_Saa_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events_Saa_ViewController.swift; sourceTree = "<group>"; };
-		41E33E7C1AF999CE00FF50BE /* Food_Flik_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food_Flik_ViewController.swift; sourceTree = "<group>"; };
+		41E33E7C1AF999CE00FF50BE /* Food_Flik_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Food_Flik_ViewController.swift; path = Flik/Food_Flik_ViewController.swift; sourceTree = "<group>"; };
 		41E33E7F1AF999CE00FF50BE /* Me_Mailbox_ViewControllerMailbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Me_Mailbox_ViewControllerMailbox.swift; sourceTree = "<group>"; };
 		41E33E811AF999CE00FF50BE /* Settings_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings_ViewController.swift; sourceTree = "<group>"; };
 		41E33E861AF99A3000FF50BE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +47,6 @@
 		41FB94781AF7DB5600D2C1B5 /* MiltonMobileIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiltonMobileIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41FB947D1AF7DB5600D2C1B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41FB947E1AF7DB5600D2C1B5 /* MiltonMobileIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiltonMobileIOSTests.swift; sourceTree = "<group>"; };
-		41FB949A1AF7DC7C00D2C1B5 /* 1329_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1329_logo.jpg; sourceTree = "<group>"; };
 		41FB949C1AF7DC7C00D2C1B5 /* Milton_Academy_Seal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Milton_Academy_Seal.jpg; sourceTree = "<group>"; };
 		41FB949D1AF7DC7C00D2C1B5 /* vegetarian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vegetarian.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,7 +79,7 @@
 				41E33E7D1AF999CE00FF50BE /* Me */,
 				41E33E801AF999CE00FF50BE /* Settings */,
 			);
-			name = Src;
+			path = Src;
 			sourceTree = "<group>";
 		};
 		41E33E771AF999CE00FF50BE /* Events */ = {
@@ -89,8 +87,7 @@
 			children = (
 				41E33E781AF999CE00FF50BE /* Saa */,
 			);
-			name = Events;
-			path = Src/Events;
+			path = Events;
 			sourceTree = "<group>";
 		};
 		41E33E781AF999CE00FF50BE /* Saa */ = {
@@ -104,16 +101,15 @@
 		41E33E7A1AF999CE00FF50BE /* Food */ = {
 			isa = PBXGroup;
 			children = (
+				41E33E7C1AF999CE00FF50BE /* Food_Flik_ViewController.swift */,
 				41E33E7B1AF999CE00FF50BE /* Flik */,
 			);
-			name = Food;
-			path = Src/Food;
+			path = Food;
 			sourceTree = "<group>";
 		};
 		41E33E7B1AF999CE00FF50BE /* Flik */ = {
 			isa = PBXGroup;
 			children = (
-				41E33E7C1AF999CE00FF50BE /* Food_Flik_ViewController.swift */,
 			);
 			path = Flik;
 			sourceTree = "<group>";
@@ -123,8 +119,7 @@
 			children = (
 				41E33E7E1AF999CE00FF50BE /* Mailbox */,
 			);
-			name = Me;
-			path = Src/Me;
+			path = Me;
 			sourceTree = "<group>";
 		};
 		41E33E7E1AF999CE00FF50BE /* Mailbox */ = {
@@ -140,8 +135,7 @@
 			children = (
 				41E33E811AF999CE00FF50BE /* Settings_ViewController.swift */,
 			);
-			name = Settings;
-			path = Src/Settings;
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		41E33E881AF99C0600FF50BE /* Home */ = {
@@ -149,7 +143,7 @@
 			children = (
 				41E33E8A1AF99C4000FF50BE /* Home_ViewController.swift */,
 			);
-			name = Home;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		41FB945A1AF7DB5600D2C1B5 = {
@@ -186,7 +180,6 @@
 		41FB94661AF7DB5600D2C1B5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				41FB949A1AF7DC7C00D2C1B5 /* 1329_logo.jpg */,
 				41FB949C1AF7DC7C00D2C1B5 /* Milton_Academy_Seal.jpg */,
 				41FB949D1AF7DC7C00D2C1B5 /* vegetarian.png */,
 				41FB94671AF7DB5600D2C1B5 /* Info.plist */,
@@ -296,7 +289,6 @@
 				41FB946E1AF7DB5600D2C1B5 /* Main.storyboard in Resources */,
 				41FB94731AF7DB5600D2C1B5 /* LaunchScreen.xib in Resources */,
 				41FB94701AF7DB5600D2C1B5 /* Images.xcassets in Resources */,
-				41FB949E1AF7DC7C00D2C1B5 /* 1329_logo.jpg in Resources */,
 				41FB94A11AF7DC7C00D2C1B5 /* vegetarian.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

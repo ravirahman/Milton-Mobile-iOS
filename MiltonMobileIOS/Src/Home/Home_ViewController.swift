@@ -39,7 +39,11 @@ class Home_ViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func barButtonItemClicked(barButtonItem: UIBarButtonItem) {
-        NSLog("clicked")
+        if(barButtonItem.title == toolbarSettingsItem.title){
+            let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Settings_ViewController") as! Settings_ViewController
+            self.navigationController?.pushViewController(secondViewController, animated: true)
+        }
+
     }
 
     @IBOutlet weak var navigationTableView: UITableView!

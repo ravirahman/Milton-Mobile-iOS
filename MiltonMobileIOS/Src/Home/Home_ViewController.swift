@@ -40,7 +40,7 @@ class Home_ViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func barButtonItemClicked(barButtonItem: UIBarButtonItem) {
         if(barButtonItem.title == toolbarSettingsItem.title){
-            let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Settings_ViewController") as! Settings_ViewController
+            let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Settings_ViewController") as Settings_ViewController
             self.navigationController?.pushViewController(secondViewController, animated: true)
         }
 
@@ -83,7 +83,7 @@ class Home_ViewController: UIViewController, UITableViewDataSource, UITableViewD
             case "Food":
                 switch(subsection) {
                     case "FLIK":
-                        let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Food_Flik_ViewController") as! Food_Flik_ViewController
+                        let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Food_Flik_ViewController") as Food_Flik_ViewController
                         
                         self.navigationController?.pushViewController(secondViewController, animated: true)
                         break
@@ -94,7 +94,7 @@ class Home_ViewController: UIViewController, UITableViewDataSource, UITableViewD
         case "Events":
             switch(subsection) {
             case "SAA":
-                let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Events_Saa_ViewController") as! Events_Saa_ViewController
+                let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Events_Saa_ViewController") as Events_Saa_ViewController
                 
                 self.navigationController?.pushViewController(secondViewController, animated: true)
                 break
@@ -105,7 +105,7 @@ class Home_ViewController: UIViewController, UITableViewDataSource, UITableViewD
         case "Me":
             switch(subsection) {
             case "Mailbox":
-                let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Me_Mailbox_ViewController") as! Me_Mailbox_ViewController
+                let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Me_Mailbox_ViewController") as Me_Mailbox_ViewController
                 
                 self.navigationController?.pushViewController(secondViewController, animated: true)
                 break

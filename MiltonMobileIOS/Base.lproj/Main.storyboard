@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="t72-DZ-8Ch">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="t72-DZ-8Ch">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -15,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="J6h-iP-v2Q"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kk5-gY-08Z">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mailbox" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mB3-xn-h2E">
@@ -37,6 +38,74 @@
             </objects>
             <point key="canvasLocation" x="494" y="1199"/>
         </scene>
+        <!--Settings Login View Controller-->
+        <scene sceneID="AeV-dt-m1P">
+            <objects>
+                <viewController id="MY5-c0-Fz1" customClass="Settings_Login_ViewController" customModule="MiltonMobileIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DJg-IX-bTA"/>
+                        <viewControllerLayoutGuide type="bottom" id="H5m-to-4It"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lm5-0u-65F">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Login Using Your myMilton Credentials" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNq-0x-M8T">
+                                <rect key="frame" x="123" y="276" width="354" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3uD-5h-Tbj">
+                                <rect key="frame" x="202" y="341" width="196" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2P8-hm-bVp">
+                                <rect key="frame" x="202" y="379" width="196" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gf-FK-O7E">
+                                <rect key="frame" x="277" y="417" width="43" height="30"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="v9q-XA-b4i">
+                                <rect key="frame" x="188" y="305" width="224" height="29"/>
+                                <segments>
+                                    <segment title="Student"/>
+                                    <segment title="Teacher"/>
+                                    <segment title="Parent"/>
+                                </segments>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Milton_Academy_Seal.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="FTw-Dk-iNO">
+                                <rect key="frame" x="202" y="72" width="196" height="196"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="196" id="a1f-mp-DMH"/>
+                                    <constraint firstAttribute="width" constant="196" id="ueE-lo-Fww"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FTw-Dk-iNO" firstAttribute="centerX" secondItem="v9q-XA-b4i" secondAttribute="centerX" id="Cbg-78-Iin"/>
+                            <constraint firstItem="FTw-Dk-iNO" firstAttribute="leading" secondItem="3uD-5h-Tbj" secondAttribute="leading" id="Ej1-sN-Cdk"/>
+                            <constraint firstItem="FTw-Dk-iNO" firstAttribute="centerX" secondItem="gNq-0x-M8T" secondAttribute="centerX" id="Gml-4N-5lb"/>
+                            <constraint firstItem="FTw-Dk-iNO" firstAttribute="trailing" secondItem="2P8-hm-bVp" secondAttribute="trailing" id="K6D-zS-R6W"/>
+                            <constraint firstItem="gNq-0x-M8T" firstAttribute="top" secondItem="FTw-Dk-iNO" secondAttribute="bottom" constant="8" symbolic="YES" id="MD4-4b-YPd"/>
+                            <constraint firstItem="FTw-Dk-iNO" firstAttribute="centerX" secondItem="Lm5-0u-65F" secondAttribute="centerX" id="fxs-nb-taH"/>
+                            <constraint firstItem="FTw-Dk-iNO" firstAttribute="top" secondItem="DJg-IX-bTA" secondAttribute="bottom" constant="8" symbolic="YES" id="gdJ-Cd-523"/>
+                            <constraint firstItem="FTw-Dk-iNO" firstAttribute="leading" secondItem="2P8-hm-bVp" secondAttribute="leading" id="s4y-gX-JXn"/>
+                            <constraint firstItem="FTw-Dk-iNO" firstAttribute="trailing" secondItem="3uD-5h-Tbj" secondAttribute="trailing" id="uZE-Y9-lMm"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SzL-4T-Us8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-726" y="-371"/>
+        </scene>
         <!--Settings View Controller-->
         <scene sceneID="59y-BY-643">
             <objects>
@@ -48,19 +117,7 @@
                     <view key="view" contentMode="scaleToFill" id="XjA-wx-trB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ip9-oB-yJH">
-                                <rect key="frame" x="279" y="289" width="63" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="Ip9-oB-yJH" secondAttribute="centerY" constant="0.5" id="OUj-tK-H0a"/>
-                            <constraint firstAttribute="centerX" secondItem="Ip9-oB-yJH" secondAttribute="centerX" constant="-10.5" id="gKk-yh-MwS"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lJC-h1-A3T" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -76,7 +133,7 @@
                         <viewControllerLayoutGuide type="bottom" id="u1u-GW-Zzv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xbf-pR-AgJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Milton_Academy_Seal.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YTE-Vf-DFE">
@@ -120,7 +177,7 @@
         <!--Milton Academy-->
         <scene sceneID="x0P-2K-i8D">
             <objects>
-                <navigationController title="Milton Academy" id="t72-DZ-8Ch" sceneMemberID="viewController">
+                <navigationController title="Milton Academy" id="t72-DZ-8Ch" customClass="Navigation_Controller" customModule="MiltonMobileIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NVa-Sx-vnK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -139,27 +196,26 @@
         <!--Milton Academy-->
         <scene sceneID="2fD-YO-msq">
             <objects>
-                <viewController id="BBV-pq-T5P" customClass="Home_ViewController" customModule="MiltonMobileIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Milton Academy" id="BBV-pq-T5P" customClass="Home_ViewController" customModule="MiltonMobileIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9sC-1u-o31"/>
                         <viewControllerLayoutGuide type="bottom" id="qov-ff-rTy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tqq-OX-GbJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzN-k2-FDG">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem title="Settings" id="Hk8-qA-f0L" userLabel="Settings"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="H3G-zv-FJ2"/>
+                                    <barButtonItem title="Login" id="Hk8-qA-f0L" userLabel="Settings">
+                                        <connections>
+                                            <segue destination="MY5-c0-Fz1" kind="show" id="3ef-q5-gLX"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Milton_Academy_Seal.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9fj-oT-qEI">
-                                <rect key="frame" x="4" y="72" width="592" height="96"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="mib-I2-4nJ"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWG-er-t3P">
                                 <rect key="frame" x="9" y="228" width="100" height="100"/>
                                 <constraints>
@@ -218,6 +274,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Milton_Academy_Seal.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9fj-oT-qEI">
+                                <rect key="frame" x="4" y="72" width="592" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="mib-I2-4nJ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -248,9 +310,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Milton Academy" id="m68-PH-Qv0"/>
-                    <connections>
-                        <outlet property="toolbar" destination="gzN-k2-FDG" id="hDm-Tx-01R"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1A3-5Z-DWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -291,7 +350,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qjh-M6-8Vf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bx5-Zu-hrf">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Milton_Academy_Seal.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="tVg-D0-cy9">

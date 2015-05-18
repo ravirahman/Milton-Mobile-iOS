@@ -19,6 +19,8 @@
 		41FB947F1AF7DB5600D2C1B5 /* MiltonMobileIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FB947E1AF7DB5600D2C1B5 /* MiltonMobileIOSTests.swift */; };
 		41FB94A01AF7DC7C00D2C1B5 /* Milton_Academy_Seal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41FB949C1AF7DC7C00D2C1B5 /* Milton_Academy_Seal.jpg */; };
 		41FB94A11AF7DC7C00D2C1B5 /* vegetarian.png in Resources */ = {isa = PBXBuildFile; fileRef = 41FB949D1AF7DC7C00D2C1B5 /* vegetarian.png */; };
+		59701F6C1B0A49FB00EADE8E /* flikicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 59701F6A1B0A49FB00EADE8E /* flikicon.png */; };
+		59701F6D1B0A49FB00EADE8E /* saaiconnew.png in Resources */ = {isa = PBXBuildFile; fileRef = 59701F6B1B0A49FB00EADE8E /* saaiconnew.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		41FB947E1AF7DB5600D2C1B5 /* MiltonMobileIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiltonMobileIOSTests.swift; sourceTree = "<group>"; };
 		41FB949C1AF7DC7C00D2C1B5 /* Milton_Academy_Seal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Milton_Academy_Seal.jpg; sourceTree = "<group>"; };
 		41FB949D1AF7DC7C00D2C1B5 /* vegetarian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vegetarian.png; sourceTree = "<group>"; };
+		59701F6A1B0A49FB00EADE8E /* flikicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flikicon.png; sourceTree = "<group>"; };
+		59701F6B1B0A49FB00EADE8E /* saaiconnew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saaiconnew.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +184,8 @@
 		41FB94661AF7DB5600D2C1B5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				59701F6A1B0A49FB00EADE8E /* flikicon.png */,
+				59701F6B1B0A49FB00EADE8E /* saaiconnew.png */,
 				41FB949C1AF7DC7C00D2C1B5 /* Milton_Academy_Seal.jpg */,
 				41FB949D1AF7DC7C00D2C1B5 /* vegetarian.png */,
 				41FB94671AF7DB5600D2C1B5 /* Info.plist */,
@@ -288,7 +294,9 @@
 				41FB94A01AF7DC7C00D2C1B5 /* Milton_Academy_Seal.jpg in Resources */,
 				41FB946E1AF7DB5600D2C1B5 /* Main.storyboard in Resources */,
 				41FB94731AF7DB5600D2C1B5 /* LaunchScreen.xib in Resources */,
+				59701F6D1B0A49FB00EADE8E /* saaiconnew.png in Resources */,
 				41FB94701AF7DB5600D2C1B5 /* Images.xcassets in Resources */,
+				59701F6C1B0A49FB00EADE8E /* flikicon.png in Resources */,
 				41FB94A11AF7DC7C00D2C1B5 /* vegetarian.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

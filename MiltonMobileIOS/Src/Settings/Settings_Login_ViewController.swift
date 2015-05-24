@@ -1,4 +1,6 @@
 import UIKit
+import Alamofire
+import HTMLReader
 
 class Settings_Login_ViewController: UIViewController {
     
@@ -13,6 +15,15 @@ class Settings_Login_ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func validateCredentials(username: String, password: String) {
+        let url = NSURL(string: "https://my.milton.edu/student/index.cfm") //TODO fix the date so the user can select it
+        var request : NSMutableURLRequest = NSMutableURLRequest()
+        
+        Alamofire.request(.POST,"https://my.milton.edu/student/index.cfm",parameters: ["":""]).response{(request, response, data, error) in
+
+            
+            }
+    }
     
     /*
     // MARK: - Navigation

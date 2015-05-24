@@ -1,0 +1,9 @@
+[submodule "Alamofire"]
+	path = Alamofire
+	url = https://github.com/Alamofire/Alamofire.git
+[submodule "hpple"]
+	path = hpple
+	url = https://github.com/topfunky/hpple.git
+[submodule "HTMLReader"]
+	path = HTMLReader
+	url = https://github.com/nolanw/HTMLReader.git

@@ -4,7 +4,8 @@ class Navigation_Controller: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-              
+        self.navigationBar.barStyle = UIBarStyle.Default
+        self.navigationBar.tintColor = UIColor.orangeColor()
         // Do any additional setup after loading the view.
     }
     

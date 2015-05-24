@@ -9,13 +9,7 @@ class Food_Flik_ViewController: UIViewController, UITableViewDataSource, UITable
     var numSectionsLunch = 5
     var numSectionsDinner = 6
     var imageThing : UIImageView?
-    
-    func populateArray(){
-        for(var i = 0; i <= 30; i++){
-            array.append("data" + String(num));
-            num = num + 1;
-        }
-    }
+
     
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -139,12 +133,20 @@ class Food_Flik_ViewController: UIViewController, UITableViewDataSource, UITable
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        populateArray();
-        let url = NSURL(string: "http://flik.ma1geek.org/getMeals.php?date=2015-05-22")
+        let url = NSURL(string: "http://flik.ma1geek.org/getMeals.php?date=2015-05-22&version=2") //TODO fix the date so the user can select it
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
-            println(NSString(data: data, encoding: NSUTF8StringEncoding))
             let json = JSON(data: data)
+            if let mealtimes = json.dictionary {
+                //format of dictionary mealtimes:
+                //{mealtime:{mealclass:[menuitems],mealcalss2:[menuitems]},mealtime2:{mealclass:[menuitems],mealcalss2:[menuitems]}
+                //for example:
+                //{Lunch:{Entree:[Hamburgers, Hot Dogs, French Fries], Flik Live: Caesar Wraps},Dinner:{Entree: [Good ol' plain pasta, Yummy carrot sticks],Dessert:[Pink Ice Cream, Dog Biscuits]}}
+                //TODO Justin please populate the table using this format
+                for (mealtime, categories) in mealtimes {
+                    //mealtimes and categories are SwiftyJSON Objects -- see https://github.com/SwiftyJSON/SwiftyJSON
+                }
+            }
         }
         
         task.resume()

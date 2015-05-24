@@ -121,7 +121,20 @@ class Events_Saa_ViewController: UIViewController, UITableViewDataSource, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        populateArray()
+        let url = NSURL(string: "http://saa.ma1geek.org/getActivities.php?date=2015-05-22") //TODO fix the date so the user can select it
+        
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
+            let json = JSON(data: data)
+            if let activitiesO = json.dictionary {
+                //format of dictionary activitiesO:
+                //{"Activities":[arrayOfActivites]}
+                //TODO Justin please populate the table using this format
+                    //see https://github.com/SwiftyJSON/SwiftyJSON
+                
+            }
+        }
+        
+        task.resume()
     }
     
     override func didReceiveMemoryWarning() {

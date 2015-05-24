@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		412EE7CF1B0F9D5C00244486 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412EE7CE1B0F9D5C00244486 /* SwiftyJSON.swift */; };
 		41D8CBDA1B0A8EC30040E5D1 /* Settings_Login_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D8CBD91B0A8EC30040E5D1 /* Settings_Login_ViewController.swift */; };
 		41D8CBDC1B0A950D0040E5D1 /* Navigation_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D8CBDB1B0A950D0040E5D1 /* Navigation_Controller.swift */; };
 		41E33E821AF999CE00FF50BE /* Events_Saa_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E33E791AF999CE00FF50BE /* Events_Saa_ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		412EE7CE1B0F9D5C00244486 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		41D8CBD91B0A8EC30040E5D1 /* Settings_Login_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings_Login_ViewController.swift; sourceTree = "<group>"; };
 		41D8CBDB1B0A950D0040E5D1 /* Navigation_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigation_Controller.swift; sourceTree = "<group>"; };
 		41E33E791AF999CE00FF50BE /* Events_Saa_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events_Saa_ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				41E33E7A1AF999CE00FF50BE /* Food */,
 				41E33E7D1AF999CE00FF50BE /* Me */,
 				41E33E801AF999CE00FF50BE /* Settings */,
+				412EE7CE1B0F9D5C00244486 /* SwiftyJSON.swift */,
 			);
 			path = Src;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				41E33E841AF999CE00FF50BE /* Me_Mailbox_ViewControllerMailbox.swift in Sources */,
 				41E33E821AF999CE00FF50BE /* Events_Saa_ViewController.swift in Sources */,
 				41D8CBDA1B0A8EC30040E5D1 /* Settings_Login_ViewController.swift in Sources */,
+				412EE7CF1B0F9D5C00244486 /* SwiftyJSON.swift in Sources */,
 				41E33E871AF99A3000FF50BE /* AppDelegate.swift in Sources */,
 				41E33E851AF999CE00FF50BE /* Settings_ViewController.swift in Sources */,
 			);

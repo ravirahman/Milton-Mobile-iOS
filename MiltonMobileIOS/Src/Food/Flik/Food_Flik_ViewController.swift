@@ -139,7 +139,15 @@ class Food_Flik_ViewController: UIViewController, UITableViewDataSource, UITable
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        populateArray()
+        populateArray();
+        let url = NSURL(string: "http://flik.ma1geek.org/getMeals.php?date=2015-05-22")
+        
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
+            println(NSString(data: data, encoding: NSUTF8StringEncoding))
+            let json = JSON(data: data)
+        }
+        
+        task.resume()
         // Do any additional setup after loading the view, typically from a nib.
     }
 

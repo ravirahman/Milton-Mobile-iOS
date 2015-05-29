@@ -2,10 +2,18 @@ import UIKit
 import Alamofire
 import HTMLReader
 
-class Settings_Login_ViewController: UIViewController {
+protocol Home_ViewController_Delegate {
+    func setLoggedIn()
+}
+
+class Settings_Login_ViewController: UIViewController, UITextFieldDelegate {
+    
+    var delegate: Home_ViewController_Delegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.usernameField.delegate = self
+        self.passwordField.delegate = self
         
         // Do any additional setup after loading the view.
     }
@@ -30,6 +38,8 @@ class Settings_Login_ViewController: UIViewController {
             alert.show()
         }
         else {
+            self.usernameField.resignFirstResponder()
+            self.passwordField.resignFirstResponder()
             validateCredentials(username, password: password)
         }
     }
@@ -72,16 +82,19 @@ class Settings_Login_ViewController: UIViewController {
                 println("lastName: " + lastName);
                 println("class: " + String(classNumber));
                 
+                KeychainWrapper.setString("true", forKey: "loggedIn")
                 KeychainWrapper.setString(username, forKey: "username")
                 KeychainWrapper.setString(password, forKey: "password")
                 KeychainWrapper.setString(firstName, forKey: "firstName")
-                KeychainWrapper.setString(lastName, forKey: "lastNAme")
+                KeychainWrapper.setString(lastName, forKey: "lastName")
                 KeychainWrapper.setString(String(classNumber), forKey: "classNumber")
+                
                 var alert = UIAlertView();
                 alert.title = "Welcome"
                 alert.message = "Welcome " + firstName + " " + lastName
                 alert.addButtonWithTitle("Continue")
                 alert.show()
+                self.delegate?.setLoggedIn()
                 self.navigationController?.popViewControllerAnimated(true)
             }
             else {
@@ -94,6 +107,17 @@ class Settings_Login_ViewController: UIViewController {
             
         }
     }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        loginClicked(UITextField)
+        return false
+    }
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+        
+    }
+    
 
     
 }

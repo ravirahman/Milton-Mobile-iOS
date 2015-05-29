@@ -4,9 +4,37 @@ class Home_ViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //configureToolbar()
+        if let retrievedString: String? = KeychainWrapper.stringForKey("loggedIn") {
+            loginButton.enabled = false
+            loginButton.title = nil
+        }
+        else {
+            logoutButton.enabled = false
+            logoutButton.title = nil
+        }
     }
 
+    @IBAction func logoutClicked(sender: AnyObject) {
+        KeychainWrapper.removeObjectForKey("loggedIn")
+        KeychainWrapper.removeObjectForKey("username")
+        KeychainWrapper.removeObjectForKey("password")
+        KeychainWrapper.removeObjectForKey("firstName")
+        KeychainWrapper.removeObjectForKey("lastName")
+        KeychainWrapper.removeObjectForKey("classNumber")
+        
+        var alert = UIAlertView();
+        alert.title = "Logged Out"
+        alert.message = "You have been logged out"
+        alert.addButtonWithTitle("OK")
+        alert.show()
+        self.navigationController?.popViewControllerAnimated(true)
+        
+        logoutButton.enabled = false
+        logoutButton.title = nil
+        loginButton.enabled = true
+        loginButton.title = "Login"
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -29,6 +57,8 @@ class Home_ViewController: UIViewController, UITableViewDataSource, UITableViewD
     }*/
     
 
+    @IBOutlet weak var loginButton: UIBarButtonItem!
+    @IBOutlet weak var logoutButton: UIBarButtonItem!
     var toolbarSettingsItem: UIBarButtonItem {
         let toolbarSettingsItem = UIBarButtonItem(title: "Settings", style: .Plain, target: self, action: "barButtonItemClicked:")
         return toolbarSettingsItem
@@ -131,5 +161,13 @@ class Home_ViewController: UIViewController, UITableViewDataSource, UITableViewD
                 break*/
             
         }
+    }
+}
+extension Home_ViewController: Home_ViewController_Delegate {
+    func setLoggedIn() {
+        logoutButton.enabled = false
+        logoutButton.title = nil
+        loginButton.enabled = true
+        loginButton.title = "Login"
     }
 }

@@ -223,6 +223,11 @@
                                             <segue destination="MY5-c0-Fz1" kind="show" id="3ef-q5-gLX"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="Logout" id="3qX-p1-2PS">
+                                        <connections>
+                                            <action selector="logoutClicked:" destination="BBV-pq-T5P" id="Fg2-m9-EN5"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWG-er-t3P">
@@ -319,6 +324,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Milton Academy" id="m68-PH-Qv0"/>
+                    <connections>
+                        <outlet property="loginButton" destination="Hk8-qA-f0L" id="g8o-Jl-YPJ"/>
+                        <outlet property="logoutButton" destination="3qX-p1-2PS" id="GDK-yJ-6lF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1A3-5Z-DWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

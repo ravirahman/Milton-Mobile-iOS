@@ -35,6 +35,20 @@ class Home_ViewController: UIViewController, UITableViewDataSource, UITableViewD
         loginButton.title = "Login"
         
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "loginSegue") {
+            //get a reference to the destination view controller
+            
+            (segue.destinationViewController as! Settings_Login_ViewController).delegate = self
+            
+            let destinationVC:Settings_Login_ViewController = segue.destinationViewController as! Settings_Login_ViewController
+            
+        }
+        super.prepareForSegue(segue, sender: sender)
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -165,9 +179,9 @@ class Home_ViewController: UIViewController, UITableViewDataSource, UITableViewD
 }
 extension Home_ViewController: Home_ViewController_Delegate {
     func setLoggedIn() {
-        logoutButton.enabled = false
-        logoutButton.title = nil
-        loginButton.enabled = true
-        loginButton.title = "Login"
+        self.logoutButton.enabled = true
+        self.logoutButton.title = "Logout"
+        self.loginButton.enabled = false
+        self.loginButton.title = nil
     }
 }

@@ -3,7 +3,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -220,7 +219,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="H3G-zv-FJ2"/>
                                     <barButtonItem title="Login" id="Hk8-qA-f0L" userLabel="Settings">
                                         <connections>
-                                            <segue destination="MY5-c0-Fz1" kind="show" id="3ef-q5-gLX"/>
+                                            <segue destination="MY5-c0-Fz1" kind="show" identifier="loginSegue" id="3ef-q5-gLX"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Logout" id="3qX-p1-2PS">
@@ -231,9 +230,10 @@
                                 </items>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWG-er-t3P">
-                                <rect key="frame" x="122" y="228" width="100" height="100"/>
+                                <rect key="frame" x="190" y="244" width="68" height="68"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="D6r-kM-x6G"/>
+                                    <constraint firstAttribute="width" constant="68" id="5nA-IO-eDd"/>
+                                    <constraint firstAttribute="height" constant="68" id="YZg-0a-OjO"/>
                                 </constraints>
                                 <state key="normal" image="flikicon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -243,7 +243,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAO-4e-3JM">
-                                <rect key="frame" x="250" y="228" width="100" height="100"/>
+                                <rect key="frame" x="266" y="244" width="68" height="68"/>
                                 <state key="normal" image="mailbox_not_pressed.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -252,28 +252,26 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mailbox" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAk-Kc-INo">
-                                <rect key="frame" x="270" y="336" width="61" height="21"/>
+                                <rect key="frame" x="270" y="320" width="61" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="61" id="HAr-yS-w5d"/>
+                                    <constraint firstAttribute="width" constant="61" id="qOp-nE-lTj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flik" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dps-28-zOq">
-                                <rect key="frame" x="159" y="336" width="27" height="21"/>
+                                <rect key="frame" x="211" y="320" width="27" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="27" id="Cj2-sD-SkF"/>
+                                    <constraint firstAttribute="height" constant="21" id="5CP-7h-m3Z"/>
+                                    <constraint firstAttribute="width" constant="27" id="RbX-EM-X0w"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7P-cS-MG5">
-                                <rect key="frame" x="380" y="228" width="94" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="94" id="AXK-em-SQl"/>
-                                </constraints>
+                                <rect key="frame" x="342" y="244" width="68" height="68"/>
                                 <state key="normal" image="saaiconnew.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -281,16 +279,20 @@
                                     <segue destination="ukh-Ur-jUD" kind="show" id="QxQ-bL-HtE"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Sn-7r-Yzd">
-                                <rect key="frame" x="410" y="336" width="34" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Milton Academy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8M-ZL-y62">
+                                <rect key="frame" x="124" y="151" width="352" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="7iz-3k-iNF"/>
+                                    <constraint firstAttribute="width" constant="352" id="Ccl-vr-ZcX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Milton Academy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8M-ZL-y62">
-                                <rect key="frame" x="124" y="151" width="352" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Sn-7r-Yzd">
+                                <rect key="frame" x="359" y="320" width="34" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="352" id="rqI-uc-jqL"/>
+                                    <constraint firstAttribute="width" constant="34" id="DtV-83-GQL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -299,28 +301,29 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KAk-Kc-INo" firstAttribute="centerX" secondItem="iAO-4e-3JM" secondAttribute="centerX" id="0em-0g-5oN"/>
-                            <constraint firstItem="H7P-cS-MG5" firstAttribute="leading" secondItem="iAO-4e-3JM" secondAttribute="trailing" constant="30" id="0qo-ag-JQL"/>
-                            <constraint firstItem="aWG-er-t3P" firstAttribute="top" secondItem="K8M-ZL-y62" secondAttribute="bottom" constant="56" id="1hM-0I-KOf"/>
-                            <constraint firstItem="H7P-cS-MG5" firstAttribute="top" secondItem="iAO-4e-3JM" secondAttribute="top" id="6cu-rp-OTi"/>
-                            <constraint firstItem="dps-28-zOq" firstAttribute="top" secondItem="aWG-er-t3P" secondAttribute="bottom" constant="8" symbolic="YES" id="8e9-cN-WxO"/>
-                            <constraint firstItem="gzN-k2-FDG" firstAttribute="bottom" secondItem="qov-ff-rTy" secondAttribute="top" id="Ake-Rg-0iG"/>
-                            <constraint firstItem="KAk-Kc-INo" firstAttribute="baseline" secondItem="dps-28-zOq" secondAttribute="firstBaseline" id="BVK-VF-Z51"/>
-                            <constraint firstItem="gzN-k2-FDG" firstAttribute="leading" secondItem="tqq-OX-GbJ" secondAttribute="leading" id="GIg-92-vLP"/>
-                            <constraint firstItem="K8M-ZL-y62" firstAttribute="top" secondItem="9sC-1u-o31" secondAttribute="bottom" constant="87" id="LPj-6a-9E1"/>
-                            <constraint firstItem="iAO-4e-3JM" firstAttribute="leading" secondItem="aWG-er-t3P" secondAttribute="trailing" constant="28" id="LUB-vi-seb"/>
-                            <constraint firstItem="KAk-Kc-INo" firstAttribute="centerX" secondItem="gzN-k2-FDG" secondAttribute="centerX" id="SWl-K5-XDr"/>
-                            <constraint firstItem="3Sn-7r-Yzd" firstAttribute="centerX" secondItem="H7P-cS-MG5" secondAttribute="centerX" id="c51-p2-JQt"/>
-                            <constraint firstItem="3Sn-7r-Yzd" firstAttribute="leading" secondItem="KAk-Kc-INo" secondAttribute="trailing" constant="79" id="cxs-8H-gG4"/>
-                            <constraint firstAttribute="trailing" secondItem="gzN-k2-FDG" secondAttribute="trailing" id="dJK-SC-Mlu"/>
-                            <constraint firstItem="3Sn-7r-Yzd" firstAttribute="top" secondItem="H7P-cS-MG5" secondAttribute="bottom" constant="8" symbolic="YES" id="f9Q-3Q-9oZ"/>
-                            <constraint firstItem="dps-28-zOq" firstAttribute="centerX" secondItem="aWG-er-t3P" secondAttribute="centerX" id="fEz-WF-L7Z"/>
-                            <constraint firstItem="iAO-4e-3JM" firstAttribute="centerX" secondItem="K8M-ZL-y62" secondAttribute="centerX" id="gTn-13-AnF"/>
-                            <constraint firstItem="dps-28-zOq" firstAttribute="baseline" secondItem="KAk-Kc-INo" secondAttribute="firstBaseline" id="kUL-a9-fqo"/>
-                            <constraint firstItem="KAk-Kc-INo" firstAttribute="top" secondItem="iAO-4e-3JM" secondAttribute="bottom" constant="8" symbolic="YES" id="rfr-q4-HRh"/>
-                            <constraint firstItem="iAO-4e-3JM" firstAttribute="top" secondItem="aWG-er-t3P" secondAttribute="top" id="sRG-3m-MVL"/>
-                            <constraint firstItem="KAk-Kc-INo" firstAttribute="leading" secondItem="dps-28-zOq" secondAttribute="trailing" constant="84" id="vuO-TZ-kHB"/>
-                            <constraint firstItem="KAk-Kc-INo" firstAttribute="baseline" secondItem="3Sn-7r-Yzd" secondAttribute="firstBaseline" id="ylJ-7c-6Ix"/>
+                            <constraint firstAttribute="trailing" secondItem="gzN-k2-FDG" secondAttribute="trailing" id="5dO-ga-yFw"/>
+                            <constraint firstItem="aWG-er-t3P" firstAttribute="top" secondItem="K8M-ZL-y62" secondAttribute="bottom" constant="72" id="5ez-Vw-Ilf"/>
+                            <constraint firstItem="iAO-4e-3JM" firstAttribute="leading" secondItem="aWG-er-t3P" secondAttribute="trailing" constant="8" symbolic="YES" id="AbY-mg-7hN"/>
+                            <constraint firstItem="3Sn-7r-Yzd" firstAttribute="leading" secondItem="KAk-Kc-INo" secondAttribute="trailing" constant="28" id="DKI-qX-rh8"/>
+                            <constraint firstItem="KAk-Kc-INo" firstAttribute="centerX" secondItem="gzN-k2-FDG" secondAttribute="centerX" id="I1I-VU-afA"/>
+                            <constraint firstItem="H7P-cS-MG5" firstAttribute="top" secondItem="iAO-4e-3JM" secondAttribute="top" id="JEv-OX-6ij"/>
+                            <constraint firstItem="iAO-4e-3JM" firstAttribute="centerX" secondItem="K8M-ZL-y62" secondAttribute="centerX" id="Npp-4J-6Ws"/>
+                            <constraint firstItem="3Sn-7r-Yzd" firstAttribute="baseline" secondItem="KAk-Kc-INo" secondAttribute="baseline" id="Ot4-98-7EG"/>
+                            <constraint firstItem="KAk-Kc-INo" firstAttribute="firstBaseline" secondItem="3Sn-7r-Yzd" secondAttribute="firstBaseline" id="PiW-UC-m7V"/>
+                            <constraint firstItem="KAk-Kc-INo" firstAttribute="centerX" secondItem="iAO-4e-3JM" secondAttribute="centerX" id="Plq-xb-JPu"/>
+                            <constraint firstItem="gzN-k2-FDG" firstAttribute="bottom" secondItem="qov-ff-rTy" secondAttribute="top" id="QCe-6E-y4h"/>
+                            <constraint firstItem="H7P-cS-MG5" firstAttribute="leading" secondItem="iAO-4e-3JM" secondAttribute="trailing" constant="8" symbolic="YES" id="Tl2-S9-5oB"/>
+                            <constraint firstItem="gzN-k2-FDG" firstAttribute="leading" secondItem="tqq-OX-GbJ" secondAttribute="leading" id="XSu-u7-Fqn"/>
+                            <constraint firstItem="K8M-ZL-y62" firstAttribute="top" secondItem="9sC-1u-o31" secondAttribute="bottom" constant="87" id="XeY-8R-hcM"/>
+                            <constraint firstItem="dps-28-zOq" firstAttribute="centerX" secondItem="aWG-er-t3P" secondAttribute="centerX" id="i9B-5R-SSQ"/>
+                            <constraint firstItem="KAk-Kc-INo" firstAttribute="top" secondItem="iAO-4e-3JM" secondAttribute="bottom" constant="8" symbolic="YES" id="mRa-GP-hXd"/>
+                            <constraint firstItem="dps-28-zOq" firstAttribute="firstBaseline" secondItem="KAk-Kc-INo" secondAttribute="firstBaseline" id="oaz-q6-f7g"/>
+                            <constraint firstItem="dps-28-zOq" firstAttribute="top" secondItem="aWG-er-t3P" secondAttribute="bottom" constant="8" symbolic="YES" id="ocJ-xS-qgh"/>
+                            <constraint firstItem="3Sn-7r-Yzd" firstAttribute="centerX" secondItem="H7P-cS-MG5" secondAttribute="centerX" id="p0Q-x6-Scl"/>
+                            <constraint firstItem="dps-28-zOq" firstAttribute="baseline" secondItem="KAk-Kc-INo" secondAttribute="baseline" id="p9k-WN-EmW"/>
+                            <constraint firstItem="KAk-Kc-INo" firstAttribute="leading" secondItem="dps-28-zOq" secondAttribute="trailing" constant="32" id="tgR-Ac-zwo"/>
+                            <constraint firstItem="3Sn-7r-Yzd" firstAttribute="top" secondItem="H7P-cS-MG5" secondAttribute="bottom" constant="8" symbolic="YES" id="wgO-Op-1Jx"/>
+                            <constraint firstItem="aWG-er-t3P" firstAttribute="top" secondItem="iAO-4e-3JM" secondAttribute="top" id="xxQ-Zf-ppb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Milton Academy" id="m68-PH-Qv0"/>

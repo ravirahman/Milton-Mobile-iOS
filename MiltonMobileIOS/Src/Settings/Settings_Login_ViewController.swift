@@ -7,7 +7,6 @@ protocol Home_ViewController_Delegate {
 }
 
 class Settings_Login_ViewController: UIViewController, UITextFieldDelegate {
-    
     var delegate: Home_ViewController_Delegate?
     
     override func viewDidLoad() {
@@ -27,6 +26,10 @@ class Settings_Login_ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBAction func loginClicked(sender: AnyObject) {
+        validateCredentials()
+    }
+    
+    func validateCredentials() {
         var accessType = accessTypeControler.titleForSegmentAtIndex(accessTypeControler.selectedSegmentIndex)
         var username = usernameField.text
         var password = passwordField.text;
@@ -40,11 +43,8 @@ class Settings_Login_ViewController: UIViewController, UITextFieldDelegate {
         else {
             self.usernameField.resignFirstResponder()
             self.passwordField.resignFirstResponder()
-            validateCredentials(username, password: password)
+            
         }
-    }
-    func validateCredentials(username: String, password: String) {
-        
         Alamofire.request(.POST,"https://my.milton.edu/student/index.cfm", parameters: ["UserLogin": username, "UserPassword": password]).responseString{(_,_,data,_) in
             var nsdata = NSString(string: data!);
             var document = HTMLDocument(string: nsdata as String)
@@ -109,7 +109,7 @@ class Settings_Login_ViewController: UIViewController, UITextFieldDelegate {
     }
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.view.endEditing(true)
-        loginClicked(UITextField)
+        validateCredentials()
         return false
     }
     

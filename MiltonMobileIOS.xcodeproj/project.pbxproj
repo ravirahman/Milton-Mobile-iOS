@@ -21,7 +21,7 @@
 		41D8CBDC1B0A950D0040E5D1 /* Navigation_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D8CBDB1B0A950D0040E5D1 /* Navigation_Controller.swift */; };
 		41E33E821AF999CE00FF50BE /* Events_Saa_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E33E791AF999CE00FF50BE /* Events_Saa_ViewController.swift */; };
 		41E33E831AF999CE00FF50BE /* Food_Flik_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E33E7C1AF999CE00FF50BE /* Food_Flik_ViewController.swift */; };
-		41E33E841AF999CE00FF50BE /* Me_Mailbox_ViewControllerMailbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E33E7F1AF999CE00FF50BE /* Me_Mailbox_ViewControllerMailbox.swift */; };
+		41E33E841AF999CE00FF50BE /* Me_Mailbox_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E33E7F1AF999CE00FF50BE /* Me_Mailbox_ViewController.swift */; };
 		41E33E851AF999CE00FF50BE /* Settings_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E33E811AF999CE00FF50BE /* Settings_ViewController.swift */; };
 		41E33E871AF99A3000FF50BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E33E861AF99A3000FF50BE /* AppDelegate.swift */; };
 		41E33E8B1AF99C4000FF50BE /* Home_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E33E8A1AF99C4000FF50BE /* Home_ViewController.swift */; };
@@ -173,7 +173,7 @@
 		41D8CBDB1B0A950D0040E5D1 /* Navigation_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigation_Controller.swift; sourceTree = "<group>"; };
 		41E33E791AF999CE00FF50BE /* Events_Saa_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events_Saa_ViewController.swift; sourceTree = "<group>"; };
 		41E33E7C1AF999CE00FF50BE /* Food_Flik_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Food_Flik_ViewController.swift; path = Flik/Food_Flik_ViewController.swift; sourceTree = "<group>"; };
-		41E33E7F1AF999CE00FF50BE /* Me_Mailbox_ViewControllerMailbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Me_Mailbox_ViewControllerMailbox.swift; sourceTree = "<group>"; };
+		41E33E7F1AF999CE00FF50BE /* Me_Mailbox_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Me_Mailbox_ViewController.swift; sourceTree = "<group>"; };
 		41E33E811AF999CE00FF50BE /* Settings_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings_ViewController.swift; sourceTree = "<group>"; };
 		41E33E861AF99A3000FF50BE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41E33E8A1AF99C4000FF50BE /* Home_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home_ViewController.swift; sourceTree = "<group>"; };
@@ -310,7 +310,7 @@
 		41E33E7E1AF999CE00FF50BE /* Mailbox */ = {
 			isa = PBXGroup;
 			children = (
-				41E33E7F1AF999CE00FF50BE /* Me_Mailbox_ViewControllerMailbox.swift */,
+				41E33E7F1AF999CE00FF50BE /* Me_Mailbox_ViewController.swift */,
 			);
 			path = Mailbox;
 			sourceTree = "<group>";
@@ -607,7 +607,7 @@
 				41D8CBDC1B0A950D0040E5D1 /* Navigation_Controller.swift in Sources */,
 				41E33E831AF999CE00FF50BE /* Food_Flik_ViewController.swift in Sources */,
 				4107B4671B1214D3005B0176 /* LocksmithRequest.swift in Sources */,
-				41E33E841AF999CE00FF50BE /* Me_Mailbox_ViewControllerMailbox.swift in Sources */,
+				41E33E841AF999CE00FF50BE /* Me_Mailbox_ViewController.swift in Sources */,
 				41E33E821AF999CE00FF50BE /* Events_Saa_ViewController.swift in Sources */,
 				41D8CBDA1B0A8EC30040E5D1 /* Settings_Login_ViewController.swift in Sources */,
 				412EE7CF1B0F9D5C00244486 /* SwiftyJSON.swift in Sources */,

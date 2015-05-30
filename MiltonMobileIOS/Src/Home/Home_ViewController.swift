@@ -45,6 +45,7 @@ class Home_ViewController: UIViewController, UITableViewDataSource, UITableViewD
             let destinationVC:Settings_Login_ViewController = segue.destinationViewController as! Settings_Login_ViewController
             
         }
+        
         super.prepareForSegue(segue, sender: sender)
     }
     

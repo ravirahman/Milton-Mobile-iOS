@@ -7,7 +7,7 @@ class Food_Flik_ViewController: UIViewController, UITableViewDataSource, UITable
     var numTitle: Int = 0;
     var num = 1;
     var imageThing : UIImageView?
-    var TableData : JSON
+    var TableData : JSON = []
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         var tableAsDictionary = TableData.dictionaryValue
@@ -54,6 +54,7 @@ class Food_Flik_ViewController: UIViewController, UITableViewDataSource, UITable
             default:
                 return "Breakfast"
         }*/
+        return "b"
     }
     
     
@@ -100,7 +101,7 @@ class Food_Flik_ViewController: UIViewController, UITableViewDataSource, UITable
                 break
             
             default:*/
-                var alert = UIAlertController(title: indexPath.item "Breakfast", message: "Selected " + (array[indexPath.row]), preferredStyle: UIAlertControllerStyle.Alert)
+                /*var alert = UIAlertController(title: indexPath.item, "Breakfast", message: "Selected " + (array[indexPath.row]), preferredStyle: UIAlertControllerStyle.Alert)
 
                 alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
                     switch action.style{
@@ -120,10 +121,11 @@ class Food_Flik_ViewController: UIViewController, UITableViewDataSource, UITable
                 }))
                 self.presentViewController(alert, animated: true, completion: nil)
                // break;
-     //   }
+     //   } */
 
     }
 
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         Alamofire.request(.GET,"http://flik.ma1geek.org/getMeals.php", parameters:["date":"2015-05-22","version":2]).responseJSON{(_,_,data,_) in
@@ -140,7 +142,7 @@ class Food_Flik_ViewController: UIViewController, UITableViewDataSource, UITable
     }
     func populateTableData() {
         dispatch_async(dispatch_get_main_queue(), {
-            self.tableView!.reloadData()
+            self.tableView.reloadData()
             return
         })
     }

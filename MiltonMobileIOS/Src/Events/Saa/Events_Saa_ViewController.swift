@@ -1,140 +1,103 @@
 import UIKit
+import Alamofire
+
 class Events_Saa_ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
-    
-    var array = Array<String>()
-    var numTitle: Int = 0;
-    var num = 1;
-    var numSectionsFriday = 2
-    var numSectionsSaturday = 5
-    var numSectionsSunday = 3
-    var imageThing : UIImageView?
-    
-    func populateArray(){
-        for(var i = 0; i <= 30; i++){
-            array.append("data" + String(num));
-            num = num + 1;
-        }
-    }
+
+    var TableData : JSON = []
+    var date = ""
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return 1;
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch(section){
-            case 1:
-                return numSectionsSaturday
-            case 2:
-                return numSectionsSunday
-            default:
-                return numSectionsFriday
-        }
-    }
-    
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    @IBAction func datePickerClicked(sender: UIBarButtonItem) {
+        // Create alert
         
+        /*    var alert = UIAlertView(title: "Select Date", message: "Select Date", delegate: , cancelButtonTitle: "Cancel", otherButtonTitles: "OK",nil)
+        
+        // Create date picker (could / should be an ivar)
+        UIDatePicker *picker = [[UIDatePicker alloc] initWithFrame:CGRectMake(10, alert.bounds.size.height, 320, 216)];
+        // Add picker to alert
+        [alert addSubview:picker];
+        // Adjust the alerts bounds
+        alert.bounds = CGRectMake(0, 0, 320 + 20, alert.bounds.size.height + 216 + 20);*/
+    }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        var tableAsArray = TableData["Activities"].arrayValue
+        return tableAsArray.count
+ /*
+        var tableAsDictionary = TableData["Activities"].arrayValue
+        var key : String = Array(tableAsDictionary.keys)[section]
+        var testc = tableAsDictionary[key]!.count
+        return testc*/
+    }
+    /*@IBAction func mealTimeChanged(sender: UISegmentedControl) {
+        self.selectedTime = sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)!
+        self.tableView.reloadData()
+    }*/
+    
+    //@IBOutlet weak var MealTimeSegmentedControl: UISegmentedControl!
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
         
+        var activityJO = TableData["Activities"][indexPath.row]
+        var eventName = activityJO["eventName"].stringValue
         
-        if (indexPath.section == 0) {
-            cell.textLabel?.text = "Friday: " + array[indexPath.row]
-            
-        }
-        if (indexPath.section == 1) {
-            cell.textLabel?.text = "Saturday: " + array[indexPath.row + numSectionsFriday]
-            
-        }
-        if (indexPath.section == 2){
-            cell.textLabel?.text = "Sunday: " + array[indexPath.row + numSectionsSaturday]
-            
-        }
+        cell.textLabel?.text = eventName
+        
         return cell;
     }
     
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch(section){
-            case 1:
-                return "Saturday"
-            case 2:
-                return "Sunday"
-            default:
-                return "Friday"
-        }
+        return "Activities"
     }
     
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        switch(indexPath.section){
-            case 1:
-            var alert = UIAlertController(title: "Saturday", message: "Selected " + (array[indexPath.row]), preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
-                switch action.style{
-                    case .Default:
-                        println("default")
-                    
-                    case .Cancel:
-                        println("cancel")
-                    
-                    case .Destructive:
-                        println("destructive")
-                }
-            }))
-            self.presentViewController(alert, animated: true, completion: nil)
-            break
-            
-        case 2:
-            var alert = UIAlertController(title: "Sunday", message: "Selected " + (array[indexPath.row]), preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
-                switch action.style{
-                    case .Default:
-                        println("default")
-                    case .Cancel:
-                        println("cancel")
-                    case .Destructive:
-                        println("destructive")
-                }
-            }))
-            self.presentViewController(alert, animated: true, completion: nil)
-            break
-        default:
-            var alert = UIAlertController(title: "Friday", message: "Selected " + (array[indexPath.row]), preferredStyle: UIAlertControllerStyle.Alert)
-
-            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
-                switch action.style{
-                    case .Default:
-                        println("default")
-                    
-                    case .Cancel:
-                        println("cancel")
-                    
-                    case .Destructive:
-                        println("destructive")
-                }
-            }))
-            self.presentViewController(alert, animated: true, completion: nil)
-            break;
-        }
+        var activityJO = TableData["Activities"][indexPath.row]
+        var eventName = activityJO["eventName"].stringValue
+        var eventDesc = activityJO["eventDescription"].stringValue
+        var startTime = activityJO["startTime"].stringValue
+        var endTime = activityJO["endTime"].stringValue
+        var location = activityJO["eventLocation"].stringValue
+        
+        var alert = UIAlertView();
+        alert.title = eventName
+        var labelt = eventDesc + "\n" + "Location: " + location + "\n\n" + "Start Time: " + startTime + "\n\n" + "End Time: " + endTime
+        
+        alert.message = labelt
+        
+        alert.addButtonWithTitle("Dismiss")
+        alert.show()
+        self.tableView.resignFirstResponder()
+        
     }
     
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = NSURL(string: "http://saa.ma1geek.org/getActivities.php?date=2015-05-22") //TODO fix the date so the user can select it
         
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
-            let json = JSON(data: data)
-            if let activitiesO = json.dictionary {
-                //format of dictionary activitiesO:
-                //{"Activities":[arrayOfActivites]}
-                //TODO Justin please populate the table using this format
-                    //see https://github.com/SwiftyJSON/SwiftyJSON
-                
-            }
+        let date = NSDate() //get the time, in this case the time an object was created.
+        //format date
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd" //format style. Browse online to get a format that fits your needs.
+        var dateString = dateFormatter.stringFromDate(date)
+        self.date = dateString
+        loadActivities()
+    }
+    func loadActivities() {
+        
+        Alamofire.request(.GET,"http://saa.ma1geek.org/getActivities.php", parameters:["date":self.date]).responseJSON{(_,_,data,_) in
+            var json = JSON(data!)
+            self.TableData = json
+            dispatch_async(dispatch_get_main_queue(), {
+                self.tableView.reloadData()
+                return
+            })
+            // see https://github.com/SwiftyJSON/SwiftyJSON
+            
         }
-        
-        task.resume()
     }
     
     override func didReceiveMemoryWarning() {

@@ -244,14 +244,30 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Milton_Academy_Seal.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YTE-Vf-DFE">
-                                <rect key="frame" x="0.0" y="72" width="600" height="96"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="du3-ZQ-iVw"/>
-                                </constraints>
-                            </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TXa-La-W2s">
-                                <rect key="frame" x="0.0" y="168" width="605" height="432"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="l6t-kT-NEe">
+                                <rect key="frame" x="16" y="20" width="568" height="29"/>
+                                <segments>
+                                    <segment title="Breakfast"/>
+                                    <segment title="Lunch"/>
+                                    <segment title="Dinner"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mealTimeChanged:" destination="cAZ-kd-cOY" eventType="valueChanged" id="jng-Jj-ukp"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="nHw-Iw-4zA">
+                                <rect key="frame" x="16" y="72" width="568" height="29"/>
+                                <segments>
+                                    <segment title="Breakfast"/>
+                                    <segment title="Lunch"/>
+                                    <segment title="Dinner"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mealTimeChanged:" destination="cAZ-kd-cOY" eventType="valueChanged" id="qTC-GW-ims"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TXa-La-W2s">
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="nT8-IC-cki">
@@ -282,14 +298,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TXa-La-W2s" firstAttribute="trailing" secondItem="YTE-Vf-DFE" secondAttribute="trailing" id="06K-Bq-4kH"/>
+                            <constraint firstItem="nHw-Iw-4zA" firstAttribute="top" secondItem="LAa-I7-mq2" secondAttribute="bottom" constant="8" symbolic="YES" id="4Kt-A1-AUE"/>
                             <constraint firstItem="TXa-La-W2s" firstAttribute="leading" secondItem="xbf-pR-AgJ" secondAttribute="leadingMargin" constant="-21" id="5Rg-6z-E81"/>
-                            <constraint firstItem="TXa-La-W2s" firstAttribute="leading" secondItem="xbf-pR-AgJ" secondAttribute="leadingMargin" constant="-16" id="6Km-pV-bOX"/>
-                            <constraint firstItem="TXa-La-W2s" firstAttribute="top" secondItem="YTE-Vf-DFE" secondAttribute="bottom" id="6Pf-ML-fIN"/>
-                            <constraint firstAttribute="trailing" secondItem="TXa-La-W2s" secondAttribute="trailing" id="AAI-uL-mCz"/>
-                            <constraint firstItem="TXa-La-W2s" firstAttribute="bottom" secondItem="u1u-GW-Zzv" secondAttribute="top" id="WIA-QV-QtQ"/>
-                            <constraint firstItem="YTE-Vf-DFE" firstAttribute="leading" secondItem="xbf-pR-AgJ" secondAttribute="leading" id="gG2-DI-pyN"/>
-                            <constraint firstItem="YTE-Vf-DFE" firstAttribute="top" secondItem="LAa-I7-mq2" secondAttribute="bottom" constant="8" symbolic="YES" id="qle-xi-n6E"/>
+                            <constraint firstItem="TXa-La-W2s" firstAttribute="leading" secondItem="xbf-pR-AgJ" secondAttribute="leading" id="EGe-ti-srE"/>
+                            <constraint firstItem="nHw-Iw-4zA" firstAttribute="leading" secondItem="l6t-kT-NEe" secondAttribute="leading" id="GOl-ZH-JNd"/>
+                            <constraint firstItem="nHw-Iw-4zA" firstAttribute="centerX" secondItem="TXa-La-W2s" secondAttribute="centerX" id="IbD-ga-aQz"/>
+                            <constraint firstItem="l6t-kT-NEe" firstAttribute="leading" secondItem="xbf-pR-AgJ" secondAttribute="leadingMargin" id="Kka-MM-I7B"/>
+                            <constraint firstItem="TXa-La-W2s" firstAttribute="top" secondItem="nHw-Iw-4zA" secondAttribute="bottom" constant="8" symbolic="YES" id="Lef-NS-7QG"/>
+                            <constraint firstItem="TXa-La-W2s" firstAttribute="bottom" secondItem="u1u-GW-Zzv" secondAttribute="top" id="YBm-tv-LCy"/>
+                            <constraint firstAttribute="trailing" secondItem="TXa-La-W2s" secondAttribute="trailing" id="dcW-lm-k5W"/>
+                            <constraint firstItem="l6t-kT-NEe" firstAttribute="trailing" secondItem="nHw-Iw-4zA" secondAttribute="trailing" id="soy-b3-mfX"/>
+                            <constraint firstItem="l6t-kT-NEe" firstAttribute="top" secondItem="xbf-pR-AgJ" secondAttribute="top" constant="20" symbolic="YES" id="vYX-j0-iDN"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -297,14 +316,22 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="FLIK" id="iyQ-Ha-Gkh"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="fCL-c7-EwX"/>
+                    <navigationItem key="navigationItem" title="FLIK" id="iyQ-Ha-Gkh">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" image="Calendar-32.png" id="FCG-Fv-bVF">
+                            <connections>
+                                <action selector="datePickerClicked:" destination="cAZ-kd-cOY" id="1ej-Zl-RUB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="MealTimeSegmentedControl" destination="nHw-Iw-4zA" id="XEk-Zv-56z"/>
                         <outlet property="tableView" destination="TXa-La-W2s" id="HKI-xC-AUO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F9S-pB-NpO" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1070" y="-191"/>
+            <point key="canvasLocation" x="770" y="-159"/>
         </scene>
         <!--Milton Academy-->
         <scene sceneID="x0P-2K-i8D">
@@ -356,29 +383,20 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWG-er-t3P">
                                 <rect key="frame" x="190" y="244" width="68" height="68"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="68" id="5nA-IO-eDd"/>
-                                    <constraint firstAttribute="height" constant="68" id="YZg-0a-OjO"/>
+                                    <constraint firstAttribute="width" constant="68" id="30V-65-Wnw"/>
+                                    <constraint firstAttribute="height" constant="68" id="RqL-7e-7w9"/>
                                 </constraints>
                                 <state key="normal" image="flikicon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cAZ-kd-cOY" kind="show" id="XKQ-uu-ehj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAO-4e-3JM">
-                                <rect key="frame" x="266" y="244" width="68" height="68"/>
-                                <state key="normal" image="mailbox_not_pressed.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="6iC-fY-UPf" kind="show" id="ZMa-It-iAD"/>
+                                    <segue destination="cAZ-kd-cOY" kind="show" id="byE-wR-Wyv"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mailbox" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAk-Kc-INo">
                                 <rect key="frame" x="270" y="320" width="61" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="61" id="qOp-nE-lTj"/>
+                                    <constraint firstAttribute="width" constant="61" id="kbC-u4-zKJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -387,8 +405,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flik" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dps-28-zOq">
                                 <rect key="frame" x="211" y="320" width="27" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="5CP-7h-m3Z"/>
-                                    <constraint firstAttribute="width" constant="27" id="RbX-EM-X0w"/>
+                                    <constraint firstAttribute="width" constant="27" id="jdp-DC-caJ"/>
+                                    <constraint firstAttribute="height" constant="21" id="xXv-vE-bel"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -404,10 +422,10 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Milton Academy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8M-ZL-y62">
-                                <rect key="frame" x="124" y="151" width="352" height="21"/>
+                                <rect key="frame" x="124" y="208" width="352" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="7iz-3k-iNF"/>
-                                    <constraint firstAttribute="width" constant="352" id="Ccl-vr-ZcX"/>
+                                    <constraint firstAttribute="width" constant="352" id="g9M-T9-aLm"/>
+                                    <constraint firstAttribute="height" constant="21" id="xa5-fS-j8N"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -416,38 +434,56 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Sn-7r-Yzd">
                                 <rect key="frame" x="359" y="320" width="34" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="34" id="DtV-83-GQL"/>
+                                    <constraint firstAttribute="width" constant="34" id="ibV-zR-vf8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Milton_Academy_Seal.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bXY-Tk-yvM">
+                                <rect key="frame" x="236" y="72" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="HUU-Qg-dUj"/>
+                                    <constraint firstAttribute="width" constant="128" id="NlU-hu-eQA"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAO-4e-3JM">
+                                <rect key="frame" x="266" y="244" width="68" height="68"/>
+                                <state key="normal" image="mailbox_not_pressed.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6iC-fY-UPf" kind="show" id="ZMa-It-iAD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="gzN-k2-FDG" secondAttribute="trailing" id="5dO-ga-yFw"/>
-                            <constraint firstItem="aWG-er-t3P" firstAttribute="top" secondItem="K8M-ZL-y62" secondAttribute="bottom" constant="72" id="5ez-Vw-Ilf"/>
-                            <constraint firstItem="iAO-4e-3JM" firstAttribute="leading" secondItem="aWG-er-t3P" secondAttribute="trailing" constant="8" symbolic="YES" id="AbY-mg-7hN"/>
-                            <constraint firstItem="3Sn-7r-Yzd" firstAttribute="leading" secondItem="KAk-Kc-INo" secondAttribute="trailing" constant="28" id="DKI-qX-rh8"/>
-                            <constraint firstItem="KAk-Kc-INo" firstAttribute="centerX" secondItem="gzN-k2-FDG" secondAttribute="centerX" id="I1I-VU-afA"/>
-                            <constraint firstItem="H7P-cS-MG5" firstAttribute="top" secondItem="iAO-4e-3JM" secondAttribute="top" id="JEv-OX-6ij"/>
-                            <constraint firstItem="iAO-4e-3JM" firstAttribute="centerX" secondItem="K8M-ZL-y62" secondAttribute="centerX" id="Npp-4J-6Ws"/>
-                            <constraint firstItem="3Sn-7r-Yzd" firstAttribute="baseline" secondItem="KAk-Kc-INo" secondAttribute="baseline" id="Ot4-98-7EG"/>
-                            <constraint firstItem="KAk-Kc-INo" firstAttribute="firstBaseline" secondItem="3Sn-7r-Yzd" secondAttribute="firstBaseline" id="PiW-UC-m7V"/>
-                            <constraint firstItem="KAk-Kc-INo" firstAttribute="centerX" secondItem="iAO-4e-3JM" secondAttribute="centerX" id="Plq-xb-JPu"/>
-                            <constraint firstItem="gzN-k2-FDG" firstAttribute="bottom" secondItem="qov-ff-rTy" secondAttribute="top" id="QCe-6E-y4h"/>
-                            <constraint firstItem="H7P-cS-MG5" firstAttribute="leading" secondItem="iAO-4e-3JM" secondAttribute="trailing" constant="8" symbolic="YES" id="Tl2-S9-5oB"/>
-                            <constraint firstItem="gzN-k2-FDG" firstAttribute="leading" secondItem="tqq-OX-GbJ" secondAttribute="leading" id="XSu-u7-Fqn"/>
-                            <constraint firstItem="K8M-ZL-y62" firstAttribute="top" secondItem="9sC-1u-o31" secondAttribute="bottom" constant="87" id="XeY-8R-hcM"/>
-                            <constraint firstItem="dps-28-zOq" firstAttribute="centerX" secondItem="aWG-er-t3P" secondAttribute="centerX" id="i9B-5R-SSQ"/>
-                            <constraint firstItem="KAk-Kc-INo" firstAttribute="top" secondItem="iAO-4e-3JM" secondAttribute="bottom" constant="8" symbolic="YES" id="mRa-GP-hXd"/>
-                            <constraint firstItem="dps-28-zOq" firstAttribute="firstBaseline" secondItem="KAk-Kc-INo" secondAttribute="firstBaseline" id="oaz-q6-f7g"/>
-                            <constraint firstItem="dps-28-zOq" firstAttribute="top" secondItem="aWG-er-t3P" secondAttribute="bottom" constant="8" symbolic="YES" id="ocJ-xS-qgh"/>
-                            <constraint firstItem="3Sn-7r-Yzd" firstAttribute="centerX" secondItem="H7P-cS-MG5" secondAttribute="centerX" id="p0Q-x6-Scl"/>
-                            <constraint firstItem="dps-28-zOq" firstAttribute="baseline" secondItem="KAk-Kc-INo" secondAttribute="baseline" id="p9k-WN-EmW"/>
-                            <constraint firstItem="KAk-Kc-INo" firstAttribute="leading" secondItem="dps-28-zOq" secondAttribute="trailing" constant="32" id="tgR-Ac-zwo"/>
-                            <constraint firstItem="3Sn-7r-Yzd" firstAttribute="top" secondItem="H7P-cS-MG5" secondAttribute="bottom" constant="8" symbolic="YES" id="wgO-Op-1Jx"/>
-                            <constraint firstItem="aWG-er-t3P" firstAttribute="top" secondItem="iAO-4e-3JM" secondAttribute="top" id="xxQ-Zf-ppb"/>
+                            <constraint firstItem="iAO-4e-3JM" firstAttribute="leading" secondItem="aWG-er-t3P" secondAttribute="trailing" constant="8" symbolic="YES" id="2ka-gU-PkE"/>
+                            <constraint firstItem="iAO-4e-3JM" firstAttribute="top" secondItem="aWG-er-t3P" secondAttribute="top" id="3Fe-T1-XlO"/>
+                            <constraint firstItem="KAk-Kc-INo" firstAttribute="top" secondItem="iAO-4e-3JM" secondAttribute="bottom" constant="8" symbolic="YES" id="DJH-W0-IUw"/>
+                            <constraint firstItem="3Sn-7r-Yzd" firstAttribute="centerX" secondItem="H7P-cS-MG5" secondAttribute="centerX" id="GAI-5e-4lt"/>
+                            <constraint firstItem="bXY-Tk-yvM" firstAttribute="top" secondItem="9sC-1u-o31" secondAttribute="bottom" constant="8" symbolic="YES" id="Gke-Yn-uAS"/>
+                            <constraint firstItem="gzN-k2-FDG" firstAttribute="leading" secondItem="tqq-OX-GbJ" secondAttribute="leading" id="Hmc-Cw-LiR"/>
+                            <constraint firstItem="3Sn-7r-Yzd" firstAttribute="baseline" secondItem="KAk-Kc-INo" secondAttribute="baseline" id="IrL-st-Fjw"/>
+                            <constraint firstAttribute="trailing" secondItem="gzN-k2-FDG" secondAttribute="trailing" id="ML3-Vb-dbR"/>
+                            <constraint firstItem="aWG-er-t3P" firstAttribute="top" secondItem="K8M-ZL-y62" secondAttribute="bottom" constant="15" id="R67-su-hQR"/>
+                            <constraint firstItem="iAO-4e-3JM" firstAttribute="centerX" secondItem="K8M-ZL-y62" secondAttribute="centerX" id="ROl-Qd-t6M"/>
+                            <constraint firstItem="gzN-k2-FDG" firstAttribute="bottom" secondItem="qov-ff-rTy" secondAttribute="top" id="Uuy-0L-d97"/>
+                            <constraint firstItem="dps-28-zOq" firstAttribute="firstBaseline" secondItem="KAk-Kc-INo" secondAttribute="firstBaseline" id="ZPz-bU-aOv"/>
+                            <constraint firstItem="H7P-cS-MG5" firstAttribute="leading" secondItem="iAO-4e-3JM" secondAttribute="trailing" constant="8" symbolic="YES" id="ZrS-6Y-EIb"/>
+                            <constraint firstItem="KAk-Kc-INo" firstAttribute="leading" secondItem="dps-28-zOq" secondAttribute="trailing" constant="32" id="a68-L0-Hf0"/>
+                            <constraint firstItem="H7P-cS-MG5" firstAttribute="top" secondItem="iAO-4e-3JM" secondAttribute="top" id="aFB-0f-jGa"/>
+                            <constraint firstItem="iAO-4e-3JM" firstAttribute="centerX" secondItem="KAk-Kc-INo" secondAttribute="centerX" id="aMy-Ek-yPp"/>
+                            <constraint firstItem="KAk-Kc-INo" firstAttribute="baseline" secondItem="dps-28-zOq" secondAttribute="baseline" id="b6M-cu-uBn"/>
+                            <constraint firstItem="K8M-ZL-y62" firstAttribute="centerX" secondItem="bXY-Tk-yvM" secondAttribute="centerX" id="hrP-an-af2"/>
+                            <constraint firstItem="dps-28-zOq" firstAttribute="top" secondItem="aWG-er-t3P" secondAttribute="bottom" constant="8" symbolic="YES" id="lP5-qd-lG6"/>
+                            <constraint firstItem="KAk-Kc-INo" firstAttribute="firstBaseline" secondItem="3Sn-7r-Yzd" secondAttribute="firstBaseline" id="mIh-b9-TZO"/>
+                            <constraint firstItem="aWG-er-t3P" firstAttribute="centerX" secondItem="dps-28-zOq" secondAttribute="centerX" id="nHE-yr-KNg"/>
+                            <constraint firstItem="gzN-k2-FDG" firstAttribute="centerX" secondItem="KAk-Kc-INo" secondAttribute="centerX" id="tzq-jC-0e2"/>
+                            <constraint firstItem="3Sn-7r-Yzd" firstAttribute="top" secondItem="H7P-cS-MG5" secondAttribute="bottom" constant="8" symbolic="YES" id="y7E-rF-EPM"/>
+                            <constraint firstItem="3Sn-7r-Yzd" firstAttribute="leading" secondItem="KAk-Kc-INo" secondAttribute="trailing" constant="28" id="ylF-O3-Avb"/>
+                            <constraint firstItem="K8M-ZL-y62" firstAttribute="top" secondItem="bXY-Tk-yvM" secondAttribute="bottom" constant="8" symbolic="YES" id="z5h-K2-Ull"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Milton Academy" id="m68-PH-Qv0"/>
@@ -498,33 +534,27 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Milton_Academy_Seal.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="tVg-D0-cy9">
-                                <rect key="frame" x="0.0" y="72" width="592" height="96"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="jI5-Ad-qrN"/>
-                                </constraints>
-                            </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mvx-Lq-ghl">
-                                <rect key="frame" x="0.0" y="168" width="600" height="432"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xe0-DO-x1N">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="664"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="ukh-Ur-jUD" id="ooX-eh-tga"/>
-                                    <outlet property="delegate" destination="ukh-Ur-jUD" id="6pV-Je-ubu"/>
+                                    <outlet property="dataSource" destination="ukh-Ur-jUD" id="SXz-a2-qxl"/>
+                                    <outlet property="delegate" destination="ukh-Ur-jUD" id="2KX-oD-YCq"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mvx-Lq-ghl" firstAttribute="top" secondItem="tVg-D0-cy9" secondAttribute="bottom" id="7Q3-TT-oUc"/>
-                            <constraint firstItem="mvx-Lq-ghl" firstAttribute="bottom" secondItem="qjh-M6-8Vf" secondAttribute="top" id="Azg-1J-RHS"/>
-                            <constraint firstItem="tVg-D0-cy9" firstAttribute="leading" secondItem="bx5-Zu-hrf" secondAttribute="leading" id="CeG-Xf-GzL"/>
-                            <constraint firstItem="mvx-Lq-ghl" firstAttribute="leading" secondItem="tVg-D0-cy9" secondAttribute="leading" id="Syi-Hj-Ev1"/>
-                            <constraint firstAttribute="trailing" secondItem="mvx-Lq-ghl" secondAttribute="trailing" id="ke0-Mt-yBe"/>
-                            <constraint firstItem="tVg-D0-cy9" firstAttribute="top" secondItem="L3i-KV-fy8" secondAttribute="bottom" constant="8" symbolic="YES" id="wIk-uw-nQM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tVg-D0-cy9" secondAttribute="trailing" constant="-8" id="wVi-0l-ffj"/>
+                            <constraint firstAttribute="trailing" secondItem="xe0-DO-x1N" secondAttribute="trailing" id="2Dp-Zc-hwz"/>
+                            <constraint firstItem="xe0-DO-x1N" firstAttribute="top" secondItem="bx5-Zu-hrf" secondAttribute="top" id="5td-gs-gJQ"/>
+                            <constraint firstItem="xe0-DO-x1N" firstAttribute="leading" secondItem="bx5-Zu-hrf" secondAttribute="leading" id="i1l-rP-bNK"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="xe0-DO-x1N" secondAttribute="bottom" constant="-64" id="j5Y-Zp-pYU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SAA" id="ii6-Ai-CSa"/>
+                    <connections>
+                        <outlet property="tableView" destination="xe0-DO-x1N" id="cji-Dj-8O5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mub-8c-eyZ" sceneMemberID="firstResponder"/>
             </objects>
@@ -532,6 +562,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Calendar-32.png" width="32" height="32"/>
         <image name="Milton_Academy_Seal.jpg" width="200" height="200"/>
         <image name="flikicon.png" width="363" height="363"/>
         <image name="mailbox_not_pressed.png" width="363" height="363"/>

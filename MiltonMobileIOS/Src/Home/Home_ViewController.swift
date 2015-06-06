@@ -5,8 +5,15 @@ class Home_ViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         if let retrievedString: String? = KeychainWrapper.stringForKey("loggedIn") {
-            loginButton.enabled = false
-            loginButton.title = nil
+            if (retrievedString == "true") {
+                loginButton.enabled = false
+                loginButton.title = nil
+            }
+            else {
+                logoutButton.enabled = false
+                logoutButton.title = nil
+            }
+
         }
         else {
             logoutButton.enabled = false

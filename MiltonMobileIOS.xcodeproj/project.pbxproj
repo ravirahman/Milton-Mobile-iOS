@@ -25,6 +25,8 @@
 		41E33E851AF999CE00FF50BE /* Settings_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E33E811AF999CE00FF50BE /* Settings_ViewController.swift */; };
 		41E33E871AF99A3000FF50BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E33E861AF99A3000FF50BE /* AppDelegate.swift */; };
 		41E33E8B1AF99C4000FF50BE /* Home_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E33E8A1AF99C4000FF50BE /* Home_ViewController.swift */; };
+		41ED41481B2311EE00727C9B /* Calendar-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 41ED41471B2311EE00727C9B /* Calendar-50.png */; };
+		41ED41541B23120700727C9B /* Calendar-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 41ED41531B23120700727C9B /* Calendar-32.png */; };
 		41FB946E1AF7DB5600D2C1B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41FB946C1AF7DB5600D2C1B5 /* Main.storyboard */; };
 		41FB94701AF7DB5600D2C1B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41FB946F1AF7DB5600D2C1B5 /* Images.xcassets */; };
 		41FB94731AF7DB5600D2C1B5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FB94711AF7DB5600D2C1B5 /* LaunchScreen.xib */; };
@@ -177,6 +179,8 @@
 		41E33E811AF999CE00FF50BE /* Settings_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings_ViewController.swift; sourceTree = "<group>"; };
 		41E33E861AF99A3000FF50BE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41E33E8A1AF99C4000FF50BE /* Home_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home_ViewController.swift; sourceTree = "<group>"; };
+		41ED41471B2311EE00727C9B /* Calendar-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calendar-50.png"; sourceTree = "<group>"; };
+		41ED41531B23120700727C9B /* Calendar-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calendar-32.png"; sourceTree = "<group>"; };
 		41EEB50F1AF7DDC1002435F7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		41FB94631AF7DB5600D2C1B5 /* MiltonMobileIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiltonMobileIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41FB94671AF7DB5600D2C1B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -369,6 +373,8 @@
 		41FB94661AF7DB5600D2C1B5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				41ED41531B23120700727C9B /* Calendar-32.png */,
+				41ED41471B2311EE00727C9B /* Calendar-50.png */,
 				4107B4611B120EF2005B0176 /* mailbox_not_pressed.png */,
 				59701F6A1B0A49FB00EADE8E /* flikicon.png */,
 				59701F6B1B0A49FB00EADE8E /* saaiconnew.png */,
@@ -581,6 +587,8 @@
 				41FB946E1AF7DB5600D2C1B5 /* Main.storyboard in Resources */,
 				41FB94731AF7DB5600D2C1B5 /* LaunchScreen.xib in Resources */,
 				4107B4621B120EF2005B0176 /* mailbox_not_pressed.png in Resources */,
+				41ED41541B23120700727C9B /* Calendar-32.png in Resources */,
+				41ED41481B2311EE00727C9B /* Calendar-50.png in Resources */,
 				59701F6D1B0A49FB00EADE8E /* saaiconnew.png in Resources */,
 				41FB94701AF7DB5600D2C1B5 /* Images.xcassets in Resources */,
 				59701F6C1B0A49FB00EADE8E /* flikicon.png in Resources */,

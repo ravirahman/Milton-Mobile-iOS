@@ -1,4 +1,4 @@
-// MasterViewController.swift
+// NSURLSessionConfiguration+AlamofireTests.swift
 //
 // Copyright (c) 2014–2015 Alamofire Software Foundation (http://alamofire.org/)
 //
@@ -21,24 +21,11 @@
 // THE SOFTWARE.
 
 import Foundation
-import Alamofire
 
-enum HTTPBinRoute: URLStringConvertible {
-    case Method(Alamofire.Method)
-    case BasicAuth(String, String)
-
-    var URLString: String {
-        let baseURLString = "http://httpbin.org/"
-        let path: String = {
-            switch self {
-            case .Method(let method):
-                return "/\(method.rawValue.lowercaseString)"
-            case .BasicAuth(let user, let password):
-                return "/basic-auth/\(user)/\(password)"
-            }
-        }()
-
-        return NSURL(string: path, relativeToURL: NSURL(string: baseURLString))!.absoluteString!
+extension String {
+    init(count: Int, repeatedString: String) {
+        var value = ""
+        for _ in 0..<count { value += repeatedString }
+        self = value
     }
 }
-

@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4100DF931B186D7500A60C90 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4100DF921B186D7500A60C90 /* KeychainWrapper.m */; };
-		4100DF951B186EFF00A60C90 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100DF941B186EFF00A60C90 /* KeychainWrapper.swift */; };
 		4107B4621B120EF2005B0176 /* mailbox_not_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 4107B4611B120EF2005B0176 /* mailbox_not_pressed.png */; };
-		4107B4651B1214B6005B0176 /* Locksmith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4107B4641B1214B6005B0176 /* Locksmith.swift */; };
-		4107B4671B1214D3005B0176 /* LocksmithRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4107B4661B1214D3005B0176 /* LocksmithRequest.swift */; };
 		4107B4771B121867005B0176 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4107B4701B1217C1005B0176 /* Alamofire.framework */; };
 		4107B4781B121867005B0176 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4107B4701B1217C1005B0176 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4107B4971B121B8A005B0176 /* HTMLReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4107B4881B121B79005B0176 /* HTMLReader.framework */; };
 		4107B4981B121B8A005B0176 /* HTMLReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4107B4881B121B79005B0176 /* HTMLReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		411083E71BB6C144007494C7 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411083DE1BB6C10F007494C7 /* Locksmith.framework */; };
+		411083E81BB6C144007494C7 /* Locksmith.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 411083DE1BB6C10F007494C7 /* Locksmith.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		411083EF1BB6C1F8007494C7 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 411083EC1BB6C1F8007494C7 /* KeychainWrapper.m */; settings = {ASSET_TAGS = (); }; };
+		411083F01BB6C1F8007494C7 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411083ED1BB6C1F8007494C7 /* KeychainWrapper.swift */; settings = {ASSET_TAGS = (); }; };
 		412EE7CF1B0F9D5C00244486 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412EE7CE1B0F9D5C00244486 /* SwiftyJSON.swift */; };
 		41D8CBDA1B0A8EC30040E5D1 /* Settings_Login_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D8CBD91B0A8EC30040E5D1 /* Settings_Login_ViewController.swift */; };
 		41D8CBDC1B0A950D0040E5D1 /* Navigation_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D8CBDB1B0A950D0040E5D1 /* Navigation_Controller.swift */; };
@@ -136,6 +136,55 @@
 			remoteGlobalIDString = 1C6C1F4B1A179BF600236076;
 			remoteInfo = "HTMLReader iOS";
 		};
+		411083DD1BB6C10F007494C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 411083D51BB6C10F007494C7 /* Locksmith.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0EC25C591BA385AA004191AF;
+			remoteInfo = "Locksmith iOS";
+		};
+		411083DF1BB6C10F007494C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 411083D51BB6C10F007494C7 /* Locksmith.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0EC25C621BA385AB004191AF;
+			remoteInfo = "Locksmith iOS Tests";
+		};
+		411083E11BB6C10F007494C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 411083D51BB6C10F007494C7 /* Locksmith.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0EC25C751BA385F6004191AF;
+			remoteInfo = "Locksmith OS X";
+		};
+		411083E31BB6C10F007494C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 411083D51BB6C10F007494C7 /* Locksmith.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0EC25C7E1BA385F6004191AF;
+			remoteInfo = "Locksmith OS X Tests";
+		};
+		411083E51BB6C10F007494C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 411083D51BB6C10F007494C7 /* Locksmith.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0EC25CA71BA39C9F004191AF;
+			remoteInfo = "Locksmith watchOS";
+		};
+		411083E91BB6C144007494C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 411083D51BB6C10F007494C7 /* Locksmith.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0EC25C581BA385AA004191AF;
+			remoteInfo = "Locksmith iOS";
+		};
+		41D34C651BB09861000AD540 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4107B4681B1217C1005B0176 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4202FE01B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
 		41FB94791AF7DB5600D2C1B5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 41FB945B1AF7DB5600D2C1B5 /* Project object */;
@@ -152,6 +201,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				411083E81BB6C144007494C7 /* Locksmith.framework in Embed Frameworks */,
 				4107B4981B121B8A005B0176 /* HTMLReader.framework in Embed Frameworks */,
 				4107B4781B121867005B0176 /* Alamofire.framework in Embed Frameworks */,
 			);
@@ -161,20 +211,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4100DF901B186D7400A60C90 /* MiltonMobileIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MiltonMobileIOS-Bridging-Header.h"; sourceTree = "<group>"; };
-		4100DF911B186D7500A60C90 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
-		4100DF921B186D7500A60C90 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
-		4100DF941B186EFF00A60C90 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 		4107B4611B120EF2005B0176 /* mailbox_not_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mailbox_not_pressed.png; sourceTree = "<group>"; };
-		4107B4641B1214B6005B0176 /* Locksmith.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locksmith.swift; sourceTree = "<group>"; };
-		4107B4661B1214D3005B0176 /* LocksmithRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocksmithRequest.swift; sourceTree = "<group>"; };
 		4107B4681B1217C1005B0176 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		4107B47C1B121B79005B0176 /* HTMLReader.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HTMLReader.xcodeproj; path = HTMLReader/HTMLReader.xcodeproj; sourceTree = "<group>"; };
+		411083D51BB6C10F007494C7 /* Locksmith.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Locksmith.xcodeproj; path = Locksmith/Locksmith.xcodeproj; sourceTree = "<group>"; };
+		411083EB1BB6C1F8007494C7 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		411083EC1BB6C1F8007494C7 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
+		411083ED1BB6C1F8007494C7 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		411083EE1BB6C1F8007494C7 /* MiltonMobileIOS-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MiltonMobileIOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		412EE7CE1B0F9D5C00244486 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = ../SwiftyJSON.swift; sourceTree = "<group>"; };
 		41D8CBD91B0A8EC30040E5D1 /* Settings_Login_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings_Login_ViewController.swift; sourceTree = "<group>"; };
 		41D8CBDB1B0A950D0040E5D1 /* Navigation_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigation_Controller.swift; sourceTree = "<group>"; };
 		41E33E791AF999CE00FF50BE /* Events_Saa_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events_Saa_ViewController.swift; sourceTree = "<group>"; };
-		41E33E7C1AF999CE00FF50BE /* Food_Flik_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Food_Flik_ViewController.swift; path = Flik/Food_Flik_ViewController.swift; sourceTree = "<group>"; };
+		41E33E7C1AF999CE00FF50BE /* Food_Flik_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food_Flik_ViewController.swift; sourceTree = "<group>"; };
 		41E33E7F1AF999CE00FF50BE /* Me_Mailbox_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Me_Mailbox_ViewController.swift; sourceTree = "<group>"; };
 		41E33E811AF999CE00FF50BE /* Settings_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings_ViewController.swift; sourceTree = "<group>"; };
 		41E33E861AF99A3000FF50BE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -201,6 +250,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				411083E71BB6C144007494C7 /* Locksmith.framework in Frameworks */,
 				4107B4971B121B8A005B0176 /* HTMLReader.framework in Frameworks */,
 				4107B4771B121867005B0176 /* Alamofire.framework in Frameworks */,
 			);
@@ -219,13 +269,11 @@
 		4107B4631B121497005B0176 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				411083EB1BB6C1F8007494C7 /* KeychainWrapper.h */,
+				411083EC1BB6C1F8007494C7 /* KeychainWrapper.m */,
+				411083ED1BB6C1F8007494C7 /* KeychainWrapper.swift */,
+				411083EE1BB6C1F8007494C7 /* MiltonMobileIOS-Bridging-Header.h */,
 				412EE7CE1B0F9D5C00244486 /* SwiftyJSON.swift */,
-				4107B4641B1214B6005B0176 /* Locksmith.swift */,
-				4100DF911B186D7500A60C90 /* KeychainWrapper.h */,
-				4100DF921B186D7500A60C90 /* KeychainWrapper.m */,
-				4107B4661B1214D3005B0176 /* LocksmithRequest.swift */,
-				4100DF901B186D7400A60C90 /* MiltonMobileIOS-Bridging-Header.h */,
-				4100DF941B186EFF00A60C90 /* KeychainWrapper.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -235,6 +283,7 @@
 			children = (
 				4107B4701B1217C1005B0176 /* Alamofire.framework */,
 				4107B4721B1217C1005B0176 /* Alamofire.framework */,
+				41D34C661BB09861000AD540 /* Alamofire.framework */,
 				4107B4741B1217C1005B0176 /* Alamofire iOS Tests.xctest */,
 				4107B4761B1217C1005B0176 /* Alamofire OSX Tests.xctest */,
 			);
@@ -256,13 +305,25 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		411083D61BB6C10F007494C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				411083DE1BB6C10F007494C7 /* Locksmith.framework */,
+				411083E01BB6C10F007494C7 /* Locksmith iOS Tests.xctest */,
+				411083E21BB6C10F007494C7 /* Locksmith.framework */,
+				411083E41BB6C10F007494C7 /* Locksmith OS X Tests.xctest */,
+				411083E61BB6C10F007494C7 /* Locksmith.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		41E33E6D1AF9998600FF50BE /* Src */ = {
 			isa = PBXGroup;
 			children = (
-				4107B4631B121497005B0176 /* Util */,
 				41D8CBDB1B0A950D0040E5D1 /* Navigation_Controller.swift */,
-				41E33E881AF99C0600FF50BE /* Home */,
 				41E33E861AF99A3000FF50BE /* AppDelegate.swift */,
+				4107B4631B121497005B0176 /* Util */,
+				41E33E881AF99C0600FF50BE /* Home */,
 				41E33E771AF999CE00FF50BE /* Events */,
 				41E33E7A1AF999CE00FF50BE /* Food */,
 				41E33E7D1AF999CE00FF50BE /* Me */,
@@ -290,7 +351,6 @@
 		41E33E7A1AF999CE00FF50BE /* Food */ = {
 			isa = PBXGroup;
 			children = (
-				41E33E7C1AF999CE00FF50BE /* Food_Flik_ViewController.swift */,
 				41E33E7B1AF999CE00FF50BE /* Flik */,
 			);
 			path = Food;
@@ -299,6 +359,7 @@
 		41E33E7B1AF999CE00FF50BE /* Flik */ = {
 			isa = PBXGroup;
 			children = (
+				41E33E7C1AF999CE00FF50BE /* Food_Flik_ViewController.swift */,
 			);
 			path = Flik;
 			sourceTree = "<group>";
@@ -339,6 +400,7 @@
 		41FB945A1AF7DB5600D2C1B5 = {
 			isa = PBXGroup;
 			children = (
+				411083D51BB6C10F007494C7 /* Locksmith.xcodeproj */,
 				4107B47C1B121B79005B0176 /* HTMLReader.xcodeproj */,
 				4107B4681B1217C1005B0176 /* Alamofire.xcodeproj */,
 				41EEB50F1AF7DDC1002435F7 /* .gitignore */,
@@ -419,6 +481,7 @@
 			dependencies = (
 				4107B47A1B121867005B0176 /* PBXTargetDependency */,
 				4107B49A1B121B8A005B0176 /* PBXTargetDependency */,
+				411083EA1BB6C144007494C7 /* PBXTargetDependency */,
 			);
 			name = MiltonMobileIOS;
 			productName = MiltonMobileIOS;
@@ -449,7 +512,9 @@
 		41FB945B1AF7DB5600D2C1B5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Milton Academy";
 				TargetAttributes = {
 					41FB94621AF7DB5600D2C1B5 = {
@@ -481,6 +546,10 @@
 				{
 					ProductGroup = 4107B47D1B121B79005B0176 /* Products */;
 					ProjectRef = 4107B47C1B121B79005B0176 /* HTMLReader.xcodeproj */;
+				},
+				{
+					ProductGroup = 411083D61BB6C10F007494C7 /* Products */;
+					ProjectRef = 411083D51BB6C10F007494C7 /* Locksmith.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -576,6 +645,48 @@
 			remoteRef = 4107B4951B121B79005B0176 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		411083DE1BB6C10F007494C7 /* Locksmith.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Locksmith.framework;
+			remoteRef = 411083DD1BB6C10F007494C7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		411083E01BB6C10F007494C7 /* Locksmith iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Locksmith iOS Tests.xctest";
+			remoteRef = 411083DF1BB6C10F007494C7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		411083E21BB6C10F007494C7 /* Locksmith.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Locksmith.framework;
+			remoteRef = 411083E11BB6C10F007494C7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		411083E41BB6C10F007494C7 /* Locksmith OS X Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Locksmith OS X Tests.xctest";
+			remoteRef = 411083E31BB6C10F007494C7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		411083E61BB6C10F007494C7 /* Locksmith.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Locksmith.framework;
+			remoteRef = 411083E51BB6C10F007494C7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		41D34C661BB09861000AD540 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 41D34C651BB09861000AD540 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -610,19 +721,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4107B4651B1214B6005B0176 /* Locksmith.swift in Sources */,
 				41E33E8B1AF99C4000FF50BE /* Home_ViewController.swift in Sources */,
 				41D8CBDC1B0A950D0040E5D1 /* Navigation_Controller.swift in Sources */,
 				41E33E831AF999CE00FF50BE /* Food_Flik_ViewController.swift in Sources */,
-				4107B4671B1214D3005B0176 /* LocksmithRequest.swift in Sources */,
+				411083F01BB6C1F8007494C7 /* KeychainWrapper.swift in Sources */,
 				41E33E841AF999CE00FF50BE /* Me_Mailbox_ViewController.swift in Sources */,
 				41E33E821AF999CE00FF50BE /* Events_Saa_ViewController.swift in Sources */,
 				41D8CBDA1B0A8EC30040E5D1 /* Settings_Login_ViewController.swift in Sources */,
 				412EE7CF1B0F9D5C00244486 /* SwiftyJSON.swift in Sources */,
-				4100DF931B186D7500A60C90 /* KeychainWrapper.m in Sources */,
 				41E33E871AF99A3000FF50BE /* AppDelegate.swift in Sources */,
-				4100DF951B186EFF00A60C90 /* KeychainWrapper.swift in Sources */,
 				41E33E851AF999CE00FF50BE /* Settings_ViewController.swift in Sources */,
+				411083EF1BB6C1F8007494C7 /* KeychainWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,6 +755,11 @@
 			isa = PBXTargetDependency;
 			name = "HTMLReader iOS";
 			targetProxy = 4107B4991B121B8A005B0176 /* PBXContainerItemProxy */;
+		};
+		411083EA1BB6C144007494C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Locksmith iOS";
+			targetProxy = 411083E91BB6C144007494C7 /* PBXContainerItemProxy */;
 		};
 		41FB947A1AF7DB5600D2C1B5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -695,6 +809,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -710,7 +825,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -748,7 +863,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -761,9 +876,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = MiltonMobileIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.milton.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MiltonMobileIOS/Src/Util/MiltonMobileIOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -777,9 +894,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = MiltonMobileIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.milton.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MiltonMobileIOS/Src/Util/MiltonMobileIOS-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -800,6 +919,7 @@
 				);
 				INFOPLIST_FILE = MiltonMobileIOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.milton.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiltonMobileIOS.app/MiltonMobileIOS";
 			};
@@ -815,6 +935,7 @@
 				);
 				INFOPLIST_FILE = MiltonMobileIOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.milton.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiltonMobileIOS.app/MiltonMobileIOS";
 			};

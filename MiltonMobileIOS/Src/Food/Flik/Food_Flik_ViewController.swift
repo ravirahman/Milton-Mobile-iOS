@@ -8,7 +8,7 @@ class Food_Flik_ViewController: UIViewController, UITableViewDataSource, UITable
     var date = ""
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        var tableAsDictionary = TableData[selectedTime].dictionaryValue
+        let tableAsDictionary = TableData[selectedTime].dictionaryValue
         return tableAsDictionary.count
     }
     
@@ -26,8 +26,8 @@ class Food_Flik_ViewController: UIViewController, UITableViewDataSource, UITable
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var tableAsDictionary = TableData[selectedTime].dictionaryValue
-        var key : String = Array(tableAsDictionary.keys)[section]
-        var testc = tableAsDictionary[key]!.count
+        let key : String = Array(tableAsDictionary.keys)[section]
+        let testc = tableAsDictionary[key]!.count
         return testc
     }
     @IBAction func mealTimeChanged(sender: UISegmentedControl) {
@@ -37,11 +37,11 @@ class Food_Flik_ViewController: UIViewController, UITableViewDataSource, UITable
 
     @IBOutlet weak var MealTimeSegmentedControl: UISegmentedControl!
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
-        var tableAsDictionary = TableData[selectedTime].dictionaryValue
-        var key : String = Array(tableAsDictionary.keys)[indexPath.section]
+        let cell = UITableViewCell()
+        let tableAsDictionary = TableData[selectedTime].dictionaryValue
+        let key : String = Array(tableAsDictionary.keys)[indexPath.section]
         
-        var labelt = TableData[selectedTime][key][indexPath.row]["mealName"].stringValue
+        let labelt = TableData[selectedTime][key][indexPath.row]["mealName"].stringValue
         
         cell.textLabel?.text = labelt
         
@@ -50,20 +50,20 @@ class Food_Flik_ViewController: UIViewController, UITableViewDataSource, UITable
     
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        var tableAsDictionary = TableData[selectedTime].dictionaryValue
-        var key : String = Array(tableAsDictionary.keys)[section]
+        let tableAsDictionary = TableData[selectedTime].dictionaryValue
+        let key : String = Array(tableAsDictionary.keys)[section]
         return key
     }
     
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var alert = UIAlertView();
+        let alert = UIAlertView();
         alert.title = "Meal Name"
         
-        var tableAsDictionary = TableData[selectedTime].dictionaryValue
-        var key : String = Array(tableAsDictionary.keys)[indexPath.section]
+        let tableAsDictionary = TableData[selectedTime].dictionaryValue
+        let key : String = Array(tableAsDictionary.keys)[indexPath.section]
         
-        var labelt = TableData[selectedTime][key][indexPath.row]["mealName"].stringValue
+        let labelt = TableData[selectedTime][key][indexPath.row]["mealName"].stringValue
         
         alert.message = labelt
         
@@ -79,19 +79,20 @@ class Food_Flik_ViewController: UIViewController, UITableViewDataSource, UITable
         
         let date = NSDate() //get the time, in this case the time an object was created.
         //format date
-        var dateFormatter = NSDateFormatter()
+        let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd" //format style. Browse online to get a format that fits your needs.
-        var dateString = dateFormatter.stringFromDate(date)
+        let dateString = dateFormatter.stringFromDate(date)
         self.date = dateString
         loadMeals()
     }
     func loadMeals() {
-        var d1 = ["mealName":"None Entered"]
-        var d2 = [d1]
-        var d3 = ["Flik":d2]
-        var d4 = JSON(d3)
+        let d1 = ["mealName":"None Entered"]
+        let d2 = [d1]
+        let d3 = ["Flik":d2]
+        let d4 = JSON(d3)
         
-        Alamofire.request(.GET,"http://flik.ma1geek.org/getMeals.php", parameters:["date":self.date,"version":2]).responseJSON{(_,_,data,_) in
+        Alamofire.request(.GET,"http://flik.ma1geek.org/getMeals.php", parameters:["date":self.date,"version":2]).responseJSON{response in
+            let data = response.2.value;
             var json = JSON(data!)
             
             if json["Breakfast"] == nil {

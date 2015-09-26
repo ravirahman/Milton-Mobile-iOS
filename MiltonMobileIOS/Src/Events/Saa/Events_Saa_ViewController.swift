@@ -23,7 +23,7 @@ class Events_Saa_ViewController: UIViewController, UITableViewDataSource, UITabl
         alert.bounds = CGRectMake(0, 0, 320 + 20, alert.bounds.size.height + 216 + 20);*/
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var tableAsArray = TableData["Activities"].arrayValue
+        let tableAsArray = TableData["Activities"].arrayValue
         return tableAsArray.count
  /*
         var tableAsDictionary = TableData["Activities"].arrayValue
@@ -38,10 +38,10 @@ class Events_Saa_ViewController: UIViewController, UITableViewDataSource, UITabl
     
     //@IBOutlet weak var MealTimeSegmentedControl: UISegmentedControl!
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
+        let cell = UITableViewCell()
         
         var activityJO = TableData["Activities"][indexPath.row]
-        var eventName = activityJO["eventName"].stringValue
+        let eventName = activityJO["eventName"].stringValue
         
         cell.textLabel?.text = eventName
         
@@ -56,15 +56,15 @@ class Events_Saa_ViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var activityJO = TableData["Activities"][indexPath.row]
-        var eventName = activityJO["eventName"].stringValue
-        var eventDesc = activityJO["eventDescription"].stringValue
-        var startTime = activityJO["startTime"].stringValue
-        var endTime = activityJO["endTime"].stringValue
-        var location = activityJO["eventLocation"].stringValue
+        let eventName = activityJO["eventName"].stringValue
+        let eventDesc = activityJO["eventDescription"].stringValue
+        let startTime = activityJO["startTime"].stringValue
+        let endTime = activityJO["endTime"].stringValue
+        let location = activityJO["eventLocation"].stringValue
         
-        var alert = UIAlertView();
+        let alert = UIAlertView();
         alert.title = eventName
-        var labelt = eventDesc + "\n" + "Location: " + location + "\n\n" + "Start Time: " + startTime + "\n\n" + "End Time: " + endTime
+        let labelt = eventDesc + "\n" + "Location: " + location + "\n\n" + "Start Time: " + startTime + "\n\n" + "End Time: " + endTime
         
         alert.message = labelt
         
@@ -80,16 +80,17 @@ class Events_Saa_ViewController: UIViewController, UITableViewDataSource, UITabl
         
         let date = NSDate() //get the time, in this case the time an object was created.
         //format date
-        var dateFormatter = NSDateFormatter()
+        let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd" //format style. Browse online to get a format that fits your needs.
-        var dateString = dateFormatter.stringFromDate(date)
+        let dateString = dateFormatter.stringFromDate(date)
         self.date = dateString
         loadActivities()
     }
     func loadActivities() {
         
-        Alamofire.request(.GET,"http://saa.ma1geek.org/getActivities.php", parameters:["date":self.date]).responseJSON{(_,_,data,_) in
-            var json = JSON(data!)
+        Alamofire.request(.GET,"http://saa.ma1geek.org/getActivities.php", parameters:["date":self.date]).responseJSON{response in
+            let data = response.2.value;
+            let json = JSON(data!)
             self.TableData = json
             dispatch_async(dispatch_get_main_queue(), {
                 self.tableView.reloadData()

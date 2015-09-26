@@ -9,22 +9,23 @@ class Me_Mailbox_ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        if let responseString = KeychainWrapper.stringForKey("loggedIn") {
+        if let _ = KeychainWrapper.stringForKey("loggedIn") {
             let username = KeychainWrapper.stringForKey("username")!
             let password = KeychainWrapper.stringForKey("password")!
             
             
-            Alamofire.request(.POST,"http://ma1geek.org/mailbox2.php", parameters:["username":username,"password":password]).responseJSON{(_,_,data,_) in
+            Alamofire.request(.POST,"http://ma1geek.org/mailbox2.php", parameters:["username":username,"password":password]).responseJSON{response in
+                let data = response.2.value;
                 var json = JSON(data!).dictionaryObject as! [String: String]
-                var mailbox = json["mailbox"]
-                var combination = json["combo"]
+                let mailbox = json["mailbox"]
+                let combination = json["combo"]
                 
                 self.mailboxNumberField.text = mailbox
                 self.mailboxCombinationField.text = combination
             }
         }
         else {
-            var alert = UIAlertView();
+            let alert = UIAlertView();
             alert.title = "Not Logged In"
             alert.message = "In order to see your mailbox combination, you must first log in"
             alert.addButtonWithTitle("OK")

@@ -1,4 +1,5 @@
 import UIKit
+import Locksmith
 
 class Home_ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -29,7 +30,7 @@ class Home_ViewController: UIViewController, UITableViewDataSource, UITableViewD
         KeychainWrapper.removeObjectForKey("lastName")
         KeychainWrapper.removeObjectForKey("classNumber")
         
-        var alert = UIAlertView();
+        let alert = UIAlertView();
         alert.title = "Logged Out"
         alert.message = "You have been logged out"
         alert.addButtonWithTitle("OK")
@@ -118,7 +119,7 @@ class Home_ViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
+        let cell = UITableViewCell()
         var (sectionName,subsections) = categories[indexPath.section]
         cell.textLabel?.text = subsections[indexPath.row]
         return cell
@@ -131,7 +132,7 @@ class Home_ViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var (sectionName,subsections) = categories[indexPath.section]
-        var subsection = subsections[indexPath.row]
+        let subsection = subsections[indexPath.row]
         switch (sectionName) {
             case "Food":
                 switch(subsection) {

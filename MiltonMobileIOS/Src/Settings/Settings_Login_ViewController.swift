@@ -30,11 +30,11 @@ class Settings_Login_ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func validateCredentials() {
-        var accessType = accessTypeControler.titleForSegmentAtIndex(accessTypeControler.selectedSegmentIndex)
-        var username = usernameField.text
-        var password = passwordField.text;
+        let accessType = accessTypeControler.titleForSegmentAtIndex(accessTypeControler.selectedSegmentIndex)
+        let username = usernameField.text!
+        let password = passwordField.text!;
         if (accessType == "Teacher" || accessType == "Parent") {
-            var alert = UIAlertView();
+            let alert = UIAlertView();
             alert.title = "Not Supported"
             alert.message = accessType! + " login not yet supported"
             alert.addButtonWithTitle("Dismiss")
@@ -45,24 +45,25 @@ class Settings_Login_ViewController: UIViewController, UITextFieldDelegate {
             self.passwordField.resignFirstResponder()
             
         }
-        Alamofire.request(.POST,"https://my.milton.edu/student/index.cfm", parameters: ["UserLogin": username, "UserPassword": password]).responseString{(_,_,data,_) in
-            var nsdata = NSString(string: data!);
-            var document = HTMLDocument(string: nsdata as String)
-            if data?.lowercaseString.rangeOfString("bluelabel") != nil {
-                var blc = document.firstNodeMatchingSelector(".bluelabel").textContent;
+        Alamofire.request(.POST,"http://my.milton.edu/student/index.cfm", parameters: ["UserLogin": username, "UserPassword": password]).responseString{response in
+            let data = response.2.value!
+            let nsdata = NSString(string: data);
+            let document = HTMLDocument(string: nsdata as String)
+            if data.lowercaseString.rangeOfString("bluelabel") != nil {
+                var blc = document.firstNodeMatchingSelector(".bluelabel")!.textContent;
                 blc = blc.stringByReplacingOccurrencesOfString("::", withString: "@").stringByReplacingOccurrencesOfString("\n", withString: "").stringByReplacingOccurrencesOfString("\t", withString: "").stringByReplacingOccurrencesOfString("  ", withString: " ").stringByReplacingOccurrencesOfString("  ", withString: " ").stringByReplacingOccurrencesOfString("  ", withString: " ").stringByReplacingOccurrencesOfString("  ", withString: " ").stringByReplacingOccurrencesOfString("  ", withString: " ").stringByReplacingOccurrencesOfString("  ", withString: " ").stringByReplacingOccurrencesOfString("  ", withString: " ").stringByReplacingOccurrencesOfString("  ", withString: " ").stringByReplacingOccurrencesOfString("  ", withString: " ")
                 
-                var lastNameStart = advance(blc.startIndex,blc.indexOfCharacter("s")!+9)
-                var lastNameEnd = advance(blc.startIndex, blc.indexOfCharacter(",")!)
-                var lastName = blc.substringWithRange(Range<String.Index>(start: lastNameStart, end: lastNameEnd))
+                let lastNameStart = blc.startIndex.advancedBy(blc.indexOfCharacter("s")!+9);
+                let lastNameEnd = blc.startIndex.advancedBy(blc.indexOfCharacter(",")!);
+                let lastName = blc.substringWithRange(Range<String.Index>(start: lastNameStart, end: lastNameEnd))
                 
                 
                 
-                var firstNameStart = advance(blc.startIndex,blc.indexOfCharacter(",")!+2)
-                var firstNameEnd = advance(blc.startIndex, blc.indexOfCharacter("[")!-1)
-                var firstName = blc.substringWithRange(Range<String.Index>(start: firstNameStart, end: firstNameEnd))
+                let firstNameStart = blc.startIndex.advancedBy(blc.indexOfCharacter(",")!+2);
+                let firstNameEnd = blc.startIndex.advancedBy(blc.indexOfCharacter("[")!-1);
+                let firstName = blc.substringWithRange(Range<String.Index>(start: firstNameStart, end: firstNameEnd))
                 
-                var classRoman = blc.substringWithRange(Range<String.Index>(start: advance(blc.startIndex,blc.indexOfCharacter("[")!+8), end: advance(blc.startIndex, blc.indexOfCharacter("@")!-1)))
+                let classRoman = blc.substringWithRange(Range<String.Index>(start: blc.startIndex.advancedBy(blc.indexOfCharacter("[")!+8), end: blc.startIndex.advancedBy(blc.indexOfCharacter("@")!-1)))
                 var classNumber = 0;
                 if (classRoman == "IV") {
                     classNumber = 4;
@@ -77,10 +78,10 @@ class Settings_Login_ViewController: UIViewController, UITextFieldDelegate {
                 if (classRoman == "I") {
                     classNumber = 1;
                 }
-                println("username: " + username);
-                println("firstName: " + firstName);
-                println("lastName: " + lastName);
-                println("class: " + String(classNumber));
+                print("username: " + username);
+                print("firstName: " + firstName);
+                print("lastName: " + lastName);
+                print("class: " + String(classNumber));
                 
                 KeychainWrapper.setString("true", forKey: "loggedIn")
                 KeychainWrapper.setString(username, forKey: "username")
@@ -89,7 +90,7 @@ class Settings_Login_ViewController: UIViewController, UITextFieldDelegate {
                 KeychainWrapper.setString(lastName, forKey: "lastName")
                 KeychainWrapper.setString(String(classNumber), forKey: "classNumber")
                 
-                var alert = UIAlertView();
+                let alert = UIAlertView();
                 alert.title = "Welcome"
                 alert.message = "Welcome " + firstName + " " + lastName
                 alert.addButtonWithTitle("Continue")
@@ -98,7 +99,7 @@ class Settings_Login_ViewController: UIViewController, UITextFieldDelegate {
                 self.navigationController?.popViewControllerAnimated(true)
             }
             else {
-                var alert = UIAlertView();
+                let alert = UIAlertView();
                 alert.title = "Check your username and password"
                 alert.message = "These credentials could not be validated"
                 alert.addButtonWithTitle("OK")
@@ -113,7 +114,7 @@ class Settings_Login_ViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
         
     }
@@ -124,8 +125,8 @@ class Settings_Login_ViewController: UIViewController, UITextFieldDelegate {
 extension String
 {
     public func indexOfCharacter(char: Character) -> Int? {
-        if let idx = find(self, char) {
-            return distance(self.startIndex, idx)
+        if let idx = self.characters.indexOf(char) {
+            return self.startIndex.distanceTo(idx)
         }
         return nil
     }

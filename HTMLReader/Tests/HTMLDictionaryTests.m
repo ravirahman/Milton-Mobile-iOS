@@ -98,8 +98,13 @@ static NSArray *fixtureKeys;
 
 - (void)testSetObjectForKey
 {
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wnonnull"
+    
     XCTAssertThrows([_dictionary setObject:@1 forKey:nil]);
     XCTAssertThrows([_dictionary setObject:nil forKey:@1]);
+    
+    #pragma clang diagnostic pop
     
     XCTAssertNil(_dictionary[@"yo"]);
     _dictionary[@"yo"] = @"hey";
@@ -122,8 +127,14 @@ static NSArray *fixtureKeys;
 - (void)testInsertObjectForKeyAtIndex
 {
     XCTAssertThrows([_dictionary insertObject:@"yo" forKey:@"yo" atIndex:1]);
+    
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wnonnull"
+    
     XCTAssertThrows([_dictionary insertObject:nil forKey:@"yo" atIndex:0]);
     XCTAssertThrows([_dictionary insertObject:@"yo" forKey:nil atIndex:0]);
+    
+    #pragma clang diagnostic pop
     
     [self populateDictionary];
     NSUInteger count = _dictionary.count;

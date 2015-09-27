@@ -114,19 +114,19 @@ class Home_ViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var (sectionName,subsections) = categories[section]
+        let (_,subsections) = categories[section]
         return subsections.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        var (sectionName,subsections) = categories[indexPath.section]
+        var (_,subsections) = categories[indexPath.section]
         cell.textLabel?.text = subsections[indexPath.row]
         return cell
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        var (sectionName,subsections) = categories[section]
+        let (sectionName,_) = categories[section]
         return sectionName
     }
     

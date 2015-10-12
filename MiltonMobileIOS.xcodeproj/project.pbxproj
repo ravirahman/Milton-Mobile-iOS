@@ -231,12 +231,12 @@
 		41ED41471B2311EE00727C9B /* Calendar-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calendar-50.png"; sourceTree = "<group>"; };
 		41ED41531B23120700727C9B /* Calendar-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calendar-32.png"; sourceTree = "<group>"; };
 		41EEB50F1AF7DDC1002435F7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		41FB94631AF7DB5600D2C1B5 /* MiltonMobileIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiltonMobileIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41FB94631AF7DB5600D2C1B5 /* miltonmobileios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miltonmobileios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41FB94671AF7DB5600D2C1B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41FB946D1AF7DB5600D2C1B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41FB946F1AF7DB5600D2C1B5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		41FB94721AF7DB5600D2C1B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		41FB94781AF7DB5600D2C1B5 /* MiltonMobileIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiltonMobileIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		41FB94781AF7DB5600D2C1B5 /* miltonmobileios.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = miltonmobileios.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41FB947D1AF7DB5600D2C1B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41FB947E1AF7DB5600D2C1B5 /* MiltonMobileIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiltonMobileIOSTests.swift; sourceTree = "<group>"; };
 		41FB949C1AF7DC7C00D2C1B5 /* Milton_Academy_Seal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Milton_Academy_Seal.jpg; sourceTree = "<group>"; };
@@ -414,8 +414,8 @@
 		41FB94641AF7DB5600D2C1B5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				41FB94631AF7DB5600D2C1B5 /* MiltonMobileIOS.app */,
-				41FB94781AF7DB5600D2C1B5 /* MiltonMobileIOSTests.xctest */,
+				41FB94631AF7DB5600D2C1B5 /* miltonmobileios.app */,
+				41FB94781AF7DB5600D2C1B5 /* miltonmobileios.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -467,9 +467,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		41FB94621AF7DB5600D2C1B5 /* MiltonMobileIOS */ = {
+		41FB94621AF7DB5600D2C1B5 /* miltonmobileios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 41FB94821AF7DB5600D2C1B5 /* Build configuration list for PBXNativeTarget "MiltonMobileIOS" */;
+			buildConfigurationList = 41FB94821AF7DB5600D2C1B5 /* Build configuration list for PBXNativeTarget "miltonmobileios" */;
 			buildPhases = (
 				41FB945F1AF7DB5600D2C1B5 /* Sources */,
 				41FB94601AF7DB5600D2C1B5 /* Frameworks */,
@@ -483,14 +483,14 @@
 				4107B49A1B121B8A005B0176 /* PBXTargetDependency */,
 				411083EA1BB6C144007494C7 /* PBXTargetDependency */,
 			);
-			name = MiltonMobileIOS;
+			name = miltonmobileios;
 			productName = MiltonMobileIOS;
-			productReference = 41FB94631AF7DB5600D2C1B5 /* MiltonMobileIOS.app */;
+			productReference = 41FB94631AF7DB5600D2C1B5 /* miltonmobileios.app */;
 			productType = "com.apple.product-type.application";
 		};
-		41FB94771AF7DB5600D2C1B5 /* MiltonMobileIOSTests */ = {
+		41FB94771AF7DB5600D2C1B5 /* miltonmobileiosTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 41FB94851AF7DB5600D2C1B5 /* Build configuration list for PBXNativeTarget "MiltonMobileIOSTests" */;
+			buildConfigurationList = 41FB94851AF7DB5600D2C1B5 /* Build configuration list for PBXNativeTarget "miltonmobileiosTests" */;
 			buildPhases = (
 				41FB94741AF7DB5600D2C1B5 /* Sources */,
 				41FB94751AF7DB5600D2C1B5 /* Frameworks */,
@@ -501,9 +501,9 @@
 			dependencies = (
 				41FB947A1AF7DB5600D2C1B5 /* PBXTargetDependency */,
 			);
-			name = MiltonMobileIOSTests;
+			name = miltonmobileiosTests;
 			productName = MiltonMobileIOSTests;
-			productReference = 41FB94781AF7DB5600D2C1B5 /* MiltonMobileIOSTests.xctest */;
+			productReference = 41FB94781AF7DB5600D2C1B5 /* miltonmobileios.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -527,7 +527,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 41FB945E1AF7DB5600D2C1B5 /* Build configuration list for PBXProject "MiltonMobileIOS" */;
+			buildConfigurationList = 41FB945E1AF7DB5600D2C1B5 /* Build configuration list for PBXProject "miltonmobileios" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -554,8 +554,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				41FB94621AF7DB5600D2C1B5 /* MiltonMobileIOS */,
-				41FB94771AF7DB5600D2C1B5 /* MiltonMobileIOSTests */,
+				41FB94621AF7DB5600D2C1B5 /* miltonmobileios */,
+				41FB94771AF7DB5600D2C1B5 /* miltonmobileiosTests */,
 			);
 		};
 /* End PBXProject section */
@@ -763,7 +763,7 @@
 		};
 		41FB947A1AF7DB5600D2C1B5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 41FB94621AF7DB5600D2C1B5 /* MiltonMobileIOS */;
+			target = 41FB94621AF7DB5600D2C1B5 /* miltonmobileios */;
 			targetProxy = 41FB94791AF7DB5600D2C1B5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -881,7 +881,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.milton.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = miltonmobileios;
 				SWIFT_OBJC_BRIDGING_HEADER = "MiltonMobileIOS/Src/Util/MiltonMobileIOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -899,7 +899,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.milton.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = miltonmobileios;
 				SWIFT_OBJC_BRIDGING_HEADER = "MiltonMobileIOS/Src/Util/MiltonMobileIOS-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -920,8 +920,8 @@
 				INFOPLIST_FILE = MiltonMobileIOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.milton.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiltonMobileIOS.app/MiltonMobileIOS";
+				PRODUCT_NAME = miltonmobileios;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/miltonmobileios.app/miltonmobileios";
 			};
 			name = Debug;
 		};
@@ -936,15 +936,15 @@
 				INFOPLIST_FILE = MiltonMobileIOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.milton.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiltonMobileIOS.app/MiltonMobileIOS";
+				PRODUCT_NAME = miltonmobileios;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/miltonmobileios.app/miltonmobileios";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		41FB945E1AF7DB5600D2C1B5 /* Build configuration list for PBXProject "MiltonMobileIOS" */ = {
+		41FB945E1AF7DB5600D2C1B5 /* Build configuration list for PBXProject "miltonmobileios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				41FB94801AF7DB5600D2C1B5 /* Debug */,
@@ -953,7 +953,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		41FB94821AF7DB5600D2C1B5 /* Build configuration list for PBXNativeTarget "MiltonMobileIOS" */ = {
+		41FB94821AF7DB5600D2C1B5 /* Build configuration list for PBXNativeTarget "miltonmobileios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				41FB94831AF7DB5600D2C1B5 /* Debug */,
@@ -962,7 +962,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		41FB94851AF7DB5600D2C1B5 /* Build configuration list for PBXNativeTarget "MiltonMobileIOSTests" */ = {
+		41FB94851AF7DB5600D2C1B5 /* Build configuration list for PBXNativeTarget "miltonmobileiosTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				41FB94861AF7DB5600D2C1B5 /* Debug */,

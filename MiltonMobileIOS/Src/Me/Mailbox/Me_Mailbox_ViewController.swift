@@ -14,7 +14,7 @@ class Me_Mailbox_ViewController: UIViewController {
             let password = KeychainWrapper.stringForKey("password")!
             
             
-            Alamofire.request(.POST,"http://ma1geek.org/mailbox2.php", parameters:["username":username,"password":password]).responseJSON{response in
+            Alamofire.request(.GET,"http://backend.ma1geek.org/me/mailbox/get", parameters:["username":username,"password":password]).responseJSON{response in
                 let data = response.2.value;
                 var json = JSON(data!).dictionaryObject as! [String: String]
                 let mailbox = json["mailbox"]

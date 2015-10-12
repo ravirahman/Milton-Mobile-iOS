@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="t72-DZ-8Ch">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="t72-DZ-8Ch">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -10,7 +10,7 @@
         <!--Mailbox-->
         <scene sceneID="PyE-RA-7YY">
             <objects>
-                <viewController storyboardIdentifier="Me_Mailbox_ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6iC-fY-UPf" customClass="Me_Mailbox_ViewController" customModule="MiltonMobileIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Me_Mailbox_ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6iC-fY-UPf" customClass="Me_Mailbox_ViewController" customModule="miltonmobileios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="snq-ve-7ov"/>
                         <viewControllerLayoutGuide type="bottom" id="J6h-iP-v2Q"/>
@@ -21,6 +21,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Combination is: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HO-6v-SXk">
                                 <rect key="frame" x="20" y="101" width="164" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="164" id="G1x-hi-Amc"/>
                                 </constraints>
@@ -30,6 +31,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZP-nn-ceQ">
                                 <rect key="frame" x="192" y="101" width="115" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="115" id="dYV-Bl-kQ0"/>
                                 </constraints>
@@ -39,6 +41,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Mailbox is:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nmr-eh-xfN">
                                 <rect key="frame" x="20" y="72" width="122" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="122" id="kzF-Qw-cze"/>
                                 </constraints>
@@ -48,6 +51,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgk-Xn-nP6">
                                 <rect key="frame" x="150" y="72" width="78" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="78" id="HSN-8C-BiU"/>
                                 </constraints>
@@ -57,6 +61,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxN-6R-VrK">
                                 <rect key="frame" x="20" y="130" width="560" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Glf-aQ-ZtR"/>
                                 </constraints>
@@ -66,6 +71,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1. Turn dial at least four times to the left to clear the combo and stop at 1st number" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2D-PW-8UE">
                                 <rect key="frame" x="20" y="159" width="560" height="43"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="LSG-78-o0M"/>
                                 </constraints>
@@ -75,23 +81,27 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2. Turn dial to the right past 1st number and stop at 2nd number" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohd-qT-r6j">
                                 <rect key="frame" x="20" y="210" width="560" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3. Turn dial to the left and stop at 3rd number" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBk-K3-MYf">
                                 <rect key="frame" x="20" y="239" width="560" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="4. Turn dial slowly to the right until it sticks then slowly pull open" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3N-Gn-r6E">
                                 <rect key="frame" x="20" y="268" width="568" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="sBk-K3-MYf" firstAttribute="trailing" secondItem="Kk5-gY-08Z" secondAttribute="trailingMargin" id="1c0-vY-OPW"/>
@@ -135,7 +145,7 @@
         <!--Login-->
         <scene sceneID="AeV-dt-m1P">
             <objects>
-                <viewController title="Login" id="MY5-c0-Fz1" customClass="Settings_Login_ViewController" customModule="MiltonMobileIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" id="MY5-c0-Fz1" customClass="Settings_Login_ViewController" customModule="miltonmobileios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DJg-IX-bTA"/>
                         <viewControllerLayoutGuide type="bottom" id="H5m-to-4It"/>
@@ -146,22 +156,26 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please Login Using Your myMilton Credentials" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNq-0x-M8T">
                                 <rect key="frame" x="16" y="72" width="568" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3uD-5h-Tbj">
                                 <rect key="frame" x="188" y="137" width="224" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2P8-hm-bVp">
                                 <rect key="frame" x="188" y="175" width="224" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gf-FK-O7E">
                                 <rect key="frame" x="188" y="213" width="224" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Log In">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -171,6 +185,7 @@
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="v9q-XA-b4i">
                                 <rect key="frame" x="188" y="101" width="224" height="29"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="224" id="gq4-EE-G1h"/>
                                 </constraints>
@@ -181,6 +196,7 @@
                                 </segments>
                             </segmentedControl>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2P8-hm-bVp" firstAttribute="trailing" secondItem="3uD-5h-Tbj" secondAttribute="trailing" id="59H-h6-dBX"/>
@@ -212,7 +228,7 @@
         <!--Settings View Controller-->
         <scene sceneID="59y-BY-643">
             <objects>
-                <viewController storyboardIdentifier="Settings_ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ieG-G4-egS" customClass="Settings_ViewController" customModule="MiltonMobileIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Settings_ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ieG-G4-egS" customClass="Settings_ViewController" customModule="miltonmobileios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dgK-HV-hnn"/>
                         <viewControllerLayoutGuide type="bottom" id="0wc-9V-nX4"/>
@@ -220,6 +236,7 @@
                     <view key="view" contentMode="scaleToFill" id="XjA-wx-trB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -230,7 +247,7 @@
         <!--FLIK-->
         <scene sceneID="WZf-QD-Nlx">
             <objects>
-                <viewController restorationIdentifier="Food_Flik_ViewController" storyboardIdentifier="Food_Flik_ViewController" id="cAZ-kd-cOY" customClass="Food_Flik_ViewController" customModule="MiltonMobileIOS" sceneMemberID="viewController">
+                <viewController restorationIdentifier="Food_Flik_ViewController" storyboardIdentifier="Food_Flik_ViewController" id="cAZ-kd-cOY" customClass="Food_Flik_ViewController" customModule="miltonmobileios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LAa-I7-mq2"/>
                         <viewControllerLayoutGuide type="bottom" id="u1u-GW-Zzv"/>
@@ -241,6 +258,7 @@
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="l6t-kT-NEe">
                                 <rect key="frame" x="16" y="20" width="568" height="29"/>
+                                <animations/>
                                 <segments>
                                     <segment title="Breakfast"/>
                                     <segment title="Lunch"/>
@@ -252,6 +270,7 @@
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="nHw-Iw-4zA">
                                 <rect key="frame" x="16" y="72" width="568" height="29"/>
+                                <animations/>
                                 <segments>
                                     <segment title="Breakfast"/>
                                     <segment title="Lunch"/>
@@ -263,6 +282,7 @@
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TXa-La-W2s">
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="nT8-IC-cki">
@@ -271,7 +291,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nT8-IC-cki" id="E1s-YZ-ePK">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
                                         </tableViewCellContentView>
+                                        <animations/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="gff-7E-p4U">
                                         <rect key="frame" x="0.0" y="66" width="600" height="44"/>
@@ -279,7 +301,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gff-7E-p4U" id="DPF-LE-uRj">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
                                         </tableViewCellContentView>
+                                        <animations/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="cbA-uY-h0B">
                                         <rect key="frame" x="0.0" y="110" width="600" height="44"/>
@@ -287,7 +311,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cbA-uY-h0B" id="z2G-hG-igo">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
                                         </tableViewCellContentView>
+                                        <animations/>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -297,6 +323,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nHw-Iw-4zA" firstAttribute="top" secondItem="LAa-I7-mq2" secondAttribute="bottom" constant="8" symbolic="YES" id="4Kt-A1-AUE"/>
@@ -318,13 +345,7 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="more" id="fCL-c7-EwX"/>
-                    <navigationItem key="navigationItem" title="FLIK" id="iyQ-Ha-Gkh">
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" image="Calendar-32.png" id="FCG-Fv-bVF">
-                            <connections>
-                                <action selector="datePickerClicked:" destination="cAZ-kd-cOY" id="1ej-Zl-RUB"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="FLIK" id="iyQ-Ha-Gkh"/>
                     <connections>
                         <outlet property="MealTimeSegmentedControl" destination="nHw-Iw-4zA" id="XEk-Zv-56z"/>
                         <outlet property="tableView" destination="TXa-La-W2s" id="HKI-xC-AUO"/>
@@ -337,13 +358,15 @@
         <!--Milton Academy-->
         <scene sceneID="x0P-2K-i8D">
             <objects>
-                <navigationController title="Milton Academy" id="t72-DZ-8Ch" customClass="Navigation_Controller" customModule="MiltonMobileIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController title="Milton Academy" id="t72-DZ-8Ch" customClass="Navigation_Controller" customModule="miltonmobileios" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NVa-Sx-vnK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="s2W-bH-d1n">
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </toolbar>
                     <connections>
                         <segue destination="BBV-pq-T5P" kind="relationship" relationship="rootViewController" id="6sf-gV-6hr"/>
@@ -356,7 +379,7 @@
         <!--Milton Academy-->
         <scene sceneID="2fD-YO-msq">
             <objects>
-                <viewController title="Milton Academy" id="BBV-pq-T5P" customClass="Home_ViewController" customModule="MiltonMobileIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Milton Academy" id="BBV-pq-T5P" customClass="Home_ViewController" customModule="miltonmobileios" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9sC-1u-o31"/>
                         <viewControllerLayoutGuide type="bottom" id="qov-ff-rTy"/>
@@ -367,6 +390,7 @@
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzN-k2-FDG">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <animations/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="H3G-zv-FJ2"/>
                                     <barButtonItem title="Login" id="Hk8-qA-f0L" userLabel="Settings">
@@ -383,6 +407,7 @@
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWG-er-t3P">
                                 <rect key="frame" x="190" y="244" width="68" height="68"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="68" id="30V-65-Wnw"/>
                                     <constraint firstAttribute="height" constant="68" id="RqL-7e-7w9"/>
@@ -396,6 +421,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mailbox" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAk-Kc-INo">
                                 <rect key="frame" x="270" y="320" width="61" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="61" id="kbC-u4-zKJ"/>
                                 </constraints>
@@ -405,6 +431,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flik" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dps-28-zOq">
                                 <rect key="frame" x="211" y="320" width="27" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="27" id="jdp-DC-caJ"/>
                                     <constraint firstAttribute="height" constant="21" id="xXv-vE-bel"/>
@@ -415,6 +442,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7P-cS-MG5">
                                 <rect key="frame" x="342" y="244" width="68" height="68"/>
+                                <animations/>
                                 <state key="normal" image="saaiconnew.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -424,6 +452,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Milton Academy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8M-ZL-y62">
                                 <rect key="frame" x="124" y="208" width="352" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="352" id="g9M-T9-aLm"/>
                                     <constraint firstAttribute="height" constant="21" id="xa5-fS-j8N"/>
@@ -434,6 +463,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Sn-7r-Yzd">
                                 <rect key="frame" x="359" y="320" width="34" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="34" id="ibV-zR-vf8"/>
                                 </constraints>
@@ -443,6 +473,7 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Milton_Academy_Seal.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bXY-Tk-yvM">
                                 <rect key="frame" x="236" y="72" width="128" height="128"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="HUU-Qg-dUj"/>
                                     <constraint firstAttribute="width" constant="128" id="NlU-hu-eQA"/>
@@ -450,6 +481,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAO-4e-3JM">
                                 <rect key="frame" x="266" y="244" width="68" height="68"/>
+                                <animations/>
                                 <state key="normal" image="mailbox_not_pressed.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -458,6 +490,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="iAO-4e-3JM" firstAttribute="leading" secondItem="aWG-er-t3P" secondAttribute="trailing" constant="8" symbolic="YES" id="2ka-gU-PkE"/>
@@ -504,6 +537,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Rff-Ce-kcc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="AKu-16-FRz">
@@ -512,7 +546,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AKu-16-FRz" id="5vf-Rg-Pnl">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
                                 </tableViewCellContentView>
+                                <animations/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -528,7 +564,7 @@
         <!--SAA-->
         <scene sceneID="wa5-g3-EUE">
             <objects>
-                <viewController storyboardIdentifier="Events_Saa_ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ukh-Ur-jUD" customClass="Events_Saa_ViewController" customModule="MiltonMobileIOS" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Events_Saa_ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ukh-Ur-jUD" customClass="Events_Saa_ViewController" customModule="miltonmobileios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L3i-KV-fy8"/>
                         <viewControllerLayoutGuide type="bottom" id="qjh-M6-8Vf"/>
@@ -539,6 +575,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xe0-DO-x1N">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="664"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="ukh-Ur-jUD" id="SXz-a2-qxl"/>
@@ -546,6 +583,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="xe0-DO-x1N" secondAttribute="trailing" id="2Dp-Zc-hwz"/>
@@ -565,7 +603,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Calendar-32.png" width="32" height="32"/>
         <image name="Milton_Academy_Seal.jpg" width="200" height="200"/>
         <image name="flikicon.png" width="363" height="363"/>
         <image name="mailbox_not_pressed.png" width="363" height="363"/>

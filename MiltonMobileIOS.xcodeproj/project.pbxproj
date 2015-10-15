@@ -30,7 +30,6 @@
 		41FB946E1AF7DB5600D2C1B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41FB946C1AF7DB5600D2C1B5 /* Main.storyboard */; };
 		41FB94701AF7DB5600D2C1B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41FB946F1AF7DB5600D2C1B5 /* Images.xcassets */; };
 		41FB94731AF7DB5600D2C1B5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FB94711AF7DB5600D2C1B5 /* LaunchScreen.xib */; };
-		41FB947F1AF7DB5600D2C1B5 /* MiltonMobileIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FB947E1AF7DB5600D2C1B5 /* MiltonMobileIOSTests.swift */; };
 		41FB94A01AF7DC7C00D2C1B5 /* Milton_Academy_Seal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41FB949C1AF7DC7C00D2C1B5 /* Milton_Academy_Seal.jpg */; };
 		41FB94A11AF7DC7C00D2C1B5 /* vegetarian.png in Resources */ = {isa = PBXBuildFile; fileRef = 41FB949D1AF7DC7C00D2C1B5 /* vegetarian.png */; };
 		59701F6C1B0A49FB00EADE8E /* flikicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 59701F6A1B0A49FB00EADE8E /* flikicon.png */; };
@@ -185,13 +184,6 @@
 			remoteGlobalIDString = E4202FE01B667AA100C997FB;
 			remoteInfo = "Alamofire watchOS";
 		};
-		41FB94791AF7DB5600D2C1B5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 41FB945B1AF7DB5600D2C1B5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 41FB94621AF7DB5600D2C1B5;
-			remoteInfo = MiltonMobileIOS;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -218,7 +210,7 @@
 		411083EB1BB6C1F8007494C7 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
 		411083EC1BB6C1F8007494C7 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 		411083ED1BB6C1F8007494C7 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
-		411083EE1BB6C1F8007494C7 /* MiltonMobileIOS-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MiltonMobileIOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		411083EE1BB6C1F8007494C7 /* miltonmobileios-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "miltonmobileios-Bridging-Header.h"; sourceTree = "<group>"; };
 		412EE7CE1B0F9D5C00244486 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = ../SwiftyJSON.swift; sourceTree = "<group>"; };
 		41D8CBD91B0A8EC30040E5D1 /* Settings_Login_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings_Login_ViewController.swift; sourceTree = "<group>"; };
 		41D8CBDB1B0A950D0040E5D1 /* Navigation_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigation_Controller.swift; sourceTree = "<group>"; };
@@ -236,9 +228,6 @@
 		41FB946D1AF7DB5600D2C1B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41FB946F1AF7DB5600D2C1B5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		41FB94721AF7DB5600D2C1B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		41FB94781AF7DB5600D2C1B5 /* miltonmobileios.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = miltonmobileios.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		41FB947D1AF7DB5600D2C1B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		41FB947E1AF7DB5600D2C1B5 /* MiltonMobileIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiltonMobileIOSTests.swift; sourceTree = "<group>"; };
 		41FB949C1AF7DC7C00D2C1B5 /* Milton_Academy_Seal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Milton_Academy_Seal.jpg; sourceTree = "<group>"; };
 		41FB949D1AF7DC7C00D2C1B5 /* vegetarian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vegetarian.png; sourceTree = "<group>"; };
 		59701F6A1B0A49FB00EADE8E /* flikicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flikicon.png; sourceTree = "<group>"; };
@@ -256,13 +245,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		41FB94751AF7DB5600D2C1B5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -272,7 +254,7 @@
 				411083EB1BB6C1F8007494C7 /* KeychainWrapper.h */,
 				411083EC1BB6C1F8007494C7 /* KeychainWrapper.m */,
 				411083ED1BB6C1F8007494C7 /* KeychainWrapper.swift */,
-				411083EE1BB6C1F8007494C7 /* MiltonMobileIOS-Bridging-Header.h */,
+				411083EE1BB6C1F8007494C7 /* miltonmobileios-Bridging-Header.h */,
 				412EE7CE1B0F9D5C00244486 /* SwiftyJSON.swift */,
 			);
 			path = Util;
@@ -404,8 +386,7 @@
 				4107B47C1B121B79005B0176 /* HTMLReader.xcodeproj */,
 				4107B4681B1217C1005B0176 /* Alamofire.xcodeproj */,
 				41EEB50F1AF7DDC1002435F7 /* .gitignore */,
-				41FB94651AF7DB5600D2C1B5 /* MiltonMobileIOS */,
-				41FB947B1AF7DB5600D2C1B5 /* MiltonMobileIOSTests */,
+				41FB94651AF7DB5600D2C1B5 /* miltonmobileios */,
 				41FB94641AF7DB5600D2C1B5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -415,12 +396,11 @@
 			isa = PBXGroup;
 			children = (
 				41FB94631AF7DB5600D2C1B5 /* miltonmobileios.app */,
-				41FB94781AF7DB5600D2C1B5 /* miltonmobileios.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		41FB94651AF7DB5600D2C1B5 /* MiltonMobileIOS */ = {
+		41FB94651AF7DB5600D2C1B5 /* miltonmobileios */ = {
 			isa = PBXGroup;
 			children = (
 				41E33E6D1AF9998600FF50BE /* Src */,
@@ -429,7 +409,7 @@
 				41FB94711AF7DB5600D2C1B5 /* LaunchScreen.xib */,
 				41FB94661AF7DB5600D2C1B5 /* Supporting Files */,
 			);
-			path = MiltonMobileIOS;
+			path = miltonmobileios;
 			sourceTree = "<group>";
 		};
 		41FB94661AF7DB5600D2C1B5 /* Supporting Files */ = {
@@ -443,23 +423,6 @@
 				41FB949C1AF7DC7C00D2C1B5 /* Milton_Academy_Seal.jpg */,
 				41FB949D1AF7DC7C00D2C1B5 /* vegetarian.png */,
 				41FB94671AF7DB5600D2C1B5 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		41FB947B1AF7DB5600D2C1B5 /* MiltonMobileIOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				41FB947E1AF7DB5600D2C1B5 /* MiltonMobileIOSTests.swift */,
-				41FB947C1AF7DB5600D2C1B5 /* Supporting Files */,
-			);
-			path = MiltonMobileIOSTests;
-			sourceTree = "<group>";
-		};
-		41FB947C1AF7DB5600D2C1B5 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				41FB947D1AF7DB5600D2C1B5 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -484,27 +447,9 @@
 				411083EA1BB6C144007494C7 /* PBXTargetDependency */,
 			);
 			name = miltonmobileios;
-			productName = MiltonMobileIOS;
+			productName = miltonmobileios;
 			productReference = 41FB94631AF7DB5600D2C1B5 /* miltonmobileios.app */;
 			productType = "com.apple.product-type.application";
-		};
-		41FB94771AF7DB5600D2C1B5 /* miltonmobileiosTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 41FB94851AF7DB5600D2C1B5 /* Build configuration list for PBXNativeTarget "miltonmobileiosTests" */;
-			buildPhases = (
-				41FB94741AF7DB5600D2C1B5 /* Sources */,
-				41FB94751AF7DB5600D2C1B5 /* Frameworks */,
-				41FB94761AF7DB5600D2C1B5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				41FB947A1AF7DB5600D2C1B5 /* PBXTargetDependency */,
-			);
-			name = miltonmobileiosTests;
-			productName = MiltonMobileIOSTests;
-			productReference = 41FB94781AF7DB5600D2C1B5 /* miltonmobileios.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -520,10 +465,6 @@
 					41FB94621AF7DB5600D2C1B5 = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = 7B7M7FR7QW;
-					};
-					41FB94771AF7DB5600D2C1B5 = {
-						CreatedOnToolsVersion = 6.3.1;
-						TestTargetID = 41FB94621AF7DB5600D2C1B5;
 					};
 				};
 			};
@@ -555,7 +496,6 @@
 			projectRoot = "";
 			targets = (
 				41FB94621AF7DB5600D2C1B5 /* miltonmobileios */,
-				41FB94771AF7DB5600D2C1B5 /* miltonmobileiosTests */,
 			);
 		};
 /* End PBXProject section */
@@ -707,13 +647,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		41FB94761AF7DB5600D2C1B5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -735,14 +668,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		41FB94741AF7DB5600D2C1B5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				41FB947F1AF7DB5600D2C1B5 /* MiltonMobileIOSTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -760,11 +685,6 @@
 			isa = PBXTargetDependency;
 			name = "Locksmith iOS";
 			targetProxy = 411083E91BB6C144007494C7 /* PBXContainerItemProxy */;
-		};
-		41FB947A1AF7DB5600D2C1B5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 41FB94621AF7DB5600D2C1B5 /* miltonmobileios */;
-			targetProxy = 41FB94791AF7DB5600D2C1B5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -877,12 +797,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = MiltonMobileIOS/Info.plist;
+				INFOPLIST_FILE = miltonmobileios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.milton.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = miltonmobileios;
-				SWIFT_OBJC_BRIDGING_HEADER = "MiltonMobileIOS/Src/Util/MiltonMobileIOS-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "miltonmobileios/Src/Util/miltonmobileios-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -895,49 +815,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = MiltonMobileIOS/Info.plist;
+				INFOPLIST_FILE = miltonmobileios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.milton.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = miltonmobileios;
-				SWIFT_OBJC_BRIDGING_HEADER = "MiltonMobileIOS/Src/Util/MiltonMobileIOS-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "miltonmobileios/Src/Util/miltonmobileios-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		41FB94861AF7DB5600D2C1B5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MiltonMobileIOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.milton.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = miltonmobileios;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/miltonmobileios.app/miltonmobileios";
-			};
-			name = Debug;
-		};
-		41FB94871AF7DB5600D2C1B5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MiltonMobileIOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.milton.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = miltonmobileios;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/miltonmobileios.app/miltonmobileios";
 			};
 			name = Release;
 		};
@@ -958,15 +842,6 @@
 			buildConfigurations = (
 				41FB94831AF7DB5600D2C1B5 /* Debug */,
 				41FB94841AF7DB5600D2C1B5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		41FB94851AF7DB5600D2C1B5 /* Build configuration list for PBXNativeTarget "miltonmobileiosTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				41FB94861AF7DB5600D2C1B5 /* Debug */,
-				41FB94871AF7DB5600D2C1B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

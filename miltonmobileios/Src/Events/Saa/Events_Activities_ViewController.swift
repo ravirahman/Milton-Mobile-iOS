@@ -87,16 +87,26 @@ class Events_Activities_ViewController: UIViewController, UITableViewDataSource,
         loadActivities()
     }
     func loadActivities() {
+        SwiftSpinner.show("Loading Activities");
         
         Alamofire.request(.GET,"http://saa.ma1geek.org/getActivities.php", parameters:["date":self.date]).responseJSON{response in
-            let data = response.2.value;
-            let json = JSON(data!)
+            SwiftSpinner.hide();
+            if let data = response.2.value {
+            let json = JSON(data)
             self.TableData = json
             dispatch_async(dispatch_get_main_queue(), {
                 self.tableView.reloadData()
                 return
             })
             // see https://github.com/SwiftyJSON/SwiftyJSON
+            }
+            else {
+                let alert = UIAlertView();
+                alert.title = "Try again"
+                alert.message = "Please check your network connection."
+                alert.addButtonWithTitle("OK")
+                alert.show()
+            }
             
         }
     }

@@ -44,6 +44,7 @@ class Me_Mailbox_ViewController: UIViewController {
         
         if let retrievedString = KeychainWrapper.stringForKey("loggedIn") {
             if (retrievedString == "true") {
+                SwiftSpinner.show("Loading Mailbox Combination");
                 let username = KeychainWrapper.stringForKey("username")!
                 let password = KeychainWrapper.stringForKey("password")!
                 
@@ -51,13 +52,22 @@ class Me_Mailbox_ViewController: UIViewController {
             
             
                 Alamofire.request(.GET,"http://backend.ma1geek.org/me/mailbox/get", parameters:["username":username,"password":password]).responseJSON{response in
-                    let data = response.2.value;
-                    var json = JSON(data!).dictionaryObject as! [String: String]
+                    SwiftSpinner.hide()
+                    if let data = response.2.value {
+                    var json = JSON(data).dictionaryObject as! [String: String]
                     let mailbox = json["mailbox"]
                     let combination = json["combo"]
                     
                     self.mailboxNumberField.text = mailbox
                     self.mailboxCombinationField.text = combination
+                    }
+                    else {
+                        let alert = UIAlertView();
+                        alert.title = "Try again"
+                        alert.message = "Please check your network connection."
+                        alert.addButtonWithTitle("OK")
+                        alert.show()
+                    }
                 }
             }
             else {

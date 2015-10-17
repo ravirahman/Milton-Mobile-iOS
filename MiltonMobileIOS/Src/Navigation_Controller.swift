@@ -1,6 +1,6 @@
 import UIKit
 
-class Navigation_Controller: UINavigationController, UITabBarDelegate {
+class Navigation_Controller: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +28,6 @@ class Navigation_Controller: UINavigationController, UITabBarDelegate {
     // Pass the selected object to the new view controller.
     }
     */
-    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
-        print("clicked on a tab");
-    }
     
 }
 extension UIColor {

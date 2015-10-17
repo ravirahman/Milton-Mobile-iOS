@@ -76,12 +76,14 @@ class Food_Meals_ViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var tableView: UITableView!
 
     func loadMeals() {
+        SwiftSpinner.show("Loading Meals");
         let d1 = ["mealName":"None Entered"]
         let d2 = [d1]
         let d3 = ["Flik":d2]
         let d4 = JSON(d3)
         
         Alamofire.request(.GET,"http://flik.ma1geek.org/getMeals.php", parameters:["date":self.date,"version":2]).responseJSON{response in
+            SwiftSpinner.hide();
             if let data = response.2.value {
                 var jsoncontent = JSON(data)
                 if jsoncontent["Breakfast"] == nil {
@@ -107,9 +109,12 @@ class Food_Meals_ViewController: UIViewController, UITableViewDataSource, UITabl
 
             }
             else {
-                
+                let alert = UIAlertView();
+                alert.title = "Try again"
+                alert.message = "Please check your network connection."
+                alert.addButtonWithTitle("OK")
+                alert.show()
             }
-            
            
         }
     }

@@ -5,13 +5,6 @@ import HTMLReader
 class Settings_Login_ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
-        if let retrievedString = KeychainWrapper.stringForKey("loggedIn") {
-            print(retrievedString);
-            if (retrievedString == "true") {
-                let mailboxViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Me_Mailbox_ViewController") as! Me_Mailbox_ViewController
-                self.navigationController?.pushViewController(mailboxViewController, animated: false)
-            }
-        }
         super.viewDidLoad()
         self.usernameField.delegate = self
         self.passwordField.delegate = self
@@ -22,6 +15,13 @@ class Settings_Login_ViewController: UIViewController, UITextFieldDelegate {
         //start with a blank username/password when the view loads
         self.usernameField.text = ""
         self.passwordField.text = ""
+        if let retrievedString = KeychainWrapper.stringForKey("loggedIn") {
+            print(retrievedString);
+            if (retrievedString == "true") {
+                let mailboxViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Me_Mailbox_ViewController") as! Me_Mailbox_ViewController
+                self.navigationController?.pushViewController(mailboxViewController, animated: false)
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,7 +42,7 @@ class Settings_Login_ViewController: UIViewController, UITextFieldDelegate {
         self.passwordField.resignFirstResponder()
             
         Alamofire.request(.POST,"http://my.milton.edu/student/index.cfm", parameters: ["UserLogin": username, "UserPassword": password]).responseString{response in
-            let data = response.2.value!
+            if let data = response.2.value {
             let nsdata = NSString(string: data);
             let document = HTMLDocument(string: nsdata as String)
             if data.lowercaseString.rangeOfString("bluelabel") != nil {
@@ -88,11 +88,20 @@ class Settings_Login_ViewController: UIViewController, UITextFieldDelegate {
 
                 let mailboxViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Me_Mailbox_ViewController") as! Me_Mailbox_ViewController
                 self.navigationController?.pushViewController(mailboxViewController, animated: true)
+            
             }
             else {
                 let alert = UIAlertView();
                 alert.title = "Check your username and password"
-                alert.message = "These credentials could not be validated"
+                alert.message = "These credentials could not be validated."
+                alert.addButtonWithTitle("OK")
+                alert.show()
+            }
+            }
+            else {
+                let alert = UIAlertView();
+                alert.title = "Try again"
+                alert.message = "Please check your network connection."
                 alert.addButtonWithTitle("OK")
                 alert.show()
             }

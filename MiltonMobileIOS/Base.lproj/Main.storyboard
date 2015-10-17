@@ -9,8 +9,8 @@
         <!--Me-->
         <scene sceneID="k71-W8-suN">
             <objects>
-                <navigationController title="Me" id="Vlb-ly-n1X" customClass="Navigation_Controller" customModule="miltonmobileios" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Mailbox" id="NWe-56-lUr"/>
+                <navigationController storyboardIdentifier="Me_Navigation_Controller" title="Me" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vlb-ly-n1X" customClass="Navigation_Controller" customModule="miltonmobileios" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mailbox" image="Me_Mailbox_Icon" id="NWe-56-lUr"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kIk-gU-cqh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -36,8 +36,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Your Combination is: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HO-6v-SXk">
-                                <rect key="frame" x="20" y="129" width="164" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Combination is: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HO-6v-SXk">
+                                <rect key="frame" x="20" y="129" width="162" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -164,12 +164,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="atZ-gZ-FBg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1500" y="983"/>
+            <point key="canvasLocation" x="1504" y="1169"/>
         </scene>
         <!--Log In-->
         <scene sceneID="AeV-dt-m1P">
             <objects>
-                <viewController storyboardIdentifier="Settings_Login_ViewController" title="Log In" id="MY5-c0-Fz1" customClass="Settings_Login_ViewController" customModule="miltonmobileios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Settings_Login_ViewController" title="Log In" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MY5-c0-Fz1" customClass="Settings_Login_ViewController" customModule="miltonmobileios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DJg-IX-bTA"/>
                         <viewControllerLayoutGuide type="bottom" id="H5m-to-4It"/>
@@ -237,13 +237,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SzL-4T-Us8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="648" y="1016"/>
+            <point key="canvasLocation" x="718" y="1169"/>
         </scene>
         <!--Food-->
         <scene sceneID="8eu-Y5-FpE">
             <objects>
-                <navigationController title="Food" id="BhH-zZ-LaA" customClass="Navigation_Controller" customModule="miltonmobileios" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Meals" id="bT7-Lc-Zg9"/>
+                <navigationController storyboardIdentifier="Food_Navigation_Controller" title="Food" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BhH-zZ-LaA" customClass="Navigation_Controller" customModule="miltonmobileios" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Meals" image="Food_Meals_Icon" id="bT7-Lc-Zg9"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BUl-iV-brD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -260,7 +260,7 @@
         <!--Meals-->
         <scene sceneID="WZf-QD-Nlx">
             <objects>
-                <viewController storyboardIdentifier="Food_Meals_ViewController" title="Meals" id="cAZ-kd-cOY" customClass="Food_Meals_ViewController" customModule="miltonmobileios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Food_Meals_ViewController" title="Meals" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cAZ-kd-cOY" customClass="Food_Meals_ViewController" customModule="miltonmobileios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LAa-I7-mq2"/>
                         <viewControllerLayoutGuide type="bottom" id="u1u-GW-Zzv"/>
@@ -327,7 +327,7 @@
         <!--Milton Academy-->
         <scene sceneID="wos-Xf-isS">
             <objects>
-                <tabBarController title="Milton Academy" id="UVE-kp-dcY" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Tab_Bar_Controller" title="Milton Academy" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UVE-kp-dcY" customClass="TabBarController" customModule="miltonmobileios" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="7te-65-gby">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -388,8 +388,8 @@
         <!--Events-->
         <scene sceneID="cHV-oj-tM2">
             <objects>
-                <navigationController title="Events" id="uyi-xb-xeT" customClass="Navigation_Controller" customModule="miltonmobileios" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Activities" id="Km9-rk-kvR"/>
+                <navigationController storyboardIdentifier="Events_Navigation_Controller" title="Events" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uyi-xb-xeT" customClass="Navigation_Controller" customModule="miltonmobileios" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Activities" image="Events_Activities_Icon" id="Km9-rk-kvR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jw3-UO-YuY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -404,5 +404,10 @@
             <point key="canvasLocation" x="-104" y="324"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Events_Activities_Icon" width="25" height="25"/>
+        <image name="Food_Meals_Icon" width="25" height="25"/>
+        <image name="Me_Mailbox_Icon" width="25" height="25"/>
+    </resources>
     <color key="tintColor" red="0.97254901960784312" green="0.59999999999999998" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
 </document>

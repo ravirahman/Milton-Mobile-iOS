@@ -2,19 +2,26 @@ import UIKit
 import Alamofire
 import HTMLReader
 
-protocol Home_ViewController_Delegate {
-    func setLoggedIn()
-}
-
 class Settings_Login_ViewController: UIViewController, UITextFieldDelegate {
-    var delegate: Home_ViewController_Delegate?
     
     override func viewDidLoad() {
+        if let retrievedString = KeychainWrapper.stringForKey("loggedIn") {
+            print(retrievedString);
+            if (retrievedString == "true") {
+                let mailboxViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Me_Mailbox_ViewController") as! Me_Mailbox_ViewController
+                self.navigationController?.pushViewController(mailboxViewController, animated: false)
+            }
+        }
         super.viewDidLoad()
         self.usernameField.delegate = self
         self.passwordField.delegate = self
-        
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        //start with a blank username/password when the view loads
+        self.usernameField.text = ""
+        self.passwordField.text = ""
     }
     
     override func didReceiveMemoryWarning() {
@@ -22,29 +29,18 @@ class Settings_Login_ViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var accessTypeControler: UISegmentedControl!
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBAction func loginClicked(sender: AnyObject) {
         validateCredentials()
     }
-    
+
     func validateCredentials() {
-        let accessType = accessTypeControler.titleForSegmentAtIndex(accessTypeControler.selectedSegmentIndex)
         let username = usernameField.text!
         let password = passwordField.text!;
-        if (accessType == "Teacher" || accessType == "Parent") {
-            let alert = UIAlertView();
-            alert.title = "Not Supported"
-            alert.message = accessType! + " login not yet supported"
-            alert.addButtonWithTitle("Dismiss")
-            alert.show()
-        }
-        else {
-            self.usernameField.resignFirstResponder()
-            self.passwordField.resignFirstResponder()
+        self.usernameField.resignFirstResponder()
+        self.passwordField.resignFirstResponder()
             
-        }
         Alamofire.request(.POST,"http://my.milton.edu/student/index.cfm", parameters: ["UserLogin": username, "UserPassword": password]).responseString{response in
             let data = response.2.value!
             let nsdata = NSString(string: data);
@@ -89,14 +85,9 @@ class Settings_Login_ViewController: UIViewController, UITextFieldDelegate {
                 KeychainWrapper.setString(firstName, forKey: "firstName")
                 KeychainWrapper.setString(lastName, forKey: "lastName")
                 KeychainWrapper.setString(String(classNumber), forKey: "classNumber")
-                
-                let alert = UIAlertView();
-                alert.title = "Welcome"
-                alert.message = "Welcome " + firstName + " " + lastName
-                alert.addButtonWithTitle("Continue")
-                alert.show()
-                self.delegate?.setLoggedIn()
-                self.navigationController?.popViewControllerAnimated(true)
+
+                let mailboxViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Me_Mailbox_ViewController") as! Me_Mailbox_ViewController
+                self.navigationController?.pushViewController(mailboxViewController, animated: true)
             }
             else {
                 let alert = UIAlertView();
@@ -105,7 +96,6 @@ class Settings_Login_ViewController: UIViewController, UITextFieldDelegate {
                 alert.addButtonWithTitle("OK")
                 alert.show()
             }
-            
         }
     }
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -118,9 +108,6 @@ class Settings_Login_ViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         
     }
-    
-
-    
 }
 extension String
 {

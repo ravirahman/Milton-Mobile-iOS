@@ -1,7 +1,7 @@
 import UIKit
 import Alamofire
 
-class Events_Saa_ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class Events_Activities_ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var TableData : JSON = []
     var date = ""
@@ -75,8 +75,8 @@ class Events_Saa_ViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     @IBOutlet weak var tableView: UITableView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
         let date = NSDate() //get the time, in this case the time an object was created.
         //format date
@@ -105,5 +105,6 @@ class Events_Saa_ViewController: UIViewController, UITableViewDataSource, UITabl
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 }
 

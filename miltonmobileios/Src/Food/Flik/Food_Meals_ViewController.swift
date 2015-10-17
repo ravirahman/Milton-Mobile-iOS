@@ -1,7 +1,7 @@
 import UIKit
 import Alamofire
 
-class Food_Flik_ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITabBarDelegate, UIAlertViewDelegate {
+class Food_Meals_ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate {
 
     var TableData : JSON = []
     var selectedTime = "Lunch"
@@ -74,17 +74,7 @@ class Food_Flik_ViewController: UIViewController, UITableViewDataSource, UITable
     }
 
     @IBOutlet weak var tableView: UITableView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let date = NSDate() //get the time, in this case the time an object was created.
-        //format date
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd" //format style. Browse online to get a format that fits your needs.
-        let dateString = dateFormatter.stringFromDate(date)
-        self.date = dateString
-        loadMeals()
-    }
+
     func loadMeals() {
         let d1 = ["mealName":"None Entered"]
         let d2 = [d1]
@@ -92,36 +82,52 @@ class Food_Flik_ViewController: UIViewController, UITableViewDataSource, UITable
         let d4 = JSON(d3)
         
         Alamofire.request(.GET,"http://flik.ma1geek.org/getMeals.php", parameters:["date":self.date,"version":2]).responseJSON{response in
-            let data = response.2.value;
-            var json = JSON(data!)
-            
-            if json["Breakfast"] == nil {
-                json["Breakfast"] = d4
-            }
-            if json["Lunch"] == nil {
-                json["Lunch"] = d4
-            }
-            if json["Dinner"] == nil {
-                json["Dinner"] = d4
-            }
-            self.TableData = json
-            dispatch_async(dispatch_get_main_queue(), {
-                self.tableView.reloadData()
-                return
-            })
-            //format of dictionary mealtimes:
-            //{mealtime:{mealclass:[menuitems],mealcalss2:[menuitems]},mealtime2:{mealclass:[menuitems],mealcalss2:[menuitems]}
-            //for example:
-            //{Lunch:{Entree:[Hamburgers, Hot Dogs, French Fries], Flik Live: Caesar Wraps},Dinner:{Entree: [Good ol' plain pasta, Yummy carrot sticks],Dessert:[Pink Ice Cream, Dog Biscuits]}}
-            //TODO Justin please populate the table using this format
+            if let data = response.2.value {
+                var jsoncontent = JSON(data)
+                if jsoncontent["Breakfast"] == nil {
+                    jsoncontent["Breakfast"] = d4
+                }
+                if jsoncontent["Lunch"] == nil {
+                    jsoncontent["Lunch"] = d4
+                }
+                if jsoncontent["Dinner"] == nil {
+                    jsoncontent["Dinner"] = d4
+                }
+                self.TableData = jsoncontent
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.tableView.reloadData()
+                    return
+                })
+                //format of dictionary mealtimes:
+                //{mealtime:{mealclass:[menuitems],mealcalss2:[menuitems]},mealtime2:{mealclass:[menuitems],mealcalss2:[menuitems]}
+                //for example:
+                //{Lunch:{Entree:[Hamburgers, Hot Dogs, French Fries], Flik Live: Caesar Wraps},Dinner:{Entree: [Good ol' plain pasta, Yummy carrot sticks],Dessert:[Pink Ice Cream, Dog Biscuits]}}
+                //TODO Justin please populate the table using this format
                 //mealtimes and categories are SwiftyJSON Objects -- see https://github.com/SwiftyJSON/SwiftyJSON
 
+            }
+            else {
+                
+            }
+            
+           
         }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        let date = NSDate() //get the time, in this case the time an object was created.
+        //format date
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd" //format style. Browse online to get a format that fits your needs.
+        let dateString = dateFormatter.stringFromDate(date)
+        self.date = dateString
+        loadMeals()
     }
 }
 

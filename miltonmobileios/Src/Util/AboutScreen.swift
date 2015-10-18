@@ -21,7 +21,7 @@ class AboutScreen {
             UIAlertAction in
             NSLog("OK Pressed")
         }
-        let icons8creditsAction = UIAlertAction(title: "Icons by Icons8", style: UIAlertActionStyle.Default) {
+        let icons8creditsAction = UIAlertAction(title: "Meals, Activities, and Mailbox Icons by Icons8", style: UIAlertActionStyle.Default) {
             UIAlertAction in
             UIApplication.sharedApplication().openURL(NSURL(string: "https://icons8.com")!)
         }

@@ -5,6 +5,7 @@ class Events_Activities_ViewController: UIViewController, UITableViewDataSource,
 
     var TableData : JSON = []
     var date = ""
+    var today = "";
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1;
@@ -86,8 +87,16 @@ class Events_Activities_ViewController: UIViewController, UITableViewDataSource,
         self.date = dateString
         loadActivities()
     }
+    
+    @IBAction func navbarclicked(sender: AnyObject) {
+        AboutScreen.showAboutScreen(self)
+    }
+    
     func loadActivities() {
-        SwiftSpinner.show("Loading Activities");
+        if (today != self.date) {
+            today = self.date;
+            SwiftSpinner.show("Loading Activities");
+        }
         
         Alamofire.request(.GET,"http://saa.ma1geek.org/getActivities.php", parameters:["date":self.date]).responseJSON{response in
             SwiftSpinner.hide();
@@ -103,14 +112,14 @@ class Events_Activities_ViewController: UIViewController, UITableViewDataSource,
             else {
                 let alert = UIAlertView();
                 alert.title = "Try again"
-                alert.message = "Please check your network connection."
+                alert.message = "Please check your network connection to load the latest activities."
                 alert.addButtonWithTitle("OK")
                 alert.show()
             }
-            
         }
+
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

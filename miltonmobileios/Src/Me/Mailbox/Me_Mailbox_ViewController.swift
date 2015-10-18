@@ -5,6 +5,7 @@ class Me_Mailbox_ViewController: UIViewController {
     @IBOutlet weak var mailboxNumberField: UILabel!
     @IBOutlet weak var mailboxCombinationField: UILabel!
     @IBOutlet weak var nameField: UILabel!
+    var loadedMailbox = false;
     
     func back(sender: AnyObject) {
         let refreshAlert = UIAlertController(title: "Log Out?", message: "Are you sure you want to log out?", preferredStyle: UIAlertControllerStyle.Alert)
@@ -16,6 +17,8 @@ class Me_Mailbox_ViewController: UIViewController {
             KeychainWrapper.removeObjectForKey("firstName")
             KeychainWrapper.removeObjectForKey("lastName")
             KeychainWrapper.removeObjectForKey("classNumber")
+            KeychainWrapper.removeObjectForKey("mailboxNumber")
+            KeychainWrapper.removeObjectForKey("mailboxCombo")
             
             let alert = UIAlertView();
             alert.title = "Logged Out"
@@ -39,27 +42,37 @@ class Me_Mailbox_ViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = newBackButton;
     }
     
+    @IBAction func navbarclicked(sender: AnyObject) {
+        AboutScreen.showAboutScreen(self)
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
         if let retrievedString = KeychainWrapper.stringForKey("loggedIn") {
             if (retrievedString == "true") {
+                                self.nameField.text = KeychainWrapper.stringForKey("firstName")! + " " + KeychainWrapper.stringForKey("lastName")!
+                if let mailboxNumber = KeychainWrapper.stringForKey("mailboxNumber"), mailboxCombo = KeychainWrapper.stringForKey("mailboxCombo") {
+                    self.mailboxNumberField.text = mailboxNumber
+                    self.mailboxCombinationField.text = mailboxCombo
+                }
+                else {
                 SwiftSpinner.show("Loading Mailbox Combination");
                 let username = KeychainWrapper.stringForKey("username")!
                 let password = KeychainWrapper.stringForKey("password")!
                 
-                self.nameField.text = KeychainWrapper.stringForKey("firstName")! + " " + KeychainWrapper.stringForKey("lastName")!
             
             
                 Alamofire.request(.GET,"http://backend.ma1geek.org/me/mailbox/get", parameters:["username":username,"password":password]).responseJSON{response in
                     SwiftSpinner.hide()
                     if let data = response.2.value {
-                    var json = JSON(data).dictionaryObject as! [String: String]
-                    let mailbox = json["mailbox"]
-                    let combination = json["combo"]
-                    
-                    self.mailboxNumberField.text = mailbox
-                    self.mailboxCombinationField.text = combination
+                        var json = JSON(data).dictionaryObject as! [String: String]
+                        let mailbox = json["mailbox"]
+                        let combination = json["combo"]
+                        KeychainWrapper.setString(mailbox!,forKey: "mailboxNumber")
+                        KeychainWrapper.setString(combination!,forKey: "mailboxCombo")
+                        self.mailboxNumberField.text = mailbox
+                        self.mailboxCombinationField.text = combination
                     }
                     else {
                         let alert = UIAlertView();
@@ -68,6 +81,7 @@ class Me_Mailbox_ViewController: UIViewController {
                         alert.addButtonWithTitle("OK")
                         alert.show()
                     }
+                }
                 }
             }
             else {

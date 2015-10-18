@@ -6,6 +6,7 @@ class Food_Meals_ViewController: UIViewController, UITableViewDataSource, UITabl
     var TableData : JSON = []
     var selectedTime = "Lunch"
     var date = ""
+    var today = ""
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         let tableAsDictionary = TableData[selectedTime].dictionaryValue
@@ -76,7 +77,10 @@ class Food_Meals_ViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var tableView: UITableView!
 
     func loadMeals() {
-        SwiftSpinner.show("Loading Meals");
+        if (today != self.date) {
+            today = self.date;
+            SwiftSpinner.show("Loading Meals");
+        }
         let d1 = ["mealName":"None Entered"]
         let d2 = [d1]
         let d3 = ["Flik":d2]
@@ -111,7 +115,7 @@ class Food_Meals_ViewController: UIViewController, UITableViewDataSource, UITabl
             else {
                 let alert = UIAlertView();
                 alert.title = "Try again"
-                alert.message = "Please check your network connection."
+                alert.message = "Please check your network connection to load the latest meals."
                 alert.addButtonWithTitle("OK")
                 alert.show()
             }
@@ -124,6 +128,10 @@ class Food_Meals_ViewController: UIViewController, UITableViewDataSource, UITabl
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func navbarclicked(sender: AnyObject) {
+        AboutScreen.showAboutScreen(self)
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         let date = NSDate() //get the time, in this case the time an object was created.
@@ -133,6 +141,15 @@ class Food_Meals_ViewController: UIViewController, UITableViewDataSource, UITabl
         let dateString = dateFormatter.stringFromDate(date)
         self.date = dateString
         loadMeals()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let alert = UIAlertView();
+        alert.title = "Allergy Warning"
+        alert.message = "Before placing your order, please inform your server if a person in your party has a food allergy."
+        alert.addButtonWithTitle("OK")
+        alert.show()
     }
 }
 

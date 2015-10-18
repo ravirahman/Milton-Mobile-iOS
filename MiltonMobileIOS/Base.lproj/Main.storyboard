@@ -155,7 +155,20 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Mailbox" id="Pfj-E3-8Ig"/>
-                    <navigationItem key="navigationItem" title="Milton Academy: Mailbox" id="S8p-V6-cyI"/>
+                    <navigationItem key="navigationItem" id="S8p-V6-cyI">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SZk-0s-k5A">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <state key="normal" title="Milton Academy: Mailbox">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="navbarclicked:" destination="6iC-fY-UPf" eventType="touchUpInside" id="q1a-V0-6Oc"/>
+                            </connections>
+                        </button>
+                    </navigationItem>
                     <connections>
                         <outlet property="mailboxCombinationField" destination="mZP-nn-ceQ" id="KMV-jp-x84"/>
                         <outlet property="mailboxNumberField" destination="Jgk-Xn-nP6" id="yM3-1S-TaB"/>
@@ -228,7 +241,20 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Log In" id="TqE-Vg-74W"/>
-                    <navigationItem key="navigationItem" title="Milton Academy: Log In" id="OwS-pE-A3f"/>
+                    <navigationItem key="navigationItem" id="OwS-pE-A3f">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="91q-Gv-RNQ">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <state key="normal" title="Milton Academy: Log In">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="navbarclicked:" destination="MY5-c0-Fz1" eventType="touchUpInside" id="QM3-dF-Amq"/>
+                            </connections>
+                        </button>
+                    </navigationItem>
                     <connections>
                         <outlet property="passwordField" destination="2P8-hm-bVp" id="3Uh-4J-an2"/>
                         <outlet property="usernameField" destination="3uD-5h-Tbj" id="EoP-36-9Yc"/>
@@ -315,7 +341,20 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Meals" id="fCL-c7-EwX"/>
-                    <navigationItem key="navigationItem" title="Milton Academy: Meals" id="iyQ-Ha-Gkh"/>
+                    <navigationItem key="navigationItem" id="iyQ-Ha-Gkh">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FZm-pf-Rru">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <state key="normal" title="Milton Academy: Meals">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="navbarclicked:" destination="cAZ-kd-cOY" eventType="touchUpInside" id="Uoy-vF-3xk"/>
+                            </connections>
+                        </button>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="TXa-La-W2s" id="HKI-xC-AUO"/>
                     </connections>
@@ -376,7 +415,20 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Activities" id="RBW-Jt-8eU"/>
-                    <navigationItem key="navigationItem" title="Milton Academy: Activities" id="ii6-Ai-CSa"/>
+                    <navigationItem key="navigationItem" id="ii6-Ai-CSa">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EyV-rO-udE">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <state key="normal" title="Milton Academy: Activities">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="navbarclicked:" destination="ukh-Ur-jUD" eventType="touchUpInside" id="ysm-12-ke6"/>
+                            </connections>
+                        </button>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="xe0-DO-x1N" id="cji-Dj-8O5"/>
                     </connections>

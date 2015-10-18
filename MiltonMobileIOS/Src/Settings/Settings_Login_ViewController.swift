@@ -2,10 +2,11 @@ import UIKit
 import Alamofire
 import HTMLReader
 
-class Settings_Login_ViewController: UIViewController, UITextFieldDelegate {
+class Settings_Login_ViewController: UIViewController, UITextFieldDelegate, UITabBarControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController!.delegate = self;
         self.usernameField.delegate = self
         self.passwordField.delegate = self
     }
@@ -113,6 +114,13 @@ class Settings_Login_ViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
+    func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
+        return (viewController != tabBarController.selectedViewController)
+    }
+    
+    @IBAction func navbarclicked(sender: AnyObject) {
+        AboutScreen.showAboutScreen(self)
+    }
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
         

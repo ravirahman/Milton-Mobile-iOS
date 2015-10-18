@@ -18,6 +18,7 @@
 		4113E23F1BD2D35700E3F01C /* Tab_Bar_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4113E23E1BD2D35700E3F01C /* Tab_Bar_Controller.swift */; settings = {ASSET_TAGS = (); }; };
 		4113E2411BD2DAB700E3F01C /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4113E2401BD2DAB700E3F01C /* SwiftSpinner.swift */; settings = {ASSET_TAGS = (); }; };
 		412EE7CF1B0F9D5C00244486 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412EE7CE1B0F9D5C00244486 /* SwiftyJSON.swift */; };
+		414241851BD3D62E006BEFE6 /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414241841BD3D62E006BEFE6 /* AboutScreen.swift */; settings = {ASSET_TAGS = (); }; };
 		41D8CBDA1B0A8EC30040E5D1 /* Settings_Login_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D8CBD91B0A8EC30040E5D1 /* Settings_Login_ViewController.swift */; };
 		41D8CBDC1B0A950D0040E5D1 /* Navigation_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D8CBDB1B0A950D0040E5D1 /* Navigation_Controller.swift */; };
 		41E33E821AF999CE00FF50BE /* Events_Activities_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E33E791AF999CE00FF50BE /* Events_Activities_ViewController.swift */; };
@@ -205,6 +206,7 @@
 		4113E23E1BD2D35700E3F01C /* Tab_Bar_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab_Bar_Controller.swift; sourceTree = "<group>"; };
 		4113E2401BD2DAB700E3F01C /* SwiftSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
 		412EE7CE1B0F9D5C00244486 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = ../SwiftyJSON.swift; sourceTree = "<group>"; };
+		414241841BD3D62E006BEFE6 /* AboutScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutScreen.swift; sourceTree = "<group>"; };
 		41D8CBD91B0A8EC30040E5D1 /* Settings_Login_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings_Login_ViewController.swift; sourceTree = "<group>"; };
 		41D8CBDB1B0A950D0040E5D1 /* Navigation_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigation_Controller.swift; sourceTree = "<group>"; };
 		41E33E791AF999CE00FF50BE /* Events_Activities_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events_Activities_ViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				411083EE1BB6C1F8007494C7 /* miltonmobileios-Bridging-Header.h */,
 				412EE7CE1B0F9D5C00244486 /* SwiftyJSON.swift */,
 				4113E2401BD2DAB700E3F01C /* SwiftSpinner.swift */,
+				414241841BD3D62E006BEFE6 /* AboutScreen.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 				412EE7CF1B0F9D5C00244486 /* SwiftyJSON.swift in Sources */,
 				41E33E871AF99A3000FF50BE /* AppDelegate.swift in Sources */,
 				411083EF1BB6C1F8007494C7 /* KeychainWrapper.m in Sources */,
+				414241851BD3D62E006BEFE6 /* AboutScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

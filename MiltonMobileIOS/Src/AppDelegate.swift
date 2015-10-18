@@ -41,6 +41,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidFinishLaunching(application: UIApplication) {
     }
 
-
 }
 

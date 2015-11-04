@@ -295,16 +295,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TXa-La-W2s">
-                                <rect key="frame" x="0.0" y="141" width="600" height="459"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <sections/>
-                                <connections>
-                                    <outlet property="dataSource" destination="cAZ-kd-cOY" id="nfn-xH-wx1"/>
-                                    <outlet property="delegate" destination="cAZ-kd-cOY" id="vwu-Lv-Tam"/>
-                                </connections>
-                            </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="nH1-hK-lGX">
                                 <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                 <animations/>
@@ -326,6 +316,7 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="l6t-kT-NEe">
                                 <rect key="frame" x="20" y="108" width="560" height="29"/>
                                 <animations/>
+                                <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
                                 <segments>
                                     <segment title="Breakfast"/>
                                     <segment title="Lunch"/>
@@ -335,6 +326,16 @@
                                     <action selector="mealTimeChanged:" destination="cAZ-kd-cOY" eventType="valueChanged" id="jng-Jj-ukp"/>
                                 </connections>
                             </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TXa-La-W2s">
+                                <rect key="frame" x="0.0" y="144" width="600" height="456"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="cAZ-kd-cOY" id="nfn-xH-wx1"/>
+                                    <outlet property="delegate" destination="cAZ-kd-cOY" id="vwu-Lv-Tam"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -343,18 +344,25 @@
                             <constraint firstItem="TXa-La-W2s" firstAttribute="leading" secondItem="xbf-pR-AgJ" secondAttribute="leadingMargin" constant="-21" id="5Rg-6z-E81"/>
                             <constraint firstAttribute="bottom" secondItem="TXa-La-W2s" secondAttribute="bottom" id="76V-c4-xso"/>
                             <constraint firstItem="l6t-kT-NEe" firstAttribute="top" secondItem="LAa-I7-mq2" secondAttribute="bottom" constant="8" symbolic="YES" id="7vh-vl-ner"/>
-                            <constraint firstItem="TXa-La-W2s" firstAttribute="top" secondItem="l6t-kT-NEe" secondAttribute="bottom" constant="5" id="Aqn-RX-Vcg"/>
+                            <constraint firstItem="TXa-La-W2s" firstAttribute="top" secondItem="l6t-kT-NEe" secondAttribute="bottom" constant="8" symbolic="YES" id="Aqn-RX-Vcg"/>
                             <constraint firstItem="l6t-kT-NEe" firstAttribute="leading" secondItem="xbf-pR-AgJ" secondAttribute="leadingMargin" id="DAn-MI-BYv"/>
+                            <constraint firstItem="R1b-ye-9oe" firstAttribute="centerX" secondItem="xbf-pR-AgJ" secondAttribute="centerX" id="IEP-fc-Jku"/>
+                            <constraint firstItem="R1b-ye-9oe" firstAttribute="centerX" secondItem="xbf-pR-AgJ" secondAttribute="centerX" id="KUO-e7-XH8"/>
                             <constraint firstItem="TXa-La-W2s" firstAttribute="leading" secondItem="xbf-pR-AgJ" secondAttribute="leading" id="PH8-g6-0wd"/>
                             <constraint firstItem="R1b-ye-9oe" firstAttribute="top" secondItem="LAa-I7-mq2" secondAttribute="bottom" constant="8" symbolic="YES" id="SCq-UD-LPZ"/>
                             <constraint firstAttribute="trailing" secondItem="TXa-La-W2s" secondAttribute="trailing" id="SEk-xf-ncB"/>
                             <constraint firstItem="R1b-ye-9oe" firstAttribute="leading" secondItem="xbf-pR-AgJ" secondAttribute="leading" id="Zhy-sw-cgE"/>
+                            <constraint firstItem="TXa-La-W2s" firstAttribute="centerX" secondItem="xbf-pR-AgJ" secondAttribute="centerX" id="ccT-Vq-EbU"/>
                             <constraint firstItem="l6t-kT-NEe" firstAttribute="centerX" secondItem="TXa-La-W2s" secondAttribute="centerX" id="fyI-PD-J91"/>
                             <constraint firstAttribute="trailing" secondItem="R1b-ye-9oe" secondAttribute="trailing" id="gLf-Er-ghQ"/>
+                            <constraint firstItem="l6t-kT-NEe" firstAttribute="centerX" secondItem="xbf-pR-AgJ" secondAttribute="centerX" id="smi-zd-ugd"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="IEP-fc-Jku"/>
+                                <exclude reference="gLf-Er-ghQ"/>
                                 <exclude reference="7vh-vl-ner"/>
+                                <exclude reference="fyI-PD-J91"/>
                                 <exclude reference="5Rg-6z-E81"/>
                             </mask>
                         </variation>
@@ -415,8 +423,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Msz-vY-SY9">
+                                <rect key="frame" x="0.0" y="72" width="600" height="29"/>
+                                <animations/>
+                                <segments>
+                                    <segment title="Monday"/>
+                                    <segment title="Tuesday"/>
+                                    <segment title="Wednesday"/>
+                                    <segment title="Thursday"/>
+                                    <segment title="Friday"/>
+                                </segments>
+                                <connections>
+                                    <action selector="dateChanged:" destination="cAZ-kd-cOY" eventType="valueChanged" id="Ons-2M-GGx"/>
+                                    <action selector="dateChanged:" destination="ukh-Ur-jUD" eventType="valueChanged" id="fBD-CT-6RS"/>
+                                </connections>
+                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xe0-DO-x1N">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <rect key="frame" x="0.0" y="108" width="600" height="435"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -428,11 +451,21 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="qjh-M6-8Vf" firstAttribute="top" secondItem="xe0-DO-x1N" secondAttribute="bottom" constant="8" symbolic="YES" id="9ZA-b6-HZu"/>
+                            <constraint firstItem="xe0-DO-x1N" firstAttribute="top" secondItem="Msz-vY-SY9" secondAttribute="bottom" constant="8" symbolic="YES" id="Bak-e3-fGY"/>
                             <constraint firstAttribute="trailing" secondItem="xe0-DO-x1N" secondAttribute="trailing" id="NVV-Kb-31j"/>
+                            <constraint firstItem="Msz-vY-SY9" firstAttribute="top" secondItem="L3i-KV-fy8" secondAttribute="bottom" constant="8" symbolic="YES" id="Qwx-Wj-owr"/>
+                            <constraint firstItem="Msz-vY-SY9" firstAttribute="centerX" secondItem="bx5-Zu-hrf" secondAttribute="centerX" id="V2p-X4-4JD"/>
+                            <constraint firstItem="Msz-vY-SY9" firstAttribute="leading" secondItem="bx5-Zu-hrf" secondAttribute="leading" id="ad8-eg-ue8"/>
                             <constraint firstItem="xe0-DO-x1N" firstAttribute="leading" secondItem="bx5-Zu-hrf" secondAttribute="leading" id="j3p-YO-imD"/>
                             <constraint firstItem="xe0-DO-x1N" firstAttribute="top" secondItem="bx5-Zu-hrf" secondAttribute="top" id="oXR-mz-ke2"/>
                             <constraint firstItem="xe0-DO-x1N" firstAttribute="bottom" secondItem="qjh-M6-8Vf" secondAttribute="top" id="pc7-IR-gmG"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="oXR-mz-ke2"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Activities" id="RBW-Jt-8eU"/>
                     <navigationItem key="navigationItem" id="ii6-Ai-CSa">
@@ -450,6 +483,7 @@
                         </button>
                     </navigationItem>
                     <connections>
+                        <outlet property="dayController" destination="Msz-vY-SY9" id="4dv-dM-MEk"/>
                         <outlet property="tableView" destination="xe0-DO-x1N" id="cji-Dj-8O5"/>
                     </connections>
                 </viewController>

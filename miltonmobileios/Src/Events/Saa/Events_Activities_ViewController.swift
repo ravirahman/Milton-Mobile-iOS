@@ -7,21 +7,44 @@ class Events_Activities_ViewController: UIViewController, UITableViewDataSource,
     var date = ""
     var today = "";
     
+    @IBOutlet var dayController: UISegmentedControl!
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1;
     }
-    
-    @IBAction func datePickerClicked(sender: UIBarButtonItem) {
-        // Create alert
+    @IBAction func dateChanged(sender: UISegmentedControl) {
+        var date = NSDate() //get the time, in this case the time an object was created.
+        //format date
+        //let dateFormatter = NSDateFormatter()
+        //dateFormatter.dateFormat = "yyyy-MM-dd" //format style. Browse online to get a format that fits your needs.
+        //let dateString = dateFormatter.stringFromDate(date)
+        //self.date = dateString
+        switch sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)!{
+        case "Monday":
+            date = date.following(weekday: .Monday)
+            
+        case "Tuesday":
+            date = date.following(weekday: .Tuesday)
+            
+        case "Wednesday":
+            date = date.following(weekday: .Wednesday)
+            
+        case "Thursday":
+            date = date.following(weekday: .Thursday)
+            
+        case "Friday":
+            date = date.following(weekday: .Friday)
+            
+        default:
+            break
+        }
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd" //format style. Browse online to get a format that fits your needs.
+        let dateString = dateFormatter.stringFromDate(date)
+        //print(dateString)
+        self.date = dateString
+        loadActivities()
         
-        /*    var alert = UIAlertView(title: "Select Date", message: "Select Date", delegate: , cancelButtonTitle: "Cancel", otherButtonTitles: "OK",nil)
-        
-        // Create date picker (could / should be an ivar)
-        UIDatePicker *picker = [[UIDatePicker alloc] initWithFrame:CGRectMake(10, alert.bounds.size.height, 320, 216)];
-        // Add picker to alert
-        [alert addSubview:picker];
-        // Adjust the alerts bounds
-        alert.bounds = CGRectMake(0, 0, 320 + 20, alert.bounds.size.height + 216 + 20);*/
+
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let tableAsArray = TableData["Activities"].arrayValue
@@ -87,9 +110,38 @@ class Events_Activities_ViewController: UIViewController, UITableViewDataSource,
         self.date = dateString
         loadActivities()
     }
-    
+    override func viewDidLoad() {
+        let date=NSDate()
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        let currentDay = dateFormatter.stringFromDate(date)
+        print(currentDay)
+        dayController.selectedSegmentIndex = getIntValueFromDay(currentDay)
+    }
     @IBAction func navbarclicked(sender: AnyObject) {
         AboutScreen.showAboutScreen(self)
+    }
+    func getIntValueFromDay(weekday:String) -> Int{
+        switch weekday{
+        case "Monday":
+            return 0
+            
+        case "Tuesday":
+            return 1
+            
+        case "Wednesday":
+            return 2
+            
+        case "Thursday":
+            return 3
+            
+        case "Friday":
+            return 4
+            
+        default:
+            return 0
+        }
+        
     }
     
     func loadActivities() {

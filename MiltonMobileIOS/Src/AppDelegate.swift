@@ -1,8 +1,10 @@
 import UIKit
+@available(iOS 9.0, *)
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var shortcutItem: UIApplicationShortcutItem?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -13,7 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window!.rootViewController = containerViewController
         window!.makeKeyAndVisible()*/
-        return true
+        var performShortcutDelegate = true
+        
+        if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsShortcutItemKey] as? UIApplicationShortcutItem {
+            
+            print("Application launched via shortcut")
+            self.shortcutItem = shortcutItem
+            
+            performShortcutDelegate = false
+        }
+        
+        return performShortcutDelegate
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -29,14 +41,55 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
-
+    func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
+        
+        print("Application performActionForShortcutItem")
+        completionHandler( handleShortcut(shortcutItem) )
+        
+    }
+    
+    func handleShortcut( shortcutItem:UIApplicationShortcutItem ) -> Bool {
+        print("Handling shortcut")
+        
+        var succeeded = false
+        
+        if( shortcutItem.type == "milton-mobile.open_menu" ) {
+            
+            // Add your code here
+            print("- Handling \(shortcutItem.type)")
+            
+            // Get the view controller you want to load
+            let mainSB = UIStoryboard(name: "Main", bundle: nil)
+            let menuVC = mainSB.instantiateViewControllerWithIdentifier("Food_Meals_ViewController") as! Food_Meals_ViewController
+            
+            let navVC = self.window?.rootViewController as! UINavigationController
+            navVC.pushViewController(menuVC, animated: true)
+            
+            succeeded = true
+            
+        }
+        
+        return succeeded
+        
+    }
+    
     func applicationDidBecomeActive(application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        print("Application did become active")
+        
+        guard let shortcut = shortcutItem else { return }
+        
+        print("- Shortcut property has been set")
+        
+        handleShortcut(shortcut)
+        
+        self.shortcutItem = nil
+        
     }
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
     
     func applicationDidFinishLaunching(application: UIApplication) {
     }

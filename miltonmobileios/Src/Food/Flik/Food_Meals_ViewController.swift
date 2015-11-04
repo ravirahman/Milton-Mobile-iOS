@@ -7,23 +7,11 @@ class Food_Meals_ViewController: UIViewController, UITableViewDataSource, UITabl
     var selectedTime = "Lunch"
     var date = ""
     var today = ""
+    @IBOutlet var dayController: UISegmentedControl!
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         let tableAsDictionary = TableData[selectedTime].dictionaryValue
         return tableAsDictionary.count
-    }
-    
-    @IBAction func datePickerClicked(sender: UIBarButtonItem) {
-        // Create alert
-        
-    /*    var alert = UIAlertView(title: "Select Date", message: "Select Date", delegate: , cancelButtonTitle: "Cancel", otherButtonTitles: "OK",nil)
-        
-        // Create date picker (could / should be an ivar)
-        UIDatePicker *picker = [[UIDatePicker alloc] initWithFrame:CGRectMake(10, alert.bounds.size.height, 320, 216)];
-        // Add picker to alert
-        [alert addSubview:picker];
-        // Adjust the alerts bounds
-        alert.bounds = CGRectMake(0, 0, 320 + 20, alert.bounds.size.height + 216 + 20);*/
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var tableAsDictionary = TableData[selectedTime].dictionaryValue
@@ -34,6 +22,41 @@ class Food_Meals_ViewController: UIViewController, UITableViewDataSource, UITabl
     @IBAction func mealTimeChanged(sender: UISegmentedControl) {
         self.selectedTime = sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)!
         self.tableView.reloadData()
+    }
+    @IBAction func dateChanged(sender: UISegmentedControl) {
+        var date = NSDate() //get the time, in this case the time an object was created.
+        //format date
+        //let dateFormatter = NSDateFormatter()
+        //dateFormatter.dateFormat = "yyyy-MM-dd" //format style. Browse online to get a format that fits your needs.
+        //let dateString = dateFormatter.stringFromDate(date)
+        //self.date = dateString
+        switch sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)!{
+        case "Monday":
+            date = date.following(weekday: .Monday)
+            
+        case "Tuesday":
+            date = date.following(weekday: .Tuesday)
+            
+        case "Wednesday":
+            date = date.following(weekday: .Wednesday)
+            
+        case "Thursday":
+            date = date.following(weekday: .Thursday)
+            
+        case "Friday":
+            date = date.following(weekday: .Friday)
+            
+        default:
+            break
+        }
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd" //format style. Browse online to get a format that fits your needs.
+        let dateString = dateFormatter.stringFromDate(date)
+        //print(dateString)
+        self.date = dateString
+        loadMeals()
+        
+        
     }
 
     @IBOutlet weak var MealTimeSegmentedControl: UISegmentedControl!
@@ -142,7 +165,28 @@ class Food_Meals_ViewController: UIViewController, UITableViewDataSource, UITabl
         self.date = dateString
         loadMeals()
     }
-    
+    func getIntValueFromDay(weekday:String) -> Int{
+        switch weekday{
+        case "Monday":
+            return 0
+            
+        case "Tuesday":
+            return 1
+            
+        case "Wednesday":
+            return 2
+            
+        case "Thursday":
+            return 3
+            
+        case "Friday":
+            return 4
+            
+        default:
+            return 0
+        }
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         let alert = UIAlertView();
@@ -150,6 +194,12 @@ class Food_Meals_ViewController: UIViewController, UITableViewDataSource, UITabl
         alert.message = "Before placing your order, please inform your server if a person in your party has a food allergy."
         alert.addButtonWithTitle("OK")
         alert.show()
+        let date=NSDate()
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        let currentDay = dateFormatter.stringFromDate(date)
+        print(currentDay)
+        dayController.selectedSegmentIndex = getIntValueFromDay(currentDay)
     }
 }
 

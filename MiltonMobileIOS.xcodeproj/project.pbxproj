@@ -13,12 +13,12 @@
 		4107B4981B121B8A005B0176 /* HTMLReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4107B4881B121B79005B0176 /* HTMLReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		411083E71BB6C144007494C7 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411083DE1BB6C10F007494C7 /* Locksmith.framework */; };
 		411083E81BB6C144007494C7 /* Locksmith.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 411083DE1BB6C10F007494C7 /* Locksmith.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		411083EF1BB6C1F8007494C7 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 411083EC1BB6C1F8007494C7 /* KeychainWrapper.m */; settings = {ASSET_TAGS = (); }; };
-		411083F01BB6C1F8007494C7 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411083ED1BB6C1F8007494C7 /* KeychainWrapper.swift */; settings = {ASSET_TAGS = (); }; };
-		4113E23F1BD2D35700E3F01C /* Tab_Bar_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4113E23E1BD2D35700E3F01C /* Tab_Bar_Controller.swift */; settings = {ASSET_TAGS = (); }; };
-		4113E2411BD2DAB700E3F01C /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4113E2401BD2DAB700E3F01C /* SwiftSpinner.swift */; settings = {ASSET_TAGS = (); }; };
+		411083EF1BB6C1F8007494C7 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 411083EC1BB6C1F8007494C7 /* KeychainWrapper.m */; };
+		411083F01BB6C1F8007494C7 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411083ED1BB6C1F8007494C7 /* KeychainWrapper.swift */; };
+		4113E23F1BD2D35700E3F01C /* Tab_Bar_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4113E23E1BD2D35700E3F01C /* Tab_Bar_Controller.swift */; };
+		4113E2411BD2DAB700E3F01C /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4113E2401BD2DAB700E3F01C /* SwiftSpinner.swift */; };
 		412EE7CF1B0F9D5C00244486 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412EE7CE1B0F9D5C00244486 /* SwiftyJSON.swift */; };
-		414241851BD3D62E006BEFE6 /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414241841BD3D62E006BEFE6 /* AboutScreen.swift */; settings = {ASSET_TAGS = (); }; };
+		414241851BD3D62E006BEFE6 /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414241841BD3D62E006BEFE6 /* AboutScreen.swift */; };
 		41D8CBDA1B0A8EC30040E5D1 /* Settings_Login_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D8CBD91B0A8EC30040E5D1 /* Settings_Login_ViewController.swift */; };
 		41D8CBDC1B0A950D0040E5D1 /* Navigation_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D8CBDB1B0A950D0040E5D1 /* Navigation_Controller.swift */; };
 		41E33E821AF999CE00FF50BE /* Events_Activities_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E33E791AF999CE00FF50BE /* Events_Activities_ViewController.swift */; };
@@ -27,6 +27,7 @@
 		41E33E871AF99A3000FF50BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E33E861AF99A3000FF50BE /* AppDelegate.swift */; };
 		41FB946E1AF7DB5600D2C1B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41FB946C1AF7DB5600D2C1B5 /* Main.storyboard */; };
 		41FB94701AF7DB5600D2C1B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41FB946F1AF7DB5600D2C1B5 /* Images.xcassets */; };
+		89D60CAA1BEA619A00585230 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D60CA91BEA619A00585230 /* NSDateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,6 +219,7 @@
 		41FB94671AF7DB5600D2C1B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41FB946D1AF7DB5600D2C1B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41FB946F1AF7DB5600D2C1B5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		89D60CA91BEA619A00585230 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSDateExtension.swift; path = MiltonMobileIOS/Src/Util/NSDateExtension.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 		4107B4631B121497005B0176 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				89D60CA91BEA619A00585230 /* NSDateExtension.swift */,
 				411083EB1BB6C1F8007494C7 /* KeychainWrapper.h */,
 				411083EC1BB6C1F8007494C7 /* KeychainWrapper.m */,
 				411083ED1BB6C1F8007494C7 /* KeychainWrapper.swift */,
@@ -437,11 +440,11 @@
 				TargetAttributes = {
 					41FB94621AF7DB5600D2C1B5 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 7B7M7FR7QW;
+						DevelopmentTeam = YQC4GRW9NL;
 					};
 				};
 			};
-			buildConfigurationList = 41FB945E1AF7DB5600D2C1B5 /* Build configuration list for PBXProject "miltonmobileios" */;
+			buildConfigurationList = 41FB945E1AF7DB5600D2C1B5 /* Build configuration list for PBXProject "MiltonMobileIOS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -629,6 +632,7 @@
 				41D8CBDA1B0A8EC30040E5D1 /* Settings_Login_ViewController.swift in Sources */,
 				412EE7CF1B0F9D5C00244486 /* SwiftyJSON.swift in Sources */,
 				41E33E871AF99A3000FF50BE /* AppDelegate.swift in Sources */,
+				89D60CAA1BEA619A00585230 /* NSDateExtension.swift in Sources */,
 				411083EF1BB6C1F8007494C7 /* KeychainWrapper.m in Sources */,
 				414241851BD3D62E006BEFE6 /* AboutScreen.swift in Sources */,
 			);
@@ -755,12 +759,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = miltonmobileios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.milton.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = miltonmobileios;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "miltonmobileios/Src/Util/miltonmobileios-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -774,12 +780,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = miltonmobileios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.milton.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = miltonmobileios;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "miltonmobileios/Src/Util/miltonmobileios-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -788,7 +796,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		41FB945E1AF7DB5600D2C1B5 /* Build configuration list for PBXProject "miltonmobileios" */ = {
+		41FB945E1AF7DB5600D2C1B5 /* Build configuration list for PBXProject "MiltonMobileIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				41FB94801AF7DB5600D2C1B5 /* Debug */,
